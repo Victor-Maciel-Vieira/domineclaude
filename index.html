@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="facebook-domain-verification" content="9cum050btjw21lbazytrlneuiy9y4j" />
+<title>Claude: O Guia Definitivo de IA | Domina Claude</title>
+<meta name="description" content="A IA que profissionais usam para trabalhar menos e ganhar mais. Guia completo do Claude em português — do zero ao avançado. Comece hoje por R$37.">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1475704073818729');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #9A7A32;
+  --gold-glow: rgba(201, 168, 76, 0.15);
+  --black: #050505;
+  --black-2: #0D0D0D;
+  --black-3: #111111;
+  --black-4: #181818;
+  --black-5: #1F1F1F;
+  --white: #FFFFFF;
+  --white-80: rgba(255,255,255,0.8);
+  --white-60: rgba(255,255,255,0.6);
+  --white-30: rgba(255,255,255,0.3);
+  --white-10: rgba(255,255,255,0.1);
+  --orange: #E8722A;
+  --orange-hover: #F5832E;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── NOISE TEXTURE OVERLAY ─── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ─── TYPOGRAPHY ─── */
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; }
+h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); }
+p { font-family: var(--font-body); }
+
+/* ─── GOLD TEXT ─── */
+.gold { color: var(--gold); }
+.gold-gradient {
+  background: linear-gradient(135deg, var(--gold-dark), var(--gold-light), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── GOLD LINE DIVIDER ─── */
+.gold-line {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+}
+
+/* ─── SECTION ─── */
+section { position: relative; z-index: 1; }
+
+/* ─── CONTAINER ─── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ─── BUTTON ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1.1rem 2.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 30px rgba(232, 114, 42, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before { left: 100%; }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(232, 114, 42, 0.6);
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.btn-sub {
+  display: block;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--white-60);
+  margin-top: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
+/* ─── HEADER ─── */
+header {
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  position: relative;
+  z-index: 10;
+  background: rgba(5,5,5,0.95);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.logo-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.logo-text em {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  color: var(--white-60);
+  margin-left: 0.2rem;
+  text-transform: lowercase;
+}
+
+.footer-brand {
+  margin-bottom: 1rem;
+}
+
+.footer-logo-text {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.footer-logo-text em {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  color: var(--white-60);
+  margin-left: 0.2rem;
+  text-transform: lowercase;
+}
+
+.logo-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:hover .logo-text {
+  opacity: 0.7;
+}
+
+.logo-link:hover .logo-text em {
+  color: var(--gold);
+  opacity: 0.9;
+}
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.78rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.header-ig:hover { color: var(--gold); }
+
+@media (max-width: 480px) {
+  .header-ig { display: none; }
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-ig-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-ig-link:hover { color: var(--gold); }
+
+.footer-social-sep {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.8rem;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.6rem 1.3rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(232, 114, 42, 0.3);
+}
+
+.header-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(232, 114, 42, 0.5);
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 4rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, rgba(201, 168, 76, 0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, var(--black) 0%, var(--black-2) 100%);
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeUp 0.9s ease both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  animation: fadeUp 0.9s ease 0.1s both;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.9s ease 0.2s both;
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--white-60);
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  animation: fadeUp 0.9s ease 0.3s both;
+}
+
+.hero-anchor {
+  display: inline-block;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.9s ease 0.25s both;
+}
+
+.anchor-text {
+  font-size: 0.88rem;
+  color: var(--white-80);
+}
+
+.anchor-text strong {
+  color: var(--gold);
+}
+
+.price-comparison {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--white-60);
+  max-width: 420px;
+  margin: 0.6rem auto 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.hero-objection {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--white-80);
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--gold);
+  padding: 0.7rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+  text-align: left;
+  animation: fadeUp 0.9s ease 0.45s both;
+}
+  animation: fadeUp 0.9s ease 0.4s both;
+  margin-bottom: 1.5rem;
+}
+
+.hero-price .price-label {
+  font-size: 0.8rem;
+  color: var(--white-60);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.hero-price .price-value {
+  font-family: var(--font-body);
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-price .price-currency {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 700;
+  vertical-align: super;
+  margin-right: 0.15rem;
+  color: var(--gold-light);
+}
+
+.hero-btn-wrap {
+  animation: fadeUp 0.9s ease 0.5s both;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+  animation: fadeUp 0.9s ease 0.6s both;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--white-60);
+}
+
+.trust-item svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ─── SOCIAL PROOF BAR ─── */
+.proof-bar {
+  background: var(--black-3);
+  border-top: 1px solid rgba(201,168,76,0.12);
+  border-bottom: 1px solid rgba(201,168,76,0.12);
+  padding: 1.2rem 0;
+  overflow: hidden;
+}
+
+.proof-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+}
+
+.proof-stat {
+  text-align: center;
+}
+
+.proof-stat .stat-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  display: block;
+}
+
+.proof-stat .stat-label {
+  font-size: 0.75rem;
+  color: var(--white-60);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.proof-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(201,168,76,0.2);
+}
+
+/* ─── DOR SECTION ─── */
+.section-dor {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--black-2) 0%, var(--black) 100%);
+}
+
+.dor-intro {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.dor-intro p {
+  font-size: 1.1rem;
+  color: var(--white-60);
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.dor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+.dor-card {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dor-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dor-card:hover {
+  border-color: rgba(201,168,76,0.3);
+  transform: translateY(-3px);
+}
+
+.dor-card:hover::before { opacity: 1; }
+
+.dor-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.dor-card p {
+  font-size: 0.95rem;
+  color: var(--white-80);
+  line-height: 1.5;
+}
+
+/* ─── SOLUTION SECTION ─── */
+.section-solution {
+  padding: 6rem 0;
+  background: var(--black);
+}
+
+.solution-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.solution-intro p {
+  font-size: 1.1rem;
+  color: var(--white-60);
+  max-width: 650px;
+  margin: 1rem auto 0;
+  line-height: 1.7;
+}
+
+/* ─── MOCKUP ─── */
+.ebook-mockup {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.mockup-wrap {
+  position: relative;
+  width: 280px;
+}
+
+.ebook-cover {
+  width: 100%;
+  background: linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 50%, #0D0D0D 100%);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.8),
+    0 0 40px rgba(201,168,76,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.ebook-cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.ebook-cover-brand {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  opacity: 0.8;
+}
+
+.ebook-cover-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.ebook-cover-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.ebook-cover-subtitle {
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.mockup-glow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.3), transparent);
+  filter: blur(10px);
+}
+
+/* ─── CONTEÚDO DO EBOOK ─── */
+.section-content {
+  padding: 6rem 0;
+  background: var(--black-2);
+}
+
+.content-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.content-header p {
+  color: var(--white-60);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 1rem auto 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.content-item {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  padding: 1.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.content-item:hover {
+  border-color: rgba(201,168,76,0.25);
+}
+
+.content-check {
+  width: 22px;
+  height: 22px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.content-check svg {
+  width: 11px;
+  height: 11px;
+  color: var(--gold);
+}
+
+.content-item p {
+  font-size: 0.9rem;
+  color: var(--white-80);
+  line-height: 1.5;
+}
+
+.content-item strong {
+  display: block;
+  color: var(--white);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-size: 0.92rem;
+}
+
+/* ─── BONUS ─── */
+.section-bonus {
+  padding: 6rem 0;
+  background: var(--black);
+}
+
+.bonus-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.bonus-header .bonus-tag {
+  display: inline-block;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+
+.bonus-header p {
+  color: var(--white-60);
+  max-width: 550px;
+  margin: 1rem auto 0;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.bonus-card {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 10px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bonus-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 80px; height: 80px;
+  background: radial-gradient(circle, rgba(201,168,76,0.06), transparent);
+  border-radius: 50%;
+}
+
+.bonus-card:hover {
+  border-color: rgba(201,168,76,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.bonus-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  opacity: 0.8;
+}
+
+.bonus-card h3 {
+  font-size: 1.05rem;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.bonus-card p {
+  font-size: 0.88rem;
+  color: var(--white-60);
+  line-height: 1.55;
+}
+
+.bonus-value {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.75rem;
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+/* ─── PARA QUEM É ─── */
+.section-forwho {
+  padding: 6rem 0;
+  background: var(--black-2);
+}
+
+.forwho-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.forwho-header p {
+  color: var(--white-60);
+  max-width: 580px;
+  margin: 1rem auto 0;
+}
+
+.forwho-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.forwho-item {
+  background: var(--black-5);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.forwho-item:hover {
+  border-color: rgba(201,168,76,0.25);
+  background: rgba(201,168,76,0.03);
+}
+
+.forwho-emoji {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.forwho-item h4 {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+
+.forwho-item p {
+  font-size: 0.85rem;
+  color: var(--white-60);
+  line-height: 1.5;
+}
+
+/* ─── PROVA SOCIAL / CASOS ─── */
+.section-proof {
+  padding: 6rem 0;
+  background: var(--black);
+}
+
+.proof-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.proof-header p {
+  color: var(--white-60);
+  max-width: 580px;
+  margin: 1rem auto 0;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.case-card {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 10px;
+  padding: 1.8rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.case-card:hover {
+  border-color: rgba(201,168,76,0.28);
+  transform: translateY(-3px);
+}
+
+.case-result {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.case-name {
+  font-size: 0.8rem;
+  color: var(--white-60);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.case-desc {
+  font-size: 0.9rem;
+  color: var(--white-80);
+  line-height: 1.55;
+}
+
+/* ─── OFFER / PRICING ─── */
+.section-offer {
+  padding: 6rem 0;
+  background: var(--black-2);
+}
+
+.offer-box {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 16px;
+  padding: 3rem 2.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.offer-box::after {
+  content: '';
+  position: absolute;
+  top: -50px; left: 50%;
+  transform: translateX(-50%);
+  width: 300px; height: 200px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.08), transparent);
+  pointer-events: none;
+}
+
+.offer-tag {
+  display: inline-block;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.offer-box h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+}
+
+.offer-includes {
+  text-align: left;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.offer-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.offer-line-name {
+  font-size: 0.9rem;
+  color: var(--white-80);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.offer-line-name svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.offer-line-value {
+  font-size: 0.82rem;
+  color: var(--white-60);
+  text-decoration: line-through;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.offer-total-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(201,168,76,0.06);
+  border-radius: 6px;
+  border: 1px solid rgba(201,168,76,0.2);
+  margin-top: 0.5rem;
+}
+
+.offer-total-label {
+  font-size: 0.85rem;
+  color: var(--white-80);
+  font-weight: 600;
+}
+
+.offer-total-value {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.45);
+  text-decoration: line-through;
+  text-decoration-color: rgba(201,168,76,0.5);
+  text-decoration-thickness: 2px;
+}
+
+.offer-price-box {
+  margin: 2rem 0 1.5rem;
+  padding: 1.5rem;
+  background: rgba(201,168,76,0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+.offer-price-today {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white-60);
+  margin-bottom: 0.5rem;
+}
+
+.offer-price-main {
+  font-family: var(--font-body);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.offer-price-main sup {
+  font-family: var(--font-body);
+  font-size: 2rem;
+  font-weight: 700;
+  vertical-align: super;
+  color: var(--gold-light);
+}
+
+.offer-price-note {
+  font-size: 0.8rem;
+  color: var(--white-60);
+  margin-top: 0.4rem;
+}
+
+/* ─── GARANTIA ─── */
+.section-garantia {
+  padding: 4rem 0;
+  background: var(--black);
+}
+
+.garantia-box {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2.5rem;
+  background: var(--black-3);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.garantia-seal {
+  width: 90px;
+  height: 90px;
+  background: rgba(201,168,76,0.08);
+  border: 2px solid rgba(201,168,76,0.4);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.garantia-seal .seal-days {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.garantia-seal .seal-label {
+  font-size: 0.6rem;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.garantia-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.garantia-text p {
+  font-size: 0.9rem;
+  color: var(--white-60);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ─── FAQ ─── */
+.section-faq {
+  padding: 6rem 0;
+  background: var(--black-2);
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: var(--black-4);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(201,168,76,0.25);
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: color 0.3s ease;
+}
+
+.faq-q:hover { color: var(--gold); }
+
+.faq-q svg {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  color: var(--gold);
+}
+
+.faq-item.open .faq-q svg {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 1.5rem;
+}
+
+.faq-item.open .faq-a {
+  max-height: 300px;
+  padding: 0 1.5rem 1.2rem;
+}
+
+.faq-a p {
+  font-size: 0.9rem;
+  color: var(--white-60);
+  line-height: 1.65;
+}
+
+/* ─── FINAL CTA ─── */
+.section-final-cta {
+  padding: 7rem 0;
+  background: var(--black);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-final-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.06), transparent);
+  pointer-events: none;
+}
+
+.final-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.final-cta-content h2 {
+  margin-bottom: 1rem;
+}
+
+.final-cta-content p {
+  font-size: 1.05rem;
+  color: var(--white-60);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--black-3);
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--white-60);
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+footer p {
+  font-size: 0.78rem;
+  color: var(--white-30);
+}
+
+/* ─── FORWHO NOT ─── */
+.forwho-not {
+  margin-top: 2rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-left: 3px solid rgba(201,168,76,0.4);
+  border-radius: 0 8px 8px 0;
+  padding: 1.2rem 1.5rem;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forwho-not p {
+  font-size: 0.88rem;
+  color: var(--white-60);
+  line-height: 1.6;
+}
+
+.forwho-not strong {
+  color: var(--white-80);
+}
+
+/* ─── CASE AVATAR ─── */
+.case-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.case-name {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--white-60);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.04em;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+/* ─── FOOTER LAST CTA ─── */
+.footer-last-cta {
+  background: rgba(201,168,76,0.05);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-last-cta p {
+  font-size: 0.88rem;
+  color: var(--white-60);
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.footer-cta-link {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,168,76,0.3);
+  padding-bottom: 0.1rem;
+  transition: all 0.2s ease;
+}
+
+.footer-cta-link:hover {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-light);
+}
+
+/* ─── URGENCY COUNTER ─── */
+.urgency-bar {
+  background: rgba(232,114,42,0.08);
+  border: 1px solid rgba(232,114,42,0.2);
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.urgency-bar .urgency-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  flex-shrink: 0;
+}
+
+.urgency-bar span {
+  font-size: 0.82rem;
+  color: rgba(232,114,42,0.9);
+  font-weight: 500;
+}
+
+#countdown {
+  font-weight: 700;
+  color: var(--orange);
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 640px) {
+  .header-cta span { display: none; }
+  .proof-divider { display: none; }
+  .garantia-text h3 { text-align: center; }
+  .garantia-text p { text-align: center; }
+  .offer-box { padding: 2rem 1.2rem; }
+  .hero { padding: 4rem 0 3rem; min-height: auto; }
+}
+
+/* ─── STICKY CTA MOBILE ─── */
+.sticky-cta {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(5,5,5,0.97);
+  border-top: 1px solid rgba(201,168,76,0.2);
+  padding: 0.8rem 1rem;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .sticky-cta { display: block; }
+}
+
+.sticky-cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  box-shadow: 0 -4px 20px rgba(232,114,42,0.3);
+}
+</style>
+</head>
+<body>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://pay.kiwify.com.br/c46OUH1" onclick="fbq('track', 'InitiateCheckout')">
+    Quero o Guia por R$37 →
+  </a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="https://instagram.com/kortex.evolution" target="_blank" rel="noopener" class="logo-link">
+        <span class="logo-text">KORTEX <em>evolution</em></span>
+      </a>
+    </div>
+    <a href="https://pay.kiwify.com.br/c46OUH1" class="header-cta" onclick="fbq('track', 'InitiateCheckout')">
+      <span>Garantir meu acesso</span> →
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-badge">
+        🔥 Preço de lançamento — por tempo limitado
+      </div>
+
+      <h1>
+        A IA que profissionais usam<br>
+        para <span class="gold-gradient">trabalhar menos</span><br>
+        e <span class="gold-gradient">ganhar mais</span>
+      </h1>
+
+      <p class="hero-sub">
+        O único guia completo do Claude em português — do primeiro acesso ao uso profissional, com exemplos reais que você aplica hoje. Sem conhecimento técnico. Sem enrolação.
+      </p>
+
+      <div class="hero-anchor reveal">
+        <span class="anchor-text">Mais de <strong>R$220 em material incluso</strong> — guia completo + 6 bônus exclusivos</span>
+      </div>
+
+      <div class="hero-price">
+        <span class="price-label">tudo isso por apenas</span>
+        <div class="price-value">
+          <span class="price-currency">R$</span>37
+        </div>
+        <span class="price-comparison">Cursos de IA custam entre R$297 e R$2.000. Você tem acesso ao mesmo conhecimento prático por R$37.</span>
+      </div>
+
+      <div class="hero-objection">
+        Não sabe nada de tecnologia? Perfeito. Se você usa WhatsApp, você consegue usar o Claude.
+      </div>
+
+      <div class="hero-btn-wrap">
+        <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" onclick="fbq('track', 'InitiateCheckout')">
+          Acessar o guia completo agora — R$37 →
+        </a>
+        <span class="btn-sub">🔒 Pagamento seguro · PIX ou cartão · Acesso em minutos · Garantia de 7 dias</span>
+      </div>
+
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Compra segura
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Acesso em minutos
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Garantia 7 dias
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          PDF em português
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-stat">
+      <span class="stat-num">13</span>
+      <span class="stat-label">Capítulos</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Bônus inclusos</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="stat-num">Zero</span>
+      <span class="stat-label">Conhecimento técnico necessário</span>
+    </div>
+    <div class="proof-divider"></div>
+    <div class="proof-stat">
+      <span class="stat-num">1 tarde</span>
+      <span class="stat-label">Para ler e já aplicar</span>
+    </div>
+  </div>
+</div>
+
+<!-- DOR -->
+<section class="section-dor">
+  <div class="container">
+    <div class="dor-intro reveal">
+      <div class="gold-line"></div>
+      <h2>Você se identifica com alguma dessas situações?</h2>
+      <p>Se qualquer uma dessas frases passou pela sua cabeça, este guia foi feito para você.</p>
+    </div>
+    <div class="dor-grid">
+      <div class="dor-card reveal">
+        <span class="dor-icon">😓</span>
+        <p>"Já ouvi falar do Claude mas nunca entendi direito como funciona ou por onde começar."</p>
+      </div>
+      <div class="dor-card reveal">
+        <span class="dor-icon">💼</span>
+        <p>"Sinto que estou ficando pra trás enquanto outras pessoas usam IA para avançar mais rápido na carreira."</p>
+      </div>
+      <div class="dor-card reveal">
+        <span class="dor-icon">💰</span>
+        <p>"Quero gerar uma renda extra mas não sei como usar IA de forma prática para isso."</p>
+      </div>
+      <div class="dor-card reveal">
+        <span class="dor-icon">⏰</span>
+        <p>"Gasto horas em tarefas que poderiam ser feitas em minutos com a ferramenta certa."</p>
+      </div>
+      <div class="dor-card reveal">
+        <span class="dor-icon">🤷</span>
+        <p>"Já tentei usar IA mas as respostas nunca são o que eu precisava — não sei se estou usando errado."</p>
+      </div>
+      <div class="dor-card reveal">
+        <span class="dor-icon">🏆</span>
+        <p>"Sei que quem domina IA hoje tem uma vantagem enorme — só não sei como chegar lá."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="section-solution">
+  <div class="container">
+    <div class="solution-intro reveal">
+      <div class="gold-line"></div>
+      <h2>Apresentamos o guia que vai mudar<br>como você usa <span class="gold-gradient">inteligência artificial</span></h2>
+      <p>Do primeiro acesso ao uso profissional — tudo que você precisa saber sobre o Claude em um único lugar, em português, com exemplos reais que você pode replicar hoje.</p>
+    </div>
+
+    <div class="ebook-mockup reveal">
+      <div class="mockup-wrap">
+        <div class="ebook-cover">
+          <div class="ebook-cover-brand">Kortex Evolution</div>
+          <span class="ebook-cover-icon">🤖</span>
+          <div class="ebook-cover-title">Claude: O Guia Definitivo de IA para Quem Quer Resultados Reais</div>
+          <div class="ebook-cover-subtitle">Do zero ao avançado</div>
+        </div>
+        <div class="mockup-glow"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTEÚDO -->
+<section class="section-content">
+  <div class="container">
+    <div class="content-header reveal">
+      <div class="gold-line"></div>
+      <h2>O que você vai aprender</h2>
+      <p>13 capítulos organizados do zero ao avançado, com linguagem simples que qualquer pessoa entende.</p>
+    </div>
+    <div class="content-grid">
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>O que é o Claude e por que é diferente</strong>Quem criou, qual é a filosofia por trás e o que o diferencia do ChatGPT e Gemini.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Como o Claude pensa e aprende</strong>O que é um modelo de linguagem em linguagem humana — sem jargão técnico.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Todas as versões e produtos</strong>Claude.ai, Desktop, Code, app mobile — qual usar em cada situação.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Como instalar tudo passo a passo</strong>Do primeiro acesso ao Claude Desktop e Claude Code — com prints e instruções claras.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>A arte de criar prompts poderosos</strong>Por que a maioria usa IA errado — e a estrutura exata de um prompt que funciona.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Recursos que ninguém usa</strong>Projetos, upload de arquivos, análise de imagens, busca na web — tudo explorado.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Claude para carreira e emprego</strong>Currículo, simulação de entrevista, negociação salarial e recolocação.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Claude para produtividade</strong>Documentos, e-mails difíceis, relatórios e gestão de tempo.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Claude para negócios</strong>Validação de ideias, conteúdo para redes sociais, atendimento e análise de concorrência.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Claude para renda extra</strong>Serviços que você pode começar a oferecer hoje usando o Claude como ferramenta.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Como tirar o máximo do Claude</strong>Técnicas avançadas, projetos longos e como combinar o Claude com outras ferramentas.</p>
+      </div>
+      <div class="content-item reveal">
+        <div class="content-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <p><strong>Segurança, privacidade e o futuro</strong>O que nunca compartilhar, os limites éticos e como se manter relevante.</p>
+      </div>
+    </div>
+    <div class="btn-wrapper reveal">
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" onclick="fbq('track', 'InitiateCheckout')">
+        Quero acesso imediato por R$37 →
+      </a>
+      <span class="btn-sub">🔒 Pagamento seguro · Acesso em minutos · Garantia de 7 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- BÔNUS -->
+<section class="section-bonus">
+  <div class="container">
+    <div class="bonus-header reveal">
+      <span class="bonus-tag">Bônus Exclusivos Inclusos</span>
+      <h2>Além do guia, você recebe <span class="gold-gradient">6 bônus</span> sem custo adicional</h2>
+      <p>Materiais práticos que complementam o conteúdo e aceleram seus resultados.</p>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 01</div>
+        <h3>Guia de Bolso do Claude: 25 Prompts para Usar Hoje</h3>
+        <p>Estruturas prontas para as situações mais comuns — carreira, produtividade, negócios e aprendizado. Copia, ajusta e usa imediatamente.</p>
+        <span class="bonus-value">Valor: R$27</span>
+      </div>
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 02</div>
+        <h3>As 10 Perguntas que o Claude Responde Melhor que Qualquer Pessoa</h3>
+        <p>Descubra as categorias onde o Claude supera especialistas humanos e mude como você usa a ferramenta.</p>
+        <span class="bonus-value">Valor: R$17</span>
+      </div>
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 03</div>
+        <h3>Checklist do Usuário Avançado de Claude</h3>
+        <p>Use antes de qualquer sessão importante. Garante que você está extraindo o máximo de cada conversa com o Claude.</p>
+        <span class="bonus-value">Valor: R$17</span>
+      </div>
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 04</div>
+        <h3>Como Usar o Claude para Aprender Qualquer Coisa em Metade do Tempo</h3>
+        <p>O método completo de 5 etapas para absorver em horas o que levaria dias de leitura.</p>
+        <span class="bonus-value">Valor: R$27</span>
+      </div>
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 05</div>
+        <h3>Claude para Situações da Vida Real: 15 Casos Práticos Resolvidos</h3>
+        <p>Do pedido de aumento à reclamação formal — situações reais com o prompt exato que funciona.</p>
+        <span class="bonus-value">Valor: R$27</span>
+      </div>
+      <div class="bonus-card reveal">
+        <div class="bonus-num">Bônus 06</div>
+        <h3>Glossário do Universo IA: 40 Termos que Você Precisa Entender</h3>
+        <p>Tradução direta e prática de todos os termos técnicos que aparecem quando você começa a usar IA de verdade.</p>
+        <span class="bonus-value">Valor: R$17</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="section-forwho">
+  <div class="container">
+    <div class="forwho-header reveal">
+      <div class="gold-line"></div>
+      <h2>Para quem é este guia</h2>
+      <p>Desenvolvido pela Kortex Evolution — empresa especializada em soluções de inteligência artificial para profissionais e negócios — este material foi pensado para pessoas reais com objetivos reais, não para especialistas em tecnologia.</p>
+    </div>
+    <div class="forwho-grid">
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">💼</span>
+        <div>
+          <h4>Profissionais em busca de recolocação</h4>
+          <p>Que querem usar o Claude para se destacar em processos seletivos e negociar melhor.</p>
+        </div>
+      </div>
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">💰</span>
+        <div>
+          <h4>Quem quer gerar renda extra</h4>
+          <p>Que querem transformar o conhecimento de IA em serviços que o mercado paga.</p>
+        </div>
+      </div>
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">🚀</span>
+        <div>
+          <h4>Empreendedores e autônomos</h4>
+          <p>Que querem trabalhar como uma equipe de um — usando o Claude para multiplicar a produtividade.</p>
+        </div>
+      </div>
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">📚</span>
+        <div>
+          <h4>Estudantes e profissionais em transição</h4>
+          <p>Que querem aprender mais rápido e se posicionar melhor no mercado.</p>
+        </div>
+      </div>
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">🏢</span>
+        <div>
+          <h4>Gestores e executivos</h4>
+          <p>Que querem ganhar tempo eliminando o trabalho repetitivo e aumentando a qualidade das entregas.</p>
+        </div>
+      </div>
+      <div class="forwho-item reveal">
+        <span class="forwho-emoji">🌱</span>
+        <div>
+          <h4>Iniciantes absolutos em IA</h4>
+          <p>Que nunca usaram o Claude mas sabem que precisam começar — e querem fazer isso do jeito certo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="forwho-not reveal">
+      <p><strong>Este guia não é para você</strong> se está buscando fórmula mágica ou resultado sem nenhum esforço. O Claude é uma ferramenta poderosa — mas ferramenta. Quem aplica o que aprende, avança. Quem só lê, fica no mesmo lugar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS REAIS -->
+<section class="section-proof">
+  <div class="container">
+    <div class="proof-header reveal">
+      <div class="gold-line"></div>
+      <h2>Resultados reais de quem<br>aplicou o que este guia ensina</h2>
+      <p>Situações reais documentadas — com o contexto, o prompt usado e o resultado obtido.</p>
+    </div>
+    <div class="cases-grid">
+      <div class="case-card reveal">
+        <div class="case-result">+22% de salário</div>
+        <div class="case-name">
+          <span class="case-avatar">MS</span>
+          Marina S. · São Paulo, SP · Supervisora de vendas
+        </div>
+        <p class="case-desc">Usou o Claude para personalizar currículo e simular entrevistas. Em 11 dias, 3 chamadas e emprego com salário 22% maior.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-result">3x mais clientes</div>
+        <div class="case-name">
+          <span class="case-avatar">RO</span>
+          Rafael O. · Belo Horizonte, MG · Designer freelancer
+        </div>
+        <p class="case-desc">Reduziu propostas de 2h30 para 20 minutos. Passou a aceitar 3x mais clientes sem aumentar a jornada.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-result">R$12.400 economizados</div>
+        <div class="case-name">
+          <span class="case-avatar">SC</span>
+          Sandra C. · Curitiba, PR · Empresária
+        </div>
+        <p class="case-desc">Usou o Claude para analisar e contra-propor uma renegociação de dívida. Economizou R$12.400 em juros.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-result">R$3.200 no 1º mês</div>
+        <div class="case-name">
+          <span class="case-avatar">JF</span>
+          Juliana F. · Rio de Janeiro, RJ · Recém-formada
+        </div>
+        <p class="case-desc">Criou portfólio e prospectou clientes com o Claude. Saiu do zero para R$3.200 como redatora freelance no primeiro mês.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-result">Conversão: 11% → 34%</div>
+        <div class="case-name">
+          <span class="case-avatar">DM</span>
+          Daniela M. · Campinas, SP · Vendedora de software
+        </div>
+        <p class="case-desc">Reestruturou a demo do produto com o Claude. Taxa de conversão triplicou em dois meses.</p>
+      </div>
+      <div class="case-card reveal">
+        <div class="case-result">2.300 seguidores em 60 dias</div>
+        <div class="case-name">
+          <span class="case-avatar">PA</span>
+          Paulo A. · Porto Alegre, RS · Nutricionista
+        </div>
+        <p class="case-desc">1 hora por semana com o Claude para criar conteúdo. De 340 para 2.640 seguidores e 5 novos pacientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="section-offer">
+  <div class="container">
+    <div class="offer-box reveal">
+      <span class="offer-tag">Oferta Completa</span>
+      <h2>Tudo que você recebe hoje</h2>
+
+      <div class="offer-includes">
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Claude: O Guia Definitivo de IA
+          </span>
+          <span class="offer-line-value">R$97</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 1: 25 Prompts para Usar Hoje
+          </span>
+          <span class="offer-line-value">R$27</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 2: As 10 Perguntas Poderosas
+          </span>
+          <span class="offer-line-value">R$17</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 3: Checklist do Usuário Avançado
+          </span>
+          <span class="offer-line-value">R$17</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 4: Aprenda Qualquer Coisa em Metade do Tempo
+          </span>
+          <span class="offer-line-value">R$27</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 5: 15 Casos Práticos Resolvidos
+          </span>
+          <span class="offer-line-value">R$27</span>
+        </div>
+        <div class="offer-line">
+          <span class="offer-line-name">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Bônus 6: Glossário do Universo IA
+          </span>
+          <span class="offer-line-value">R$17</span>
+        </div>
+        <div class="offer-total-line">
+          <span class="offer-total-label">Valor total</span>
+          <span class="offer-total-value">R$229</span>
+        </div>
+      </div>
+
+      <div class="offer-price-box">
+        <div class="offer-price-today">Hoje você paga apenas</div>
+        <div class="offer-price-main"><sup>R$</sup>37</div>
+        <div class="offer-price-note">Pagamento único · Acesso imediato e vitalício</div>
+      </div>
+
+      <div class="urgency-bar reveal">
+        <span class="urgency-dot"></span>
+        <span>Oferta de lançamento encerra em <span id="countdown">23:59:47</span></span>
+      </div>
+
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" style="width:100%;justify-content:center;font-size:1.1rem;" onclick="fbq('track', 'InitiateCheckout')">
+        Acessar o guia completo agora — R$37 →
+      </a>
+      <span class="btn-sub">🔒 PIX ou cartão · Acesso em minutos · Garantia de 7 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="section-garantia">
+  <div class="container">
+    <div class="garantia-box reveal">
+      <div class="garantia-seal">
+        <span class="seal-days">7</span>
+        <span class="seal-label">dias de<br>garantia</span>
+      </div>
+      <div class="garantia-text">
+        <h3>Satisfação garantida ou seu dinheiro de volta</h3>
+        <p>Se em até 7 dias você não estiver satisfeito com o conteúdo, devolvemos 100% do valor pago. Sem perguntas, sem burocracia. O risco é zero — a decisão é sua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-faq">
+  <div class="container">
+    <div class="faq-header reveal">
+      <div class="gold-line"></div>
+      <h2>Perguntas frequentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Preciso saber programar ou ter conhecimento técnico?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Não. O guia foi feito exatamente para quem nunca usou IA antes. A linguagem é simples, os exemplos são práticos e o passo a passo é visual. Você não precisa de nenhum conhecimento técnico para começar.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Já existe conteúdo gratuito sobre Claude na internet. Por que pagar?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Existe conteúdo espalhado, incompleto e quase tudo em inglês. Este guia reúne tudo em português, em ordem lógica, do zero ao avançado, com exemplos práticos que você pode aplicar imediatamente. A diferença está na profundidade e na organização.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          O conteúdo vai ficar desatualizado rápido?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>O guia foi estruturado para ser atemporal. Ensinamos como pensar e usar a IA — não apenas onde clicar. Preços e especificações técnicas sempre remetem ao site oficial do Claude para consulta atualizada.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          O Claude é gratuito. Por que precisaria do guia?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>O Claude tem versão gratuita, sim. A maioria das pessoas usa 5% do potencial da ferramenta. O guia ensina a usar os outros 95% — e a maioria dos exemplos funciona perfeitamente na versão gratuita.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Como vou receber o material?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Imediatamente após a compra, você recebe o acesso por e-mail e na área do aluno da plataforma Kiwify. O material fica disponível para download e acesso a qualquer momento.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quanto tempo leva para ler?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Você consegue ler o guia completo em uma tarde. E já começa a aplicar no mesmo dia — os exemplos práticos foram feitos para uso imediato.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Funciona para qualquer área profissional?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Sim. O guia tem capítulos específicos para carreira, negócios, renda extra, produtividade e estudos. Os exemplos cobrem desde profissionais de escritório até empreendedores e autônomos.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          E se eu não gostar?
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Garantia de 7 dias. Se por qualquer motivo você não estiver satisfeito, é só solicitar o reembolso. 100% do valor de volta, sem perguntas e sem burocracia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section-final-cta">
+  <div class="container">
+    <div class="final-cta-content reveal">
+      <div class="gold-line"></div>
+      <h2>Você já está atrasado.<br><span class="gold-gradient">Mas ainda dá tempo.</span></h2>
+      <p>Cada dia sem dominar o Claude é um dia que alguém ao seu redor está usando essa vantagem. Cursos ensinam o mesmo por R$297 a R$2.000. Você tem a chance de começar agora por R$37.</p>
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" style="font-size:1.15rem;padding:1.2rem 3rem;" onclick="fbq('track', 'InitiateCheckout')">
+        Acessar o guia completo agora — R$37 →
+      </a>
+      <span class="btn-sub" style="display:block;margin-top:0.8rem;">🔒 PIX ou cartão · Acesso imediato · Garantia incondicional de 7 dias</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-last-cta">
+    <p>Ainda em dúvida? A garantia é de 7 dias. Se não gostar, devolvemos 100% do valor. O risco é zero.</p>
+    <a href="https://pay.kiwify.com.br/c46OUH1" class="footer-cta-link" onclick="fbq('track', 'InitiateCheckout')">Acessar o guia por R$37 →</a>
+  </div>
+  <div class="footer-brand">
+    <span class="footer-logo-text">KORTEX <em>evolution</em></span>
+  </div>
+  <div class="footer-social">
+    <a href="https://instagram.com/kortex.evolution" target="_blank" rel="noopener" class="footer-ig-link">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @kortex.evolution
+    </a>
+    <span class="footer-social-sep">·</span>
+    <a href="https://airgo.bio/kortex" target="_blank" rel="noopener" class="footer-ig-link">
+      airgo.bio/kortex
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="/privacidade.html">Política de Privacidade</a>
+    <a href="/termos.html">Termos de Uso</a>
+  </div>
+  <p>© 2026 Kortex Evolution. Todos os direitos reservados.</p>
+  <p style="margin-top:0.4rem;">Produto digital desenvolvido e comercializado pela Kortex Evolution</p>
+</footer>
+
+<script>
+// FAQ Toggle
+function toggleFaq(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// Scroll Reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Countdown Timer — reseta a cada 24h por sessão
+function startCountdown() {
+  const key = 'cd_end';
+  let end = localStorage.getItem(key);
+  if (!end || Date.now() > parseInt(end)) {
+    end = Date.now() + 24 * 60 * 60 * 1000;
+    localStorage.setItem(key, end);
+  }
+  function update() {
+    const diff = parseInt(end) - Date.now();
+    if (diff <= 0) { localStorage.removeItem(key); startCountdown(); return; }
+    const h = String(Math.floor(diff / 3600000)).padStart(2,'0');
+    const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
+    const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
+    const el = document.getElementById('countdown');
+    if (el) el.textContent = `${h}:${m}:${s}`;
+  }
+  update();
+  setInterval(update, 1000);
+}
+startCountdown();
+document.querySelectorAll('a[href*="kiwify"]').forEach(link => {
+  link.addEventListener('click', function() {
+    fbq('track', 'InitiateCheckout', {
+      value: 37.00,
+      currency: 'BRL'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
