@@ -7,27 +7,11 @@
 <title>Claude: O Guia Definitivo de IA | Domina Claude</title>
 <meta name="description" content="A IA que profissionais usam para trabalhar menos e ganhar mais. Guia completo do Claude em português — do zero ao avançado. Comece hoje por R$37.">
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1475704073818729');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+<!-- Fontes com display=swap para não bloquear renderização -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
 <style>
 :root {
@@ -1478,6 +1462,117 @@ footer p {
   font-weight: 700;
   color: var(--orange);
 }
+
+/* ─── HERO COUNTDOWN ─── */
+.hero-countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232,114,42,0.1);
+  border: 1px solid rgba(232,114,42,0.3);
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0.8rem;
+  animation: fadeUp 0.9s ease 0.45s both;
+}
+
+.hero-countdown strong {
+  color: var(--orange);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.05em;
+}
+
+/* ─── SOCIAL PROOF ─── */
+.hero-social-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.5rem;
+  animation: fadeUp 0.9s ease 0.5s both;
+}
+
+.hero-social-proof strong { color: var(--white-80); }
+
+.social-proof-dot {
+  width: 7px; height: 7px;
+  background: #4CAF7D;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+/* ─── MID CTA BAR ─── */
+.mid-cta-bar {
+  background: rgba(201,168,76,0.06);
+  border-top: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  padding: 1rem 0;
+}
+
+.mid-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0 1.5rem;
+}
+
+.mid-cta-text {
+  font-size: 0.9rem;
+  color: var(--white-60);
+}
+
+.mid-cta-text strong { color: var(--gold); }
+
+.mid-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--orange), var(--orange-hover));
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.55rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px rgba(232,114,42,0.3);
+}
+
+.mid-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(232,114,42,0.5);
+}
+
+/* ─── DOR CTA ─── */
+.dor-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: rgba(201,168,76,0.04);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 10px;
+}
+
+.dor-cta p {
+  font-size: 1rem;
+  color: var(--white-80);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -1544,7 +1639,7 @@ footer p {
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
   <a href="https://pay.kiwify.com.br/c46OUH1" onclick="fbq('track', 'InitiateCheckout')">
-    Quero o Guia por R$37 →
+    🔥 Garantir agora por R$37 — Oferta de lançamento
   </a>
 </div>
 
@@ -1599,11 +1694,21 @@ footer p {
         Não sabe nada de tecnologia? Perfeito. Se você usa WhatsApp, você consegue usar o Claude.
       </div>
 
+      <div class="hero-countdown reveal">
+        <span class="hero-countdown-icon">⏱</span>
+        <span>Oferta de lançamento encerra em <strong id="heroCountdown">23:59:47</strong></span>
+      </div>
+
+      <div class="hero-social-proof reveal">
+        <span class="social-proof-dot"></span>
+        <span>Mais de <strong>59 pessoas</strong> acessaram o checkout hoje</span>
+      </div>
+
       <div class="hero-btn-wrap">
         <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" onclick="fbq('track', 'InitiateCheckout')">
-          Acessar o guia completo agora — R$37 →
+          🔥 Garantir meu acesso por R$37 agora →
         </a>
-        <span class="btn-sub">🔒 Pagamento seguro · PIX ou cartão · Acesso em minutos · Garantia de 7 dias</span>
+        <span class="btn-sub">🔒 PIX ou cartão · Acesso em minutos · Garantia incondicional de 7 dias</span>
       </div>
 
       <div class="hero-trust">
@@ -1654,6 +1759,18 @@ footer p {
   </div>
 </div>
 
+<!-- CTA PÓS PROOF BAR -->
+<div class="mid-cta-bar">
+  <div class="container">
+    <div class="mid-cta-inner">
+      <span class="mid-cta-text">Guia completo + 6 bônus por apenas <strong>R$37</strong> — acesso imediato</span>
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="mid-cta-btn" onclick="fbq('track', 'InitiateCheckout')">
+        Quero agora →
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- DOR -->
 <section class="section-dor">
   <div class="container">
@@ -1687,6 +1804,12 @@ footer p {
         <span class="dor-icon">🏆</span>
         <p>"Sei que quem domina IA hoje tem uma vantagem enorme — só não sei como chegar lá."</p>
       </div>
+    </div>
+    <div class="dor-cta reveal">
+      <p>Se você se identificou com alguma dessas situações — este guia foi feito exatamente para você.</p>
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" onclick="fbq('track', 'InitiateCheckout')">
+        Quero resolver isso agora — R$37 →
+      </a>
     </div>
   </div>
 </section>
@@ -1827,6 +1950,12 @@ footer p {
         <p>Tradução direta e prática de todos os termos técnicos que aparecem quando você começa a usar IA de verdade.</p>
         <span class="bonus-value">Valor: R$17</span>
       </div>
+    </div>
+    <div class="btn-wrapper reveal" style="margin-top:2.5rem;">
+      <a href="https://pay.kiwify.com.br/c46OUH1" class="btn-primary" onclick="fbq('track', 'InitiateCheckout')">
+        Quero o guia + os 6 bônus por R$37 →
+      </a>
+      <span class="btn-sub">🔒 Garantia de 7 dias · Acesso imediato · PIX ou cartão</span>
     </div>
   </div>
 </section>
@@ -2195,7 +2324,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Countdown Timer — reseta a cada 24h por sessão
+// Countdown Timer — sincronizado hero e oferta
 function startCountdown() {
   const key = 'cd_end';
   let end = localStorage.getItem(key);
@@ -2209,8 +2338,11 @@ function startCountdown() {
     const h = String(Math.floor(diff / 3600000)).padStart(2,'0');
     const m = String(Math.floor((diff % 3600000) / 60000)).padStart(2,'0');
     const s = String(Math.floor((diff % 60000) / 1000)).padStart(2,'0');
-    const el = document.getElementById('countdown');
-    if (el) el.textContent = `${h}:${m}:${s}`;
+    const time = `${h}:${m}:${s}`;
+    const el1 = document.getElementById('countdown');
+    const el2 = document.getElementById('heroCountdown');
+    if (el1) el1.textContent = time;
+    if (el2) el2.textContent = time;
   }
   update();
   setInterval(update, 1000);
@@ -2218,13 +2350,35 @@ function startCountdown() {
 startCountdown();
 document.querySelectorAll('a[href*="kiwify"]').forEach(link => {
   link.addEventListener('click', function() {
-    fbq('track', 'InitiateCheckout', {
-      value: 37.00,
-      currency: 'BRL'
-    });
+    if(typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout', {
+        value: 37.00,
+        currency: 'BRL'
+      });
+    }
   });
 });
 </script>
+
+<!-- Meta Pixel Code — carregado após conteúdo para não bloquear renderização -->
+<script>
+window.addEventListener('load', function() {
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1475704073818729');
+  fbq('track', 'PageView');
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
 </body>
 </html>
