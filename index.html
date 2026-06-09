@@ -2348,12 +2348,33 @@ function startCountdown() {
   setInterval(update, 1000);
 }
 startCountdown();
+
+// Escassez social — número automático baseado na data de lançamento
+function updateSocialProof() {
+  const launch = new Date('2026-06-04T00:00:00');
+  const now = new Date();
+  const days = Math.floor((now - launch) / (1000 * 60 * 60 * 24));
+  const base = 59;
+  // Semente diária para variação consistente — mesma pessoa vê mesmo número no mesmo dia
+  const seed = now.getFullYear() * 10000 + (now.getMonth()+1) * 100 + now.getDate();
+  const pseudo = ((seed * 9301 + 49297) % 233280) / 233280;
+  const dailyAdd = Math.floor(pseudo * 6) + 3; // entre 3 e 8 por dia
+  const total = base + (days * dailyAdd);
+  const el = document.querySelector('.hero-social-proof strong');
+  if (el) el.textContent = total + ' pessoas';
+}
+updateSocialProof();
+
+// Eventos do pixel — InitiateCheckout com moeda e parâmetros completos
 document.querySelectorAll('a[href*="kiwify"]').forEach(link => {
   link.addEventListener('click', function() {
     if(typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout', {
         value: 37.00,
-        currency: 'BRL'
+        currency: 'BRL',
+        content_type: 'product',
+        content_ids: ['ebook-claude-01'],
+        num_items: 1
       });
     }
   });
