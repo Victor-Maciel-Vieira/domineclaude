@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Precificação para Serviços com IA — Quanto Cobrar como Freelancer</title>
+<meta name="description" content="Calculadora gratuita de precificação para freelancers que usam IA. Descubra o preço mínimo, justo e premium dos seus serviços com base no mercado brasileiro.">
+<meta name="keywords" content="calculadora precificação freelancer, quanto cobrar serviços IA, precificação Claude, freelancer inteligência artificial, quanto cobrar freelancer Brasil">
+<meta property="og:title" content="Calculadora de Precificação para Serviços com IA">
+<meta property="og:description" content="Descubra quanto cobrar pelos seus serviços usando IA. Gratuito, sem cadastro.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto cobrar por serviços de IA como freelancer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O valor varia conforme o tipo de serviço, nível de experiência e perfil do cliente. Copywriting com IA: R$150 a R$600 por texto. Consultoria de IA: R$800 a R$4.000 por projeto. Gestão de redes sociais com IA: R$400 a R$2.500/mês. Use nossa calculadora para um valor personalizado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Devo cobrar por hora ou por projeto ao usar IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cobrar por projeto é mais vantajoso quando se usa IA, pois a ferramenta reduz o tempo de execução mas não o valor entregue. Cobrar por hora penaliza quem é mais eficiente. O ideal é precificar pelo resultado e pelo valor gerado para o cliente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso cobrar mais usando IA nos serviços?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A IA aumenta a qualidade e a velocidade das entregas. Um freelancer que usa Claude entrega em 2 horas o que levaria 8 horas manualmente, com qualidade superior. Isso justifica preços iguais ou maiores — e permite atender mais clientes simultaneamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual é o preço mínimo para cobrar como freelancer de IA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O preço mínimo deve cobrir seus custos (tempo, ferramentas, impostos) com margem de segurança. Para a maioria dos serviços com IA no Brasil, o mínimo viável parte de R$150 por entrega para serviços simples e R$500+ para projetos estratégicos."
+      }
+    }
+  ]
+}
+</script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculadora de Precificação para Serviços com IA",
+  "url": "https://www.domineclaude.com.br/ferramentas/calculadora",
+  "description": "Calculadora gratuita de precificação para freelancers que usam IA. Descubra o preço mínimo, justo e premium dos seus serviços.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "All",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"},
+  "publisher": {"@type": "Organization", "name": "Kortex Evolution", "url": "https://www.domineclaude.com.br"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},
+    {"@type":"ListItem","position":2,"name":"Ferramentas","item":"https://www.domineclaude.com.br/ferramentas"},
+    {"@type":"ListItem","position":3,"name":"Calculadora de Precificação","item":"https://www.domineclaude.com.br/ferramentas/calculadora"}
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-dark: #9A7A32;
+  --black: #060606;
+  --black-2: #0E0E0E;
+  --black-3: #141414;
+  --black-4: #1C1C1C;
+  --black-5: #242424;
+  --white: #FFFFFF;
+  --white-80: rgba(255,255,255,0.8);
+  --white-60: rgba(255,255,255,0.6);
+  --white-40: rgba(255,255,255,0.4);
+  --green: #4CAF7D;
+  --orange: #E8722A;
+  --red: #E05252;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* HEADER FIXO */
+.site-header { position:fixed; top:0; left:0; right:0; z-index:100; padding:0 1.5rem; height:56px; display:flex; align-items:center; justify-content:space-between; background:rgba(6,6,6,0.92); backdrop-filter:blur(12px); border-bottom:1px solid rgba(201,168,76,0.12); }
+.brand { font-family:var(--font-display); font-size:0.95rem; font-weight:800; color:var(--white); letter-spacing:-0.01em; text-decoration:none; }
+.brand span { color:var(--gold); }
+.header-nav { display:flex; align-items:center; gap:1.4rem; }
+.header-nav a { color:rgba(255,255,255,0.5); font-size:0.8rem; text-decoration:none; font-weight:500; transition:color 0.2s; }
+.header-nav a:hover { color:var(--white); }
+.header-nav .nav-cta { background:linear-gradient(135deg,var(--gold-dark),var(--gold)); color:var(--black) !important; font-weight:700 !important; padding:0.4rem 1rem; border-radius:4px; }
+.hamburger { display:none; background:none; border:none; cursor:pointer; padding:0.3rem; flex-direction:column; gap:5px; }
+.hamburger span { display:block; width:22px; height:2px; background:rgba(255,255,255,0.7); border-radius:2px; }
+.mobile-menu { display:none; position:fixed; top:56px; left:0; right:0; background:rgba(14,14,14,0.98); backdrop-filter:blur(12px); border-bottom:1px solid rgba(201,168,76,0.12); padding:1rem 1.5rem; flex-direction:column; gap:0.7rem; z-index:99; }
+.mobile-menu a { font-size:0.88rem; font-weight:500; color:rgba(255,255,255,0.7); text-decoration:none; padding:0.4rem 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.mobile-menu.open { display:flex; }
+.page-push { height:56px; }
+@media(max-width:640px){ .header-nav a:not(.nav-cta){display:none} .hamburger{display:flex} }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 20%, rgba(201,168,76,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201,168,76,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,0.025) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* LAYOUT */
+.wrap { position: relative; z-index: 10; max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* HEADER */
+.site-header {
+  position: relative; z-index: 10;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-family: var(--font-display); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; text-decoration: none; }
+.brand em { font-style: normal; font-weight: 400; color: var(--white-40); font-size: 0.75rem; margin-left: 0.3rem; letter-spacing: 0.25em; }
+.header-nav { display: flex; align-items: center; gap: 1.5rem; }
+.header-nav a { color: var(--white-60); font-size: 0.82rem; text-decoration: none; transition: color 0.2s; }
+.header-nav a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  padding: 3.5rem 0 2.5rem;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 0.3rem 0.9rem; border-radius: 100px;
+  margin-bottom: 1.2rem;
+}
+.hero-badge::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
+.hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.1; margin-bottom: 0.8rem; }
+.hero h1 span { background: linear-gradient(135deg, var(--gold-dark), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub { font-size: 0.95rem; color: var(--white-60); max-width: 520px; margin: 0 auto 1.5rem; line-height: 1.6; }
+.hero-stats { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+.hero-stat { text-align: center; }
+.hero-stat .num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--gold); display: block; line-height: 1; }
+.hero-stat .lbl { font-size: 0.72rem; color: var(--white-40); letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-stat-div { width: 1px; height: 36px; background: rgba(201,168,76,0.2); }
+
+/* CARD */
+.card {
+  background: var(--black-3); border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 12px; padding: 1.8rem; margin-bottom: 1rem;
+  position: relative; overflow: hidden; transition: border-color 0.3s;
+}
+.card:hover { border-color: rgba(201,168,76,0.22); }
+.card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent); }
+.card-title { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.5rem; }
+.card-title::before { content: ''; width: 20px; height: 1px; background: var(--gold); opacity: 0.5; }
+
+/* FORM */
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.field { display: flex; flex-direction: column; gap: 0.5rem; }
+.field label { font-size: 0.8rem; font-weight: 500; color: var(--white-60); letter-spacing: 0.03em; }
+.field select, .field input[type="number"] {
+  background: var(--black-5); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  color: var(--white); font-family: var(--font-body); font-size: 0.9rem; padding: 0.75rem 1rem;
+  outline: none; transition: border-color 0.2s, box-shadow 0.2s; width: 100%;
+}
+.field select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(201,168,76,0.7)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; padding-right: 2.2rem; cursor: pointer; }
+.field select:focus, .field input[type="number"]:focus { border-color: rgba(201,168,76,0.5); box-shadow: 0 0 0 3px rgba(201,168,76,0.08); }
+.field select option { background: #1C1C1C; color: #fff; }
+.field input[type="number"] { -moz-appearance: textfield; }
+.field input[type="number"]::-webkit-inner-spin-button, .field input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+.field-hint { font-size: 0.72rem; color: var(--white-40); }
+.field-error { font-size: 0.72rem; color: var(--red); display: none; }
+.field.error input, .field.error select { border-color: var(--red); }
+.field.error .field-error { display: block; }
+
+/* TOGGLES */
+.toggle-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.toggle-btn {
+  background: var(--black-5); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px;
+  color: var(--white-60); font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
+  padding: 0.55rem 1rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;
+}
+.toggle-btn:hover { border-color: rgba(201,168,76,0.3); color: var(--white-80); }
+.toggle-btn.active { background: rgba(201,168,76,0.1); border-color: var(--gold); color: var(--gold); }
+
+/* TABELA DE MERCADO */
+.market-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+.market-table th { background: rgba(201,168,76,0.08); color: var(--gold); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.68rem; padding: 0.6rem 0.8rem; text-align: left; }
+.market-table td { padding: 0.55rem 0.8rem; color: var(--white-60); border-bottom: 1px solid rgba(255,255,255,0.04); }
+.market-table tr:hover td { background: rgba(201,168,76,0.03); color: var(--white-80); }
+.market-table tr:last-child td { border-bottom: none; }
+
+/* BOTÃO */
+.btn-calc {
+  width: 100%; background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+  border: none; border-radius: 10px; color: var(--black); font-family: var(--font-display);
+  font-size: 1rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 1.1rem; cursor: pointer; transition: all 0.3s; position: relative; overflow: hidden;
+  margin-top: 0.5rem;
+}
+.btn-calc::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+.btn-calc:hover::before { left: 100%; }
+.btn-calc:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.3); }
+
+/* RESULTADO */
+.resultado { display: none; animation: fadeUp 0.5s ease both; }
+.resultado.show { display: block; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)} }
+
+/* PRICE CARDS */
+.price-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-bottom: 1.2rem; }
+@media(max-width:580px){ .price-grid{grid-template-columns:1fr} }
+.price-card { background: var(--black-4); border-radius: 10px; padding: 1.4rem; text-align: center; border: 1px solid transparent; transition: all 0.3s; position: relative; }
+.price-card.minimo { border-color: rgba(255,255,255,0.08); }
+.price-card.justo { border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.04); }
+.price-card.premium { border-color: rgba(76,175,125,0.3); background: rgba(76,175,125,0.04); }
+.price-card.justo::before { content: 'RECOMENDADO'; position: absolute; top: 0; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--black); font-family: var(--font-display); font-size: 0.55rem; font-weight: 800; letter-spacing: 0.15em; padding: 0.2rem 0.7rem; border-radius: 0 0 6px 6px; }
+.price-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.6rem; margin-top: 0.4rem; }
+.price-card.minimo .price-card-label { color: var(--white-40); }
+.price-card.justo .price-card-label { color: var(--gold); }
+.price-card.premium .price-card-label { color: var(--green); }
+.price-card-value { font-family: var(--font-display); font-size: 2rem; font-weight: 800; line-height: 1; margin-bottom: 0.4rem; }
+.price-card.minimo .price-card-value { color: var(--white-60); }
+.price-card.justo .price-card-value { color: var(--gold); }
+.price-card.premium .price-card-value { color: var(--green); }
+.price-card-value sup { font-size: 0.9rem; vertical-align: super; font-weight: 600; }
+.price-card-desc { font-size: 0.75rem; color: var(--white-40); line-height: 1.4; }
+
+/* COMPARADOR */
+.comparador-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; margin-bottom: 1.2rem; }
+@media(max-width:580px){ .comparador-grid{grid-template-columns:1fr} }
+.comp-card { background: var(--black-4); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1rem; text-align: center; }
+.comp-label { font-size: 0.7rem; color: var(--white-40); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.comp-val { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); }
+.comp-sub { font-size: 0.7rem; color: var(--white-40); margin-top: 0.2rem; }
+
+/* SIMULADOR CRESCIMENTO */
+.crescimento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 0.8rem; }
+.cresc-card { background: var(--black-5); border: 1px solid rgba(201,168,76,0.1); border-radius: 8px; padding: 1rem; text-align: center; }
+.cresc-periodo { font-size: 0.68rem; color: var(--white-40); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.cresc-val { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--gold); }
+.cresc-clientes { font-size: 0.7rem; color: var(--white-40); margin-top: 0.2rem; }
+
+/* MENSAL */
+.mensal-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0.8rem; margin-bottom: 1.2rem; }
+@media(max-width:580px){ .mensal-grid{grid-template-columns:1fr} }
+.mensal-card { background: var(--black-4); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1rem; text-align: center; }
+.mensal-clientes { font-size: 0.7rem; color: var(--white-40); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.3rem; }
+.mensal-valor { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); }
+.mensal-label { font-size: 0.7rem; color: var(--white-40); margin-top: 0.2rem; }
+
+/* INSIGHTS */
+.insights { background: var(--black-4); border: 1px solid rgba(201,168,76,0.1); border-radius: 10px; padding: 1.4rem; margin-bottom: 1rem; }
+.insight-item { display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 0.8rem; padding-bottom: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.insight-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.insight-icon { width: 28px; height: 28px; background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0; }
+.insight-text { font-size: 0.85rem; color: var(--white-60); line-height: 1.5; }
+.insight-text strong { color: var(--white-80); font-weight: 600; }
+
+/* ERROS */
+.erros { background: rgba(232,114,42,0.06); border: 1px solid rgba(232,114,42,0.2); border-radius: 10px; padding: 1.4rem; margin-bottom: 1rem; }
+.erros-title { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 1rem; }
+.erro-item { display: flex; align-items: flex-start; gap: 0.7rem; margin-bottom: 0.7rem; }
+.erro-item:last-child { margin-bottom: 0; }
+.erro-num { width: 20px; height: 20px; background: rgba(232,114,42,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; color: var(--orange); flex-shrink: 0; margin-top: 0.1rem; }
+.erro-text { font-size: 0.83rem; color: var(--white-60); line-height: 1.5; }
+.erro-text strong { color: var(--white-80); }
+
+/* HISTÓRICO */
+.historico-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.historico-item { background: var(--black-5); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.8rem 1rem; display: flex; align-items: center; justify-content: space-between; cursor: pointer; transition: border-color 0.2s; }
+.historico-item:hover { border-color: rgba(201,168,76,0.25); }
+.historico-info { display: flex; flex-direction: column; gap: 0.2rem; }
+.historico-servico { font-size: 0.85rem; font-weight: 500; color: var(--white-80); }
+.historico-data { font-size: 0.72rem; color: var(--white-40); }
+.historico-preco { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--gold); }
+.historico-vazio { text-align: center; padding: 1.5rem; color: var(--white-40); font-size: 0.85rem; }
+
+/* ALERTA REVISAO */
+.alerta-revisao { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; padding: 0.8rem 1rem; display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.alerta-icon { font-size: 1.2rem; flex-shrink: 0; }
+.alerta-text { font-size: 0.82rem; color: var(--white-80); line-height: 1.4; }
+.alerta-text strong { color: var(--gold); }
+
+/* BOTÕES AÇÃO */
+.btn-acao-group { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1rem; }
+.btn-copiar, .btn-recalcular, .btn-salvar {
+  flex: 1; min-width: 120px; padding: 0.7rem 1rem; border-radius: 8px; font-family: var(--font-body);
+  font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: all 0.2s; border: 1px solid;
+  text-align: center;
+}
+.btn-copiar { background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.3); color: var(--gold); }
+.btn-copiar:hover { background: rgba(201,168,76,0.2); border-color: var(--gold); }
+.btn-recalcular { background: transparent; border-color: rgba(255,255,255,0.1); color: var(--white-60); }
+.btn-recalcular:hover { border-color: rgba(255,255,255,0.25); color: var(--white-80); }
+.btn-salvar { background: rgba(76,175,125,0.1); border-color: rgba(76,175,125,0.3); color: var(--green); }
+.btn-salvar:hover { background: rgba(76,175,125,0.2); border-color: var(--green); }
+
+/* CTA */
+.cta-box { background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.04)); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; padding: 2rem; text-align: center; margin-bottom: 1rem; }
+.cta-box h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+.cta-box p { font-size: 0.88rem; color: var(--white-60); max-width: 440px; margin: 0 auto 1.2rem; line-height: 1.6; }
+.btn-cta { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #E8722A, #F5832E); color: #fff; font-family: var(--font-display); font-size: 0.9rem; font-weight: 800; padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: all 0.3s; box-shadow: 0 4px 20px rgba(232,114,42,0.3); }
+.btn-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(232,114,42,0.5); }
+
+/* ARTIGOS */
+.artigos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1rem; }
+.artigo-card { background: var(--black-4); border: 1px solid rgba(201,168,76,0.1); border-radius: 10px; padding: 1.4rem; transition: all 0.3s; text-decoration: none; display: block; }
+.artigo-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-3px); }
+.artigo-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; display: block; }
+.artigo-titulo { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--white); line-height: 1.3; margin-bottom: 0.5rem; }
+.artigo-desc { font-size: 0.8rem; color: var(--white-60); line-height: 1.5; }
+.artigo-leia { font-size: 0.78rem; color: var(--gold); margin-top: 0.8rem; display: inline-flex; align-items: center; gap: 0.3rem; }
+
+/* SEÇÃO SEO */
+.seo-section { padding: 3rem 0; }
+.seo-section h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; }
+.seo-section h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--gold); margin: 1.5rem 0 0.6rem; }
+.seo-section p { font-size: 0.9rem; color: var(--white-60); line-height: 1.7; margin-bottom: 0.8rem; }
+.seo-section ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+.seo-section li { font-size: 0.88rem; color: var(--white-60); line-height: 1.6; margin-bottom: 0.4rem; }
+.seo-section strong { color: var(--white-80); }
+
+/* FAQ */
+.faq-item { background: var(--black-4); border: 1px solid rgba(201,168,76,0.1); border-radius: 8px; margin-bottom: 0.6rem; overflow: hidden; }
+.faq-q { width: 100%; background: none; border: none; color: var(--white); font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-align: left; padding: 1rem 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: color 0.2s; }
+.faq-q:hover { color: var(--gold); }
+.faq-q svg { flex-shrink: 0; transition: transform 0.3s; color: var(--gold); }
+.faq-item.open .faq-q svg { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s; padding: 0 1.2rem; }
+.faq-item.open .faq-a { max-height: 300px; padding: 0 1.2rem 1rem; }
+.faq-a p { font-size: 0.88rem; color: var(--white-60); line-height: 1.65; }
+
+/* DIVIDER */
+.divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent); margin: 1.2rem 0; }
+.section-title { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.section-title::before { content: ''; width: 20px; height: 1px; background: var(--gold); opacity: 0.5; }
+
+/* TOAST */
+.toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--black-3); border: 1px solid rgba(201,168,76,0.3); color: var(--white); padding: 0.8rem 1.5rem; border-radius: 8px; font-size: 0.85rem; z-index: 1000; transition: transform 0.3s ease; }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* FOOTER */
+.footer { text-align: center; padding: 2rem 1.5rem; border-top: 1px solid rgba(201,168,76,0.08); margin-top: 2rem; }
+.footer-brand { font-family: var(--font-display); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; color: rgba(201,168,76,0.5); text-transform: uppercase; margin-bottom: 0.4rem; }
+.footer-note { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+
+@media(max-width:640px) {
+  .hero h1 { font-size: 1.8rem; }
+  .card { padding: 1.2rem; }
+  .hero-stats { gap: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="toast" id="toast"></div>
+
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="brand">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas/calculadora">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas/calculadora">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-badge">Ferramenta gratuita</div>
+    <h1>Calculadora de <span>Precificação</span><br>para Serviços com IA</h1>
+    <p class="hero-sub">Descubra quanto cobrar pelos seus serviços usando o Claude. Preço mínimo, justo e premium — calculados para o seu contexto real.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="num">16</span><span class="lbl">Tipos de serviço</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="num">5</span><span class="lbl">Variáveis de cálculo</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="num">3</span><span class="lbl">Cenários de preço</span></div>
+    </div>
+  </div>
+
+  <!-- ALERTA REVISÃO -->
+  <div class="alerta-revisao" id="alertaRevisao" style="display:none">
+    <div class="alerta-icon">⏰</div>
+    <div class="alerta-text"><strong>Hora de revisar seu preço.</strong> Você calculou pela última vez há mais de 30 dias. O mercado muda — seu preço também deve mudar.</div>
+  </div>
+
+  <!-- FORMULÁRIO -->
+  <div id="formulario">
+
+    <!-- TABELA DE MERCADO -->
+    <div class="card">
+      <div class="card-title">Referência de mercado</div>
+      <p style="font-size:0.82rem;color:var(--white-40);margin-bottom:1rem;">Valores praticados no mercado brasileiro para serviços com IA. Use como âncora antes de calcular.</p>
+      <table class="market-table">
+        <thead><tr><th>Serviço</th><th>Faixa de mercado</th><th>Frequência</th></tr></thead>
+        <tbody>
+          <tr><td>Copywriting e redação</td><td>R$150 – R$600</td><td>Por texto</td></tr>
+          <tr><td>Gestão de redes sociais</td><td>R$400 – R$2.500</td><td>Por mês</td></tr>
+          <tr><td>Consultoria de IA</td><td>R$800 – R$4.000</td><td>Por projeto</td></tr>
+          <tr><td>Roteiros (YouTube/Podcast)</td><td>R$150 – R$900</td><td>Por roteiro</td></tr>
+          <tr><td>Assessoria de currículo</td><td>R$100 – R$800</td><td>Por pacote</td></tr>
+          <tr><td>Criação de e-books</td><td>R$500 – R$3.000</td><td>Por e-book</td></tr>
+          <tr><td>Apresentações executivas</td><td>R$400 – R$2.500</td><td>Por apresentação</td></tr>
+          <tr><td>Ghostwriting executivo</td><td>R$600 – R$30.000</td><td>Por projeto</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TIPO DE SERVIÇO -->
+    <div class="card">
+      <div class="card-title">Seu serviço</div>
+      <div class="form-grid">
+        <div class="field" id="field-tipoServico">
+          <label>Tipo de serviço</label>
+          <select id="tipoServico">
+            <option value="">Selecione o serviço</option>
+            <option value="copywriting">Copywriting e redação</option>
+            <option value="redesociais">Gestão de redes sociais</option>
+            <option value="propostas">Propostas comerciais</option>
+            <option value="consultoria">Consultoria de IA</option>
+            <option value="revisao">Revisão acadêmica</option>
+            <option value="roteiros">Roteiros YouTube/Podcast</option>
+            <option value="curriculo">Assessoria de currículo</option>
+            <option value="ebooks">Criação de e-books</option>
+            <option value="scripts">Scripts de vendas</option>
+            <option value="apresentacoes">Apresentações executivas</option>
+            <option value="pesquisa">Pesquisa e síntese</option>
+            <option value="treinamento">Treinamento corporativo</option>
+            <option value="ghostwriting">Ghostwriting executivo</option>
+            <option value="newsletter">Newsletter paga</option>
+            <option value="conteudo">Conteúdo para blogs</option>
+            <option value="outro">Outro serviço com IA</option>
+          </select>
+          <span class="field-error">Selecione um tipo de serviço</span>
+        </div>
+        <div class="field" id="field-custoHora">
+          <label>Seu custo por hora (R$)</label>
+          <input type="number" id="custoHora" value="30" min="10" max="500" placeholder="Ex: 30">
+          <span class="field-hint">Quanto você precisa ganhar por hora para cobrir seus custos e ter lucro?</span>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="form-grid">
+        <div class="field">
+          <label>Horas por entrega</label>
+          <input type="number" id="horas" value="2" min="0.5" max="100" step="0.5" placeholder="Ex: 2">
+        </div>
+        <div class="field">
+          <label>Entregas por mês</label>
+          <input type="number" id="entregas" value="8" min="1" max="100" placeholder="Ex: 8">
+        </div>
+        <div class="field">
+          <label>Meta de faturamento mensal (R$)</label>
+          <input type="number" id="metaMensal" value="5000" min="500" max="100000" step="500" placeholder="Ex: 5000">
+        </div>
+      </div>
+    </div>
+
+    <!-- PERFIL -->
+    <div class="card">
+      <div class="card-title">Seu perfil e contexto</div>
+      <div class="form-grid">
+        <div class="field">
+          <label>Seu nível de experiência</label>
+          <div class="toggle-group" id="nivelGroup">
+            <button class="toggle-btn active" data-value="iniciante" onclick="selectToggle('nivelGroup',this)">Iniciante</button>
+            <button class="toggle-btn" data-value="intermediario" onclick="selectToggle('nivelGroup',this)">Intermediário</button>
+            <button class="toggle-btn" data-value="avancado" onclick="selectToggle('nivelGroup',this)">Avançado</button>
+            <button class="toggle-btn" data-value="especialista" onclick="selectToggle('nivelGroup',this)">Especialista</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Perfil do cliente</label>
+          <div class="toggle-group" id="clienteGroup">
+            <button class="toggle-btn active" data-value="pf" onclick="selectToggle('clienteGroup',this)">Pessoa física</button>
+            <button class="toggle-btn" data-value="mei" onclick="selectToggle('clienteGroup',this)">MEI</button>
+            <button class="toggle-btn" data-value="pme" onclick="selectToggle('clienteGroup',this)">Pequena empresa</button>
+            <button class="toggle-btn" data-value="media" onclick="selectToggle('clienteGroup',this)">Média empresa</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Complexidade do trabalho</label>
+          <div class="toggle-group" id="complexGroup">
+            <button class="toggle-btn active" data-value="simples" onclick="selectToggle('complexGroup',this)">Simples</button>
+            <button class="toggle-btn" data-value="medio" onclick="selectToggle('complexGroup',this)">Médio</button>
+            <button class="toggle-btn" data-value="complexo" onclick="selectToggle('complexGroup',this)">Complexo</button>
+          </div>
+        </div>
+        <div class="field">
+          <label>Margem de lucro desejada</label>
+          <div class="toggle-group" id="margemGroup">
+            <button class="toggle-btn" data-value="20" onclick="selectToggle('margemGroup',this)">20%</button>
+            <button class="toggle-btn active" data-value="40" onclick="selectToggle('margemGroup',this)">40%</button>
+            <button class="toggle-btn" data-value="60" onclick="selectToggle('margemGroup',this)">60%</button>
+            <button class="toggle-btn" data-value="80" onclick="selectToggle('margemGroup',this)">80%</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calcular()">Calcular meus preços →</button>
+
+    <!-- HISTÓRICO -->
+    <div class="card" style="margin-top:1rem">
+      <div class="card-title">Histórico de cálculos</div>
+      <div class="historico-list" id="historicoList">
+        <div class="historico-vazio">Nenhum cálculo salvo ainda. Calcule e salve para acompanhar sua evolução.</div>
+      </div>
+    </div>
+
+  </div><!-- /formulario -->
+
+  <!-- RESULTADO -->
+  <div class="resultado" id="resultado">
+
+    <div class="card">
+      <div class="section-title">Seus preços calculados</div>
+      <p id="resultado-contexto" style="font-size:0.8rem;color:var(--white-40);margin-bottom:1.2rem;text-align:center"></p>
+
+      <div class="price-grid">
+        <div class="price-card minimo">
+          <div class="price-card-label">Preço mínimo</div>
+          <div class="price-card-value"><sup>R$</sup><span id="precoMinimo">0</span></div>
+          <div class="price-card-desc">Abaixo disso você tem prejuízo. Nunca negocie para baixo desse valor.</div>
+        </div>
+        <div class="price-card justo">
+          <div class="price-card-label">Preço justo</div>
+          <div class="price-card-value"><sup>R$</sup><span id="precoJusto">0</span></div>
+          <div class="price-card-desc">Remunera bem seu tempo e entrega valor real ao cliente.</div>
+        </div>
+        <div class="price-card premium">
+          <div class="price-card-label">Preço premium</div>
+          <div class="price-card-value"><sup>R$</sup><span id="precoPremium">0</span></div>
+          <div class="price-card-desc">Para clientes maiores ou quando você agrega diferencial claro.</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title">Comparador — se você aumentar seu preço</div>
+      <div class="comparador-grid">
+        <div class="comp-card">
+          <div class="comp-label">Preço atual (justo)</div>
+          <div class="comp-val" id="compAtual">R$0</div>
+          <div class="comp-sub">base de cálculo</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-label">+20% sobre o justo</div>
+          <div class="comp-val" id="comp20">R$0</div>
+          <div class="comp-sub">reajuste moderado</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-label">+40% sobre o justo</div>
+          <div class="comp-val" id="comp40">R$0</div>
+          <div class="comp-sub">posicionamento premium</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title">Projeção de faturamento mensal</div>
+      <div class="mensal-grid">
+        <div class="mensal-card">
+          <div class="mensal-clientes">3 clientes</div>
+          <div class="mensal-valor" id="mensal3">R$0</div>
+          <div class="mensal-label">no preço justo</div>
+        </div>
+        <div class="mensal-card">
+          <div class="mensal-clientes" id="labelMensal">8 clientes</div>
+          <div class="mensal-valor" id="mensalN">R$0</div>
+          <div class="mensal-label">no preço justo</div>
+        </div>
+        <div class="mensal-card">
+          <div class="mensal-clientes" id="labelMeta">Meta R$5.000</div>
+          <div class="mensal-valor" id="clientesMeta">0 clientes</div>
+          <div class="mensal-label">necessários</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="section-title">Simulador de crescimento — próximos 6 meses</div>
+      <div class="crescimento-grid" id="crescimentoGrid"></div>
+    </div>
+
+    <div class="insights">
+      <div class="section-title">Insights para o seu serviço</div>
+      <div id="insightsList"></div>
+    </div>
+
+    <div class="erros">
+      <div class="erros-title">⚠ Erros que fazem freelancers de IA perderem dinheiro</div>
+      <div class="erro-item"><div class="erro-num">1</div><div class="erro-text"><strong>Cobrar por hora em vez de por resultado.</strong> Quando você diz R$50/hora, o cliente calcula o tempo. Quando diz que uma proposta custa R$300, ele avalia se o resultado vale isso.</div></div>
+      <div class="erro-item"><div class="erro-num">2</div><div class="erro-text"><strong>Revelar que usa IA para cobrar menos.</strong> Você não cobra menos porque usa uma calculadora em vez de fazer contas à mão. A ferramenta é sua. O resultado é o produto.</div></div>
+      <div class="erro-item"><div class="erro-num">3</div><div class="erro-text"><strong>Dar desconto sem pedir nada em troca.</strong> Sempre que der desconto, peça algo — depoimento, indicação, prazo maior. Desconto gratuito comunica que o preço original era inflado.</div></div>
+      <div class="erro-item"><div class="erro-num">4</div><div class="erro-text"><strong>Não reajustar o preço conforme ganha experiência.</strong> O preço de quando você começou não é o certo depois de 20 projetos. Revise a cada 6 meses — sempre para cima.</div></div>
+      <div class="erro-item"><div class="erro-num">5</div><div class="erro-text"><strong>Subestimar o valor do resultado para o cliente.</strong> Um currículo que gera emprego com R$1.000 a mais por mês vale muito mais do que R$200. Pense no resultado que entrega, não no tempo que gasta.</div></div>
+    </div>
+
+    <div class="btn-acao-group">
+      <button class="btn-copiar" onclick="copiarResultado()">📋 Copiar resultado</button>
+      <button class="btn-salvar" onclick="salvarCalculo()">💾 Salvar no histórico</button>
+      <button class="btn-recalcular" onclick="recalcular()">← Recalcular</button>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box" style="margin-top:1.5rem">
+      <h3>Quer os 30 modelos de negócio<br>validados com IA?</h3>
+      <p>O guia Renda com IA entrega scripts de prospecção prontos, 30 modelos de negócio testados e os erros que fazem freelancers de IA perderem clientes — com acesso imediato por R$97.</p>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-cta">Ver o guia completo →</a>
+    </div>
+
+  </div><!-- /resultado -->
+
+  <!-- ÚLTIMOS ARTIGOS -->
+  <div style="margin-top:2rem">
+    <div class="section-title">Últimos artigos</div>
+    <div class="artigos-grid">
+      <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="artigo-card">
+        <span class="artigo-tag">Renda com IA</span>
+        <div class="artigo-titulo">Como usar o Claude para ganhar dinheiro — guia completo para freelancers</div>
+        <div class="artigo-desc">Do primeiro cliente ao primeiro salário com IA. Estratégias reais, modelos de negócio validados e quanto cobrar em cada nicho.</div>
+        <span class="artigo-leia">Ler artigo →</span>
+      </a>
+      <a href="https://www.domineclaude.com.br/oferta" class="artigo-card">
+        <span class="artigo-tag">Guia completo</span>
+        <div class="artigo-titulo">Claude: O Guia Definitivo de IA para Quem Quer Resultados Reais</div>
+        <div class="artigo-desc">Do zero ao avançado. 13 capítulos, 6 bônus exclusivos, exemplos práticos que você aplica hoje. Por R$37.</div>
+        <span class="artigo-leia" style="color:var(--orange)">Acessar o guia →</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO SEO -->
+  <div class="seo-section">
+    <div class="divider"></div>
+    <h2>Quanto cobrar por serviços com IA no Brasil</h2>
+    <p>A chegada das ferramentas de inteligência artificial como o Claude transformou o mercado de serviços freelancer no Brasil. Profissionais que antes levavam 8 horas para entregar um trabalho agora entregam em 2 horas — com qualidade superior. Mas essa velocidade levanta uma pergunta crítica: <strong>como precificar serviços quando a IA torna você mais eficiente?</strong></p>
+    <p>A resposta contraintuitiva é: você deve cobrar o mesmo ou mais. A eficiência gerada pela IA é seu diferencial competitivo, não um motivo para reduzir preços. O cliente paga pelo resultado, não pelo tempo que você levou para produzir.</p>
+
+    <h3>Por que a precificação de serviços com IA é diferente</h3>
+    <p>No modelo tradicional de freelancer, o preço é calculado em horas trabalhadas multiplicado pelo valor da hora. Com IA, esse modelo quebra. Se você usa o Claude para criar uma proposta comercial em 30 minutos que antes levaria 3 horas, cobrar por hora penaliza sua própria eficiência.</p>
+    <p>O modelo correto para freelancers que usam IA é <strong>precificar por resultado e por valor entregue</strong>. Uma proposta comercial não vale R$150 porque levou 3 horas — vale R$500 porque pode gerar R$50.000 em contrato para o cliente.</p>
+
+    <h3>Como usar esta calculadora para definir seu preço</h3>
+    <p>Esta calculadora considera cinco variáveis que determinam o preço justo do seu serviço:</p>
+    <ul>
+      <li><strong>Tipo de serviço:</strong> cada categoria tem uma faixa de mercado específica no Brasil</li>
+      <li><strong>Seu custo por hora:</strong> quanto você precisa ganhar para cobrir despesas e ter lucro</li>
+      <li><strong>Nível de experiência:</strong> iniciantes cobram menos até construir portfólio; especialistas justificam preços premium</li>
+      <li><strong>Perfil do cliente:</strong> uma média empresa paga 70% mais que uma pessoa física pelo mesmo serviço</li>
+      <li><strong>Complexidade:</strong> projetos estratégicos e complexos justificam multiplição de 35% sobre o preço base</li>
+    </ul>
+
+    <h3>Valores de referência por tipo de serviço em 2024-2025</h3>
+    <p>Com base em dados de plataformas como Workana, 99Freelas e Fiverr Brasil, além de pesquisas com freelancers ativos, os valores praticados para serviços com IA no mercado brasileiro são:</p>
+    <ul>
+      <li><strong>Copywriting e redação com IA:</strong> R$150 a R$600 por texto, dependendo da extensão e complexidade</li>
+      <li><strong>Gestão de redes sociais com IA:</strong> R$400 a R$2.500 por mês, por conta gerenciada</li>
+      <li><strong>Consultoria de implementação de IA:</strong> R$800 a R$4.000 por projeto</li>
+      <li><strong>Roteiros para YouTube e podcasts:</strong> R$150 a R$900 por roteiro</li>
+      <li><strong>Assessoria de currículo e LinkedIn:</strong> R$100 a R$800 por pacote completo</li>
+      <li><strong>Criação de e-books e materiais digitais:</strong> R$500 a R$3.000 por projeto</li>
+      <li><strong>Ghostwriting executivo:</strong> R$600 a R$30.000 por projeto, dependendo do escopo</li>
+    </ul>
+
+    <h3>Como usar o Claude para entregar mais e cobrar mais</h3>
+    <p>O Claude permite que freelancers aumentem sua capacidade de atendimento sem aumentar as horas trabalhadas. Um redator que usa o Claude pode gerenciar 3x mais clientes simultaneamente, mantendo a qualidade. Um consultor pode entregar relatórios mais detalhados no mesmo prazo.</p>
+    <p>Isso significa que a combinação correta é: <strong>mantenha ou aumente seus preços, atenda mais clientes, entregue em menos tempo</strong>. É o modelo que transforma freelancer em negócio escalável.</p>
+
+    <div class="divider"></div>
+    <h2>Perguntas frequentes sobre precificação para freelancers de IA</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Devo cobrar por hora ou por projeto ao usar IA?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Cobrar por projeto é mais vantajoso quando se usa IA. A ferramenta reduz o tempo de execução mas não o valor entregue. Cobrar por hora penaliza quem é mais eficiente — quanto melhor você usa a IA, menos você ganharia. O modelo por projeto precifica o resultado, não o esforço.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Posso cobrar o mesmo que cobrava antes sem usar IA?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Sim, e muitas vezes você deve cobrar mais. A IA melhora a qualidade das entregas. Um e-mail de vendas criado com suporte do Claude tende a ser mais persuasivo e bem estruturado do que um criado manualmente em menos tempo. Qualidade superior justifica preço igual ou maior.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Devo revelar ao cliente que uso IA no serviço?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Não é obrigatório e geralmente não é recomendado revelar espontaneamente, pela mesma razão que um designer não menciona qual software usou. O cliente paga pelo resultado. Se o cliente perguntar diretamente, seja honesto — mas nunca use isso como justificativa para cobrar menos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Como aumentar meu preço sem perder clientes?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Aumente 20% a cada revisão semestral. Clientes existentes recebem um aviso com antecedência de 30 dias. Novos clientes já entram no preço novo. Clientes que não aceitam o reajuste liberam espaço para clientes que pagam mais — e você mantém o mesmo faturamento com menos trabalho.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Qual é o preço mínimo viável para serviços com IA?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>O preço mínimo deve cobrir: seu custo de vida dividido pelas horas disponíveis para trabalhar, mais ferramentas (Claude, softwares), mais impostos (MEI: 6%, simples: variável), mais margem de segurança de 20%. Para a maioria dos serviços com IA no Brasil, o mínimo viável parte de R$150 por entrega simples e R$500+ para projetos estratégicos.</p></div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<footer class="footer">
+  <div class="footer-brand">DOMINA <span style="font-weight:400;font-style:normal;color:rgba(201,168,76,0.4);font-size:0.7rem;margin-left:0.2rem;letter-spacing:0.2em;">claude</span></div>
+  <div class="footer-note">Ferramenta gratuita desenvolvida pela Kortex Evolution · Os valores são estimativas baseadas no mercado brasileiro · <a href="https://www.domineclaude.com.br/privacidade" style="color:rgba(255,255,255,0.2)">Privacidade</a></div>
+</footer>
+
+<script>
+const servicosBase = {
+  copywriting:    { nome:'Copywriting e redação',         base:150, mercado:'R$150 a R$600 por texto' },
+  redesociais:    { nome:'Gestão de redes sociais',       base:500, mercado:'R$400 a R$2.500/mês' },
+  propostas:      { nome:'Propostas comerciais',          base:300, mercado:'R$200 a R$1.200 por proposta' },
+  consultoria:    { nome:'Consultoria de IA',             base:800, mercado:'R$800 a R$4.000 por projeto' },
+  revisao:        { nome:'Revisão acadêmica',             base:200, mercado:'R$150 a R$1.200 por trabalho' },
+  roteiros:       { nome:'Roteiros YouTube/Podcast',      base:200, mercado:'R$150 a R$900 por roteiro' },
+  curriculo:      { nome:'Assessoria de currículo',       base:200, mercado:'R$100 a R$800 por pacote' },
+  ebooks:         { nome:'Criação de e-books',            base:700, mercado:'R$500 a R$3.000 por e-book' },
+  scripts:        { nome:'Scripts de vendas',             base:500, mercado:'R$400 a R$2.000 por projeto' },
+  apresentacoes:  { nome:'Apresentações executivas',      base:500, mercado:'R$400 a R$2.500 por apresentação' },
+  pesquisa:       { nome:'Pesquisa e síntese',            base:400, mercado:'R$300 a R$1.500 por relatório' },
+  treinamento:    { nome:'Treinamento corporativo',       base:800, mercado:'R$800 a R$6.000 por projeto' },
+  ghostwriting:   { nome:'Ghostwriting executivo',        base:700, mercado:'R$600 a R$30.000 por projeto' },
+  newsletter:     { nome:'Newsletter paga',               base:30,  mercado:'R$15 a R$97 por assinante/mês' },
+  conteudo:       { nome:'Conteúdo para blogs',           base:200, mercado:'R$150 a R$700 por artigo' },
+  outro:          { nome:'Serviço com IA',                base:300, mercado:'Variável conforme nicho' },
+};
+
+const multiplicadores = {
+  nivel:   { iniciante:0.7, intermediario:1.0, avancado:1.35, especialista:1.7 },
+  cliente: { pf:0.8, mei:1.0, pme:1.3, media:1.7 },
+  complex: { simples:0.8, medio:1.0, complexo:1.35 },
+};
+
+const insights = {
+  copywriting:   ['Copywriters com IA entregam 3x mais rápido — isso é seu diferencial, não seu problema de preço.','Ofereça pacotes mensais de conteúdo. Recorrência vale mais que projetos avulsos.','Especializar em um nicho (saúde, finanças, tecnologia) permite cobrar 40% a mais.'],
+  redesociais:   ['Pacotes mensais são o modelo mais previsível — evite projetos avulsos de baixo ticket.','Combine criação de conteúdo com relatório mensal de resultados para justificar o valor.','Nichos locais (clínicas, restaurantes, academias) têm menos concorrência e pagam bem.'],
+  propostas:     ['Profissionais que perdem contratos por propostas fracas têm urgência real — é seu melhor cliente.','Ofereça análise gratuita da proposta atual para demonstrar o problema antes de vender a solução.','Franquias e redes com múltiplas unidades são clientes de alto valor para esse serviço.'],
+  consultoria:   ['Empresas em crescimento rápido têm a dor mais aguda — contrataram muita gente e não documentaram nada.','Treinamento de equipe em formato workshop tem melhor percepção de valor que consultoria individual.','Departamentos de marketing, vendas e RH são os que mais se beneficiam — foque em um deles.'],
+  revisao:       ['Os meses de entrega acadêmica (junho e novembro) têm demanda 3x maior — prepare-se com antecedência.','Estudantes de pós-graduação pagam mais e têm trabalhos maiores — é o nicho mais lucrativo.','Ofereça revisão + sugestão de melhoria de argumentação como serviço premium.'],
+  roteiros:      ['Criadores que publicam de forma irregular são seu cliente ideal — eles querem consistência, não criatividade.','Pacote mensal de 4 roteiros é mais valioso que roteiros avulsos e cria previsibilidade para os dois lados.','YouTubers com audiência entre 10k e 100k são o sweet spot — precisam de qualidade mas têm budget.'],
+  curriculo:     ['Profissionais demitidos recentemente têm urgência real — o timing da abordagem é crucial.','Pacote completo (currículo + LinkedIn + 3 personalizações por vaga) tem muito mais valor percebido.','Grupos de recolocação no LinkedIn e WhatsApp são concentrações de clientes com dor ativa.'],
+  ebooks:        ['Consultores e coaches com audiência mas sem produto são seus melhores clientes — eles já têm o mercado.','E-book de isca digital para captura de leads tem ROI claro para o cliente — facilita a venda.','Agências de marketing são parceiras naturais — elas têm os clientes, você tem a capacidade.'],
+  scripts:       ['Franquias são clientes de alto valor por natureza — precisam de padronização em escala.','Empresas com alta rotatividade de vendedores precisam de materiais que transferem conhecimento.','Combine script com treinamento da equipe para um pacote mais completo e lucrativo.'],
+  apresentacoes: ['Executivos e consultores no LinkedIn são o público mais acessível e disposto a pagar.','Pitch deck para investidores tem o maior valor percebido — justifica preços entre R$800 e R$2.500.','Ofereça preparação do apresentador como serviço adicional — aumenta o ticket sem muito trabalho extra.'],
+  pesquisa:      ['Executivos sobrecarregados com pouco tempo para filtrar informação são seu cliente ideal.','Briefings semanais em formato de assinatura criam receita recorrente previsível.','Empresas entrando em novos mercados têm urgência e budget para pesquisa de qualidade.'],
+  treinamento:   ['Documente o processo: entreviste os especialistas internos, transforme em material com Claude.','RHs de empresas em crescimento têm essa dor de forma aguda e budget alocado para treinamento.','Ofereça revisão e atualização anual dos materiais como contrato de manutenção.'],
+  ghostwriting:  ['Construa confiança primeiro — ghostwriting exige relacionamento antes de contrato.','Executivos com perfil incipiente no LinkedIn são os mais acessíveis como primeiro cliente.','Contratos longos (6 meses de posts mensais) são mais valiosos que projetos avulsos.'],
+  newsletter:    ['Comece gratuito por 3 edições para demonstrar valor antes de cobrar.','Nichos B2B (gestão, marketing, finanças, tecnologia) têm maior disposição para pagar.','Com 200 assinantes a R$29 você tem R$5.800 mensais recorrentes — esse é o primeiro marco.'],
+  conteudo:      ['Agências de marketing são o canal mais eficiente — elas têm os clientes e você tem a capacidade.','Empresas de SaaS precisam de conteúdo educacional constante para atrair usuários.','Artigos longos (2.000+ palavras) rankeiam melhor e custam mais — foque neles.'],
+  outro:         ['Identifique um nicho específico — generalistas cobram menos, especialistas cobram mais.','Defina o resultado concreto que você entrega — isso é o que o cliente está comprando.','Comece com preço acessível para construir portfólio e depoimentos, depois aumente gradualmente.'],
+};
+
+let dadosCalculo = {};
+
+function fmt(v){ return v.toLocaleString('pt-BR',{minimumFractionDigits:0,maximumFractionDigits:0}); }
+
+function selectToggle(groupId, btn){
+  document.querySelectorAll(`#${groupId} .toggle-btn`).forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+function getToggleValue(groupId){
+  const a = document.querySelector(`#${groupId} .toggle-btn.active`);
+  return a ? a.dataset.value : null;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2500);
+}
+
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen) item.classList.add('open');
+}
+
+function calcular(){
+  const tipo = document.getElementById('tipoServico').value;
+  const fieldTipo = document.getElementById('field-tipoServico');
+  if(!tipo){ fieldTipo.classList.add('error'); return; }
+  fieldTipo.classList.remove('error');
+
+  const custoHora = parseFloat(document.getElementById('custoHora').value)||30;
+  const horas = parseFloat(document.getElementById('horas').value)||2;
+  const entregas = parseInt(document.getElementById('entregas').value)||8;
+  const metaMensal = parseInt(document.getElementById('metaMensal').value)||5000;
+  const margem = parseInt(getToggleValue('margemGroup'))/100;
+  const nivel = getToggleValue('nivelGroup');
+  const cliente = getToggleValue('clienteGroup');
+  const complex = getToggleValue('complexGroup');
+
+  const servico = servicosBase[tipo];
+  const custoBase = horas * custoHora;
+  const multTotal = multiplicadores.nivel[nivel] * multiplicadores.cliente[cliente] * multiplicadores.complex[complex];
+
+  const minimo = Math.max(custoBase * 1.2, servico.base * 0.5) * multTotal;
+  const justo = servico.base * multTotal * (1 + margem);
+  const premium = justo * 1.6;
+
+  const minR = Math.round(minimo/10)*10;
+  const juR  = Math.round(justo/10)*10;
+  const prR  = Math.round(premium/10)*10;
+
+  document.getElementById('precoMinimo').textContent = fmt(minR);
+  document.getElementById('precoJusto').textContent  = fmt(juR);
+  document.getElementById('precoPremium').textContent= fmt(prR);
+
+  // Comparador
+  document.getElementById('compAtual').textContent = `R$${fmt(juR)}`;
+  document.getElementById('comp20').textContent = `R$${fmt(Math.round(juR*1.2/10)*10)}`;
+  document.getElementById('comp40').textContent = `R$${fmt(Math.round(juR*1.4/10)*10)}`;
+
+  // Mensal
+  document.getElementById('mensal3').textContent = `R$${fmt(juR*3)}`;
+  document.getElementById('labelMensal').textContent = `${entregas} clientes`;
+  document.getElementById('mensalN').textContent = `R$${fmt(juR*entregas)}`;
+  document.getElementById('labelMeta').textContent = `Meta R$${fmt(metaMensal)}`;
+  document.getElementById('clientesMeta').textContent = `${Math.ceil(metaMensal/juR)} clientes`;
+
+  // Simulador crescimento
+  const grid = document.getElementById('crescimentoGrid');
+  const crescimento = [
+    { periodo:'1 mês', mult:1.0 },
+    { periodo:'2 meses', mult:1.1 },
+    { periodo:'3 meses', mult:1.2 },
+    { periodo:'4 meses', mult:1.3 },
+    { periodo:'5 meses', mult:1.4 },
+    { periodo:'6 meses', mult:1.5 },
+  ];
+  grid.innerHTML = crescimento.map(c=>{
+    const preco = Math.round(juR * c.mult / 10)*10;
+    const fat = preco * entregas;
+    return `<div class="cresc-card">
+      <div class="cresc-periodo">${c.periodo}</div>
+      <div class="cresc-val">R$${fmt(preco)}</div>
+      <div class="cresc-clientes">R$${fmt(fat)}/mês com ${entregas} entregas</div>
+    </div>`;
+  }).join('');
+
+  // Contexto
+  const nomeN = {iniciante:'iniciante',intermediario:'intermediário',avancado:'avançado',especialista:'especialista'};
+  const nomeC = {pf:'pessoa física',mei:'MEI',pme:'pequena empresa',media:'média empresa'};
+  document.getElementById('resultado-contexto').textContent =
+    `${servico.nome} · nível ${nomeN[nivel]} · cliente ${nomeC[cliente]} · mercado: ${servico.mercado}`;
+
+  // Insights
+  const ins = insights[tipo]||insights.outro;
+  document.getElementById('insightsList').innerHTML = ins.map(i=>`
+    <div class="insight-item">
+      <div class="insight-icon">💡</div>
+      <div class="insight-text">${i}</div>
+    </div>`).join('');
+
+  dadosCalculo = { tipo, custoHora, horas, entregas, metaMensal, margem, nivel, cliente, complex,
+    minR, juR, prR, data: new Date().toLocaleDateString('pt-BR'), servico: servico.nome };
+
+  localStorage.setItem('dc_ultimo_calculo', JSON.stringify({...dadosCalculo, ts: Date.now()}));
+
+  document.getElementById('formulario').style.display='none';
+  const res = document.getElementById('resultado');
+  res.classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function recalcular(){
+  document.getElementById('formulario').style.display='block';
+  document.getElementById('resultado').classList.remove('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function salvarCalculo(){
+  if(!dadosCalculo.tipo){ showToast('Calcule primeiro antes de salvar.'); return; }
+  const hist = JSON.parse(localStorage.getItem('dc_historico')||'[]');
+  hist.unshift({...dadosCalculo, id: Date.now()});
+  if(hist.length>10) hist.pop();
+  localStorage.setItem('dc_historico', JSON.stringify(hist));
+  renderHistorico();
+  showToast('✅ Salvo no histórico!');
+}
+
+function copiarResultado(){
+  if(!dadosCalculo.tipo){ showToast('Calcule primeiro.'); return; }
+  const txt = `Precificação — ${dadosCalculo.servico}
+Preço mínimo: R$${fmt(dadosCalculo.minR)}
+Preço justo: R$${fmt(dadosCalculo.juR)}
+Preço premium: R$${fmt(dadosCalculo.prR)}
+Faturamento com ${dadosCalculo.entregas} entregas/mês: R$${fmt(dadosCalculo.juR * dadosCalculo.entregas)}
+Calculado em: ${dadosCalculo.data}
+Calculadora: www.domineclaude.com.br/ferramentas/calculadora`;
+  navigator.clipboard.writeText(txt).then(()=>showToast('✅ Copiado!')).catch(()=>showToast('Erro ao copiar.'));
+}
+
+function renderHistorico(){
+  const hist = JSON.parse(localStorage.getItem('dc_historico')||'[]');
+  const el = document.getElementById('historicoList');
+  if(!hist.length){
+    el.innerHTML='<div class="historico-vazio">Nenhum cálculo salvo ainda. Calcule e salve para acompanhar sua evolução.</div>';
+    return;
+  }
+  el.innerHTML = hist.map(h=>`
+    <div class="historico-item" onclick="restaurarCalculo(${h.id})">
+      <div class="historico-info">
+        <div class="historico-servico">${h.servico}</div>
+        <div class="historico-data">${h.data} · nível ${h.nivel} · cliente ${h.cliente}</div>
+      </div>
+      <div class="historico-preco">R$${fmt(h.juR)}</div>
+    </div>`).join('');
+}
+
+function restaurarCalculo(id){
+  const hist = JSON.parse(localStorage.getItem('dc_historico')||'[]');
+  const h = hist.find(x=>x.id===id);
+  if(!h) return;
+  document.getElementById('tipoServico').value = h.tipo;
+  document.getElementById('custoHora').value = h.custoHora;
+  document.getElementById('horas').value = h.horas;
+  document.getElementById('entregas').value = h.entregas;
+  document.getElementById('metaMensal').value = h.metaMensal;
+  ['nivelGroup','clienteGroup','complexGroup'].forEach(g=>{
+    const key = g==='nivelGroup'?h.nivel:g==='clienteGroup'?h.cliente:h.complex;
+    document.querySelectorAll(`#${g} .toggle-btn`).forEach(b=>{
+      b.classList.toggle('active', b.dataset.value===key);
+    });
+  });
+  const margemPct = Math.round(h.margem*100).toString();
+  document.querySelectorAll('#margemGroup .toggle-btn').forEach(b=>{
+    b.classList.toggle('active', b.dataset.value===margemPct);
+  });
+  showToast('Dados restaurados! Clique em Calcular.');
+}
+
+// Verificar alerta de revisão
+function verificarRevisao(){
+  const ultimo = JSON.parse(localStorage.getItem('dc_ultimo_calculo')||'null');
+  if(!ultimo) return;
+  const dias = (Date.now()-ultimo.ts)/(1000*60*60*24);
+  if(dias>30){
+    document.getElementById('alertaRevisao').style.display='flex';
+  }
+}
+
+renderHistorico();
+verificarRevisao();
+</script>
+</body>
+</html>
