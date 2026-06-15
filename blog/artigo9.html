@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude na prática — 10 casos reais de uso com prompts e resultados documentados</title>
+<meta name="description" content="10 situações reais de uso do Claude no trabalho, com o prompt exato e o resultado obtido. E-mails, propostas, relatórios, contratos, copywriting e muito mais.">
+<meta property="og:title" content="Claude na prática — 10 casos reais de uso com prompts e resultados documentados">
+<meta property="og:description" content="10 situações reais de uso do Claude no trabalho, com o prompt exato e o resultado obtido. E-mails, propostas, relatórios, contratos, copywriting e muito mais.">
+<meta property="og:type" content="article">
+<meta name="author" content="Kortex Evolution">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude na prática — 10 casos reais de uso com prompts e resultados documentados",
+  "description": "10 situações reais de uso do Claude no trabalho, com o prompt exato e o resultado obtido. E-mails, propostas, relatórios, contratos, copywriting e muito mais.",
+  "author": {"@type": "Organization", "name": "Kortex Evolution"},
+  "publisher": {"@type": "Organization", "name": "Domina Claude", "url": "https://www.domineclaude.com.br"},
+  "mainEntityOfPage": "https://www.domineclaude.com.br/blog/claude-na-pratica-casos-reais"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},
+    {"@type":"ListItem","position":2,"name":"Artigos","item":"https://www.domineclaude.com.br/blog"},
+    {"@type":"ListItem","position":3,"name":"Claude na prática — 10 casos reais de uso com prompts e resultados documentados","item":"https://www.domineclaude.com.br/blog/claude-na-pratica-casos-reais"}
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que o Claude consegue fazer na prática?","acceptedAnswer":{"@type":"Answer","text":"Na prática, o Claude consegue redigir e-mails profissionais, criar propostas comerciais, resumir documentos longos, escrever textos de copywriting, criar calendários editoriais, analisar contratos, preparar roteiros de vídeo, elaborar relatórios e muito mais. Qualquer tarefa que envolve produção ou análise de texto pode ser acelerada com o Claude."}},
+    {"@type":"Question","name":"O Claude funciona bem para uso profissional no Brasil?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Claude tem excelente suporte ao português brasileiro e entende contextos culturais e profissionais locais. Termos técnicos de setores brasileiros, linguagem jurídica, comunicação empresarial — tudo funciona com qualidade comparável ao inglês."}},
+    {"@type":"Question","name":"Quanto tempo o Claude economiza por tarefa?","acceptedAnswer":{"@type":"Answer","text":"Varia por tarefa, mas como referência: e-mail profissional de 2 horas para 5 minutos, relatório mensal de 4 horas para 30 minutos, proposta comercial de 3 horas para 20 minutos, calendário editorial mensal de 3 horas para 25 minutos. A média de redução de tempo é de 80 a 90%."}},
+    {"@type":"Question","name":"Os resultados do Claude precisam de revisão?","acceptedAnswer":{"@type":"Answer","text":"Sempre. O Claude produz rascunhos de alta qualidade, mas você precisa revisar para garantir precisão factual, alinhamento com o contexto específico do cliente e personalizações que só você conhece. O fluxo ideal é: Claude produz o rascunho, você revisa e refina. Isso é mais rápido que criar do zero e resulta em qualidade superior."}}
+  ]
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#060606;--black-3:#141414;--black-4:#1C1C1C;--black-5:#242424;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);--white-60:rgba(255,255,255,0.6);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);letter-spacing:-0.01em;text-decoration:none;}
+.logo span{color:var(--gold);}
+.header-nav{display:flex;align-items:center;gap:1.4rem;}
+.header-nav a{color:var(--white-50);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
+.header-nav a:hover{color:var(--white-90);}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);padding:1rem 1.5rem;flex-direction:column;gap:0.7rem;z-index:99;}
+.mobile-menu a{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.hamburger{display:flex}}
+.page-push{height:56px;}
+.article-wrap{position:relative;z-index:10;max-width:780px;margin:0 auto;padding:0 1.5rem;}
+.article-hero{padding:3rem 0 2rem;}
+.article-category{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;margin-bottom:1.2rem;text-decoration:none;}
+.article-h1{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em;}
+.article-h1 span{color:var(--gold);}
+.article-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.meta-item{font-size:0.77rem;color:var(--white-40);}
+.article-intro{font-size:1rem;color:var(--white-70);line-height:1.75;padding:1.2rem 1.4rem;background:rgba(201,168,76,0.05);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;margin-bottom:2rem;}
+.indice{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:2rem;}
+.indice-titulo{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.indice ol{padding-left:1.4rem;}
+.indice li{font-size:0.83rem;color:var(--white-50);line-height:1.6;margin-bottom:0.3rem;}
+.indice a{color:var(--white-50);text-decoration:none;transition:color 0.2s;}
+.indice a:hover{color:var(--gold);}
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--white-90);margin:2.5rem 0 0.8rem;padding-top:0.5rem;border-top:1px solid rgba(201,168,76,0.1);letter-spacing:-0.01em;scroll-margin-top:70px;}
+.article-body h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gold);margin:1.8rem 0 0.6rem;scroll-margin-top:70px;}
+.article-body p{font-size:0.9rem;color:var(--white-60);line-height:1.8;margin-bottom:0.9rem;}
+.article-body p strong{color:var(--white-80);font-weight:600;}
+.article-body ul,.article-body ol{padding-left:1.4rem;margin-bottom:1rem;}
+.article-body li{font-size:0.88rem;color:var(--white-60);line-height:1.65;margin-bottom:0.5rem;}
+.article-body li strong{color:var(--white-80);}
+.article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.article-body a:hover{border-bottom-color:var(--gold);}
+.destaque{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.destaque-titulo{font-family:var(--font-display);font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;}
+.destaque p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin-bottom:0.4rem;}
+.destaque p:last-child{margin-bottom:0;}
+.alerta{background:rgba(232,114,42,0.06);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.alerta p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin:0;}
+.alerta strong{color:var(--orange);}
+.cta-inline{background:rgba(232,114,42,0.07);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-inline-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-inline-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-orange{display:inline-flex;align-items:center;background:linear-gradient(135deg,#E8722A,#F5832E);color:#ffffff!important;font-family:var(--font-display);font-size:0.8rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;border:none;}
+.btn-orange:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(232,114,42,0.5);}
+.cta-calc{background:rgba(76,175,125,0.05);border:1px solid rgba(76,175,125,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-calc-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-calc-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-green{display:inline-flex;align-items:center;background:rgba(76,175,125,0.12);border:1px solid rgba(76,175,125,0.3);color:#ffffff!important;font-family:var(--font-body);font-size:0.83rem;font-weight:600;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.btn-green:hover{background:rgba(76,175,125,0.22);border-color:var(--green);}
+.cta-final{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;}
+.cta-final h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
+.cta-final p{font-size:0.88rem;color:var(--white-50);max-width:440px;margin:0 auto 1.2rem;line-height:1.65;}
+.btn-gold{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#ffffff!important;font-family:var(--font-display);font-size:0.88rem;font-weight:700;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(201,168,76,0.25);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.4);}
+.faq-item{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:8px;margin-bottom:0.5rem;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:var(--font-body);font-size:0.88rem;font-weight:600;text-align:left;padding:0.9rem 1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color 0.2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-q svg{flex-shrink:0;transition:transform 0.3s;color:var(--gold);}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;padding:0 1.1rem;}
+.faq-item.open .faq-a{max-height:400px;padding:0 1.1rem 0.9rem;}
+.faq-a p{font-size:0.86rem;color:var(--white-60);line-height:1.65;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.rel-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:10px;padding:1.1rem;transition:all 0.25s;text-decoration:none;display:block;}
+.rel-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
+.rel-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:block;}
+.rel-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.3rem;}
+.rel-leia{font-size:0.75rem;color:var(--gold);margin-top:0.5rem;display:block;}
+.todos-produtos{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:1.8rem;margin:2rem 0;}
+.todos-titulo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);margin-bottom:0.4rem;}
+.todos-sub{font-size:0.83rem;color:var(--white-40);margin-bottom:1.2rem;}
+.prod-lista{display:flex;flex-direction:column;gap:0.6rem;}
+.prod-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--black-5);border:1px solid rgba(201,168,76,0.08);border-radius:8px;padding:0.9rem 1rem;text-decoration:none;transition:all 0.2s;}
+.prod-item:hover{border-color:rgba(201,168,76,0.25);background:rgba(201,168,76,0.04);}
+.prod-info{flex:1;}
+.prod-nome{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--white-90);margin-bottom:0.2rem;}
+.prod-desc{font-size:0.75rem;color:var(--white-40);line-height:1.4;}
+.prod-preco-btn{display:flex;align-items:center;gap:0.8rem;flex-shrink:0;}
+.prod-preco{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--gold);}
+.prod-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.7rem;font-weight:700;padding:0.4rem 0.9rem;border-radius:4px;white-space:nowrap;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:2rem 0;}
+footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);margin-top:2rem;position:relative;z-index:10;}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.4rem;}
+.footer-logo span{color:rgba(201,168,76,0.35);}
+.footer-note{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+.footer-note a{color:rgba(255,255,255,0.18);text-decoration:none;}
+@media(max-width:640px){.article-h1{font-size:1.7rem}.cta-inline,.cta-calc{flex-direction:column}.prod-item{flex-direction:column;align-items:flex-start}.prod-preco-btn{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1475704073818729');
+window.addEventListener('load',function(){fbq('track','PageView');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+<div class="article-wrap">
+  <div class="article-hero">
+    <a href="https://www.domineclaude.com.br/blog" class="article-category">Na prática</a>
+    <h1 class="article-h1">Claude na prática — <span>10 casos reais</span> com prompts e resultados</h1>
+    <div class="article-meta">
+      <span class="meta-item">✍️ Kortex Evolution</span>
+      <span class="meta-item">📖 Leitura de 13 min</span>
+      <span class="meta-item">🔄 Atualizado regularmente</span>
+    </div>
+    <div class="article-intro">10 situações reais de uso do Claude no trabalho, com o prompt exato e o resultado obtido. E-mails, propostas, relatórios, contratos, copywriting e muito mais.</div>
+  </div>
+  <div class="indice">
+    <div class="indice-titulo">Índice do artigo</div>
+    <ol>
+      <li><a href="#como-usar-casos">Como usar este guia de casos práticos</a></li>
+      <li><a href="#caso-email">Caso 1 — E-mail de cobrança delicada</a></li>
+      <li><a href="#caso-proposta">Caso 2 — Proposta comercial em 20 minutos</a></li>
+      <li><a href="#caso-relatorio">Caso 3 — Relatório mensal de resultados</a></li>
+      <li><a href="#caso-contrato">Caso 4 — Análise de contrato longo</a></li>
+      <li><a href="#caso-calendario">Caso 5 — Calendário editorial para três redes</a></li>
+      <li><a href="#caso-copywriting">Caso 6 — Copy para anúncio de produto</a></li>
+      <li><a href="#caso-curriculo">Caso 7 — Reescrita de currículo para nova área</a></li>
+      <li><a href="#caso-roteiro">Caso 8 — Roteiro para vídeo no YouTube</a></li>
+      <li><a href="#caso-pesquisa">Caso 9 — Pesquisa de mercado resumida</a></li>
+      <li><a href="#caso-onboarding">Caso 10 — Material de onboarding de funcionários</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </div>
+  <div class="article-body">
+    <h2 id="como-usar-casos">Como usar este guia de casos práticos</h2>
+    <p>Este artigo documenta 10 situações reais de uso do Claude no trabalho. Para cada caso, você vai ver o contexto, o prompt exato usado e o tipo de resultado obtido. O objetivo não é mostrar teoria — é mostrar o Claude em ação para que você possa replicar.</p>
+    <div class="alerta">
+      <p><strong>Nota importante:</strong> os prompts aqui são pontos de partida. Para ter 30 casos documentados com mais profundidade, com variações e análise dos resultados, o <strong>Claude na Prática</strong> tem essa documentação completa.</p>
+    </div>
+
+    <h2 id="caso-email">Caso 1 — E-mail de cobrança delicada</h2>
+    <p><strong>Contexto:</strong> um cliente deve 2 faturas há 45 dias e não responde mensagens. A empresa quer cobrar sem perder o relacionamento.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Escreva um e-mail de cobrança para um cliente B2B que está com 2 faturas em aberto há 45 dias e não responde. Tom: profissional, sem agressividade, mas firme. Objetivo: obter resposta e pagamento sem romper o relacionamento comercial. Mencione que aguardamos posição até [data] para evitar medidas adicionais — sem ameaçar explicitamente. Máximo 150 palavras."</p>
+    </div>
+    <p><strong>Resultado:</strong> e-mail profissional e equilibrado em 30 segundos. O que normalmente levaria 20 minutos de revisão e reescrita — porque é um e-mail emocionalmente delicado — foi resolvido em uma interação.</p>
+        <div class="cta-inline">
+      <div class="cta-inline-text"><h4>Quer ver 30 casos como este documentados com prompt e resultado?</h4><p>O Claude na Prática tem 30 situações reais com o contexto completo, o prompt exato e o que funcionou em cada caso.</p></div>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-orange">Ver o guia</a>
+    </div>
+    <h2 id="caso-proposta">Caso 2 — Proposta comercial em 20 minutos</h2>
+    <p><strong>Contexto:</strong> consultora de marketing precisa enviar uma proposta para uma clínica odontológica interessada em gestão de redes sociais. Reunião aconteceu pela manhã, proposta precisa ir ainda no dia.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Crie uma proposta comercial para gestão de redes sociais para uma clínica odontológica em São Paulo com 3 dentistas. Dores identificadas: presença digital fraca, concorrência crescente, querem atrair mais pacientes particulares. Serviço proposto: gestão do Instagram e LinkedIn com 20 posts/mês, stories diários e relatório mensal. Investimento: R$1.200/mês. Inclua: resumo executivo, diagnóstico, solução, o que está incluído, investimento e próximos passos. Tom: profissional e próximo, sem linguagem técnica de marketing."</p>
+    </div>
+    <p><strong>Resultado:</strong> proposta completa de 3 páginas em 8 minutos. A consultora ajustou 2 parágrafos e enviou. O cliente aprovou no mesmo dia.</p>
+
+    <h2 id="caso-relatorio">Caso 3 — Relatório mensal de resultados</h2>
+    <p><strong>Contexto:</strong> gestor de redes sociais precisa entregar relatório mensal para 8 clientes. Com o processo manual, levava 3 horas por relatório — 24 horas no total.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Crie um relatório mensal de redes sociais para o cliente [nome]. Dados do mês: seguidores no início: [X], seguidores no final: [Y], posts publicados: [N], alcance total: [Z], engajamento médio: [%], melhores posts: [lista]. Inclua: resumo executivo, análise dos números, o que funcionou, o que pode melhorar, recomendações para o próximo mês. Tom: profissional mas acessível — o cliente não entende de marketing digital."</p>
+    </div>
+    <p><strong>Resultado:</strong> cada relatório ficou pronto em 15 minutos. As 24 horas caíram para 2 horas. O gestor usou o tempo restante para criar mais conteúdo e prospectar novos clientes.</p>
+
+    <h2 id="caso-contrato">Caso 4 — Análise de contrato longo</h2>
+    <p><strong>Contexto:</strong> empreendedor recebe contrato de 40 páginas de um fornecedor e precisa identificar cláusulas problemáticas antes de assinar. Não tem orçamento para advogado para uma revisão inicial.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Analise este contrato e identifique: 1) as 5 cláusulas mais importantes que preciso prestar atenção, 2) qualquer linguagem que me coloque em desvantagem significativa, 3) o que está faltando que deveria estar em um contrato como este, 4) perguntas que devo fazer ao fornecedor antes de assinar. Seja direto e use linguagem simples — não sou advogado." [+ texto do contrato colado]</p>
+    </div>
+    <p><strong>Resultado:</strong> análise completa em 3 minutos. Identificou 2 cláusulas problemáticas que teriam passado despercebidas. O empreendedor negociou alterações antes de assinar.</p>
+
+    <h2 id="caso-calendario">Caso 5 — Calendário editorial para três redes</h2>
+    <p><strong>Contexto:</strong> gestor precisa criar calendário editorial para um cliente que está em Instagram, LinkedIn e Facebook, com conteúdos adaptados para cada plataforma.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Crie um calendário editorial para [empresa de contabilidade] para o mês de [mês]. Plataformas: Instagram (mais visual e informal), LinkedIn (profissional, voltado para empresários), Facebook (misto, alcança funcionários e donos). Frequência: Instagram 5x/semana, LinkedIn 3x/semana, Facebook 3x/semana. Para cada post: data, tema, formato, gancho adaptado para cada plataforma e hashtags. Distribua: 40% educativo, 30% posicionamento, 20% humanização, 10% CTA."</p>
+    </div>
+    <p><strong>Resultado:</strong> calendário completo com 44 posts adaptados para 3 plataformas em 12 minutos. O que levaria um dia inteiro foi resolvido antes do almoço.</p>
+
+    <h2 id="caso-copywriting">Caso 6 — Copy para anúncio de produto</h2>
+    <p><strong>Contexto:</strong> loja de suplementos precisa de copy para anúncio no Meta Ads. O produto é um termogênico e o público é mulheres entre 25 e 40 anos que treinam 3 a 5 vezes por semana.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Você é um copywriter especialista em marketing de suplementos. Escreva 3 versões de copy para anúncio no Instagram para um termogênico feminino. Público: mulheres de 25-40 anos, ativas, que treinam mas sentem que falta energia e resultado. Cada versão deve: começar com gancho forte (não com o nome do produto), focar em resultado emocional (não apenas benefício físico), ter no máximo 120 palavras, terminar com CTA claro. Tom: motivador, não pejorativo."</p>
+    </div>
+    <p><strong>Resultado:</strong> 3 versões prontas em 2 minutos. O cliente aprovou uma com ajuste mínimo. O copy ficou mais forte do que o que a agência anterior entregava em 2 dias.</p>
+
+    <h2 id="caso-curriculo">Caso 7 — Reescrita de currículo para nova área</h2>
+    <p><strong>Contexto:</strong> profissional de RH quer migrar para área de consultoria de IA. Tem 8 anos de experiência em gestão de pessoas mas nunca trabalhou formalmente com tecnologia.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Reescreva este currículo para posicionar o profissional como consultor de implementação de IA para RH. Destaque as experiências que têm conexão com análise de dados, processos e mudança organizacional — mesmo que não sejam de tecnologia. Reescreva cada experiência como conquista com resultado mensurável. Crie um resumo profissional que conecte a experiência em RH com consultoria de IA. Mantenha máximo 2 páginas." [+ currículo colado]</p>
+    </div>
+    <p><strong>Resultado:</strong> currículo completamente reposicionado. O profissional passou a receber retorno de processos seletivos na nova área dentro de 2 semanas.</p>
+
+    <h2 id="caso-roteiro">Caso 8 — Roteiro para vídeo no YouTube</h2>
+    <p><strong>Contexto:</strong> criador de conteúdo sobre finanças pessoais precisa roteirizar um vídeo de 8 minutos sobre investimento para iniciantes. Sempre procrastinava na escrita do roteiro — era o gargalo do canal.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Crie um roteiro para vídeo do YouTube de 8 minutos sobre como começar a investir do zero. Público: pessoas entre 22-35 anos que nunca investiram por achar complicado ou por falta de dinheiro. Tom: descontraído e direto, como conversa entre amigos. Estrutura: gancho nos primeiros 30 segundos, problema + identificação, 3 conceitos principais (simples, com exemplos reais), 1 ação para hoje, CTA para próximo vídeo. Inclua sugestões de cortes e momentos de ênfase visual."</p>
+    </div>
+    <p><strong>Resultado:</strong> roteiro completo em 4 minutos. O criador editou 20% do conteúdo e gravou. O vídeo atingiu o dobro de visualizações da média do canal.</p>
+
+    <h2 id="caso-pesquisa">Caso 9 — Pesquisa de mercado resumida</h2>
+    <p><strong>Contexto:</strong> empreendedor quer abrir uma escola de idiomas online focada em inglês para profissionais de TI. Precisa entender o mercado antes de investir.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Atue como analista de mercado. Analise o mercado de ensino de inglês online para profissionais de TI no Brasil e me dê: tamanho estimado e crescimento, principais concorrentes e posicionamentos, perfil do cliente ideal (dores, motivações, objeções), oportunidades de diferenciação, principais riscos do negócio e 3 hipóteses que preciso validar antes de investir. Seja direto e use dados quando possível."</p>
+    </div>
+    <p><strong>Resultado:</strong> análise completa em 5 minutos com informações que teriam levado dias de pesquisa manual. O empreendedor identificou um nicho específico (inglês técnico para entrevistas internacionais) que nenhum concorrente atendia diretamente.</p>
+
+    <h2 id="caso-onboarding">Caso 10 — Material de onboarding de funcionários</h2>
+    <p><strong>Contexto:</strong> startup crescendo rápido contratou 5 pessoas em um mês. Não existe material de onboarding — o processo era 100% informal e inconsistente.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Prompt usado</div>
+      <p>"Crie um guia de onboarding para novos funcionários de uma startup de tecnologia com 15 pessoas. A empresa tem produto SaaS B2B para o setor de saúde. Inclua: boas-vindas e cultura, organograma e quem faz o quê, ferramentas que usamos e como acessar, processos mais importantes (reuniões, comunicação, tarefas), o que esperamos nos primeiros 30 dias, perguntas frequentes de novos funcionários. Tom: amigável e direto."</p>
+    </div>
+    <p><strong>Resultado:</strong> guia completo de 12 páginas em 15 minutos. A startup adaptou o conteúdo às suas especificidades e implementou o material no mesmo dia. O onboarding dos 5 novos funcionários foi o mais organizado da história da empresa.</p>
+        <div class="cta-inline">
+      <div class="cta-inline-text"><h4>Quer dominar o Claude para resultados como esses?</h4><p>O guia definitivo com 13 capítulos mostra como usar o Claude em cada área do seu trabalho — com exemplos práticos que você aplica no mesmo dia.</p></div>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-orange">Ver o guia</a>
+    </div>
+    <div class="divider"></div>
+    <h2 id="faq">Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O que o Claude consegue fazer na prática? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Na prática, o Claude consegue redigir e-mails profissionais, criar propostas comerciais, resumir documentos longos, escrever textos de copywriting, criar calendários editoriais, analisar contratos, preparar roteiros de vídeo, elaborar relatórios e muito mais.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O Claude funciona bem para uso profissional no Brasil? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Sim. O Claude tem excelente suporte ao português brasileiro e entende contextos culturais e profissionais locais. Termos técnicos de setores brasileiros, linguagem jurídica, comunicação empresarial — tudo funciona com qualidade comparável ao inglês.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Quanto tempo o Claude economiza por tarefa? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Como referência: e-mail profissional de 2 horas para 5 minutos, relatório mensal de 4 horas para 30 minutos, proposta comercial de 3 horas para 20 minutos, calendário editorial mensal de 3 horas para 25 minutos. A média de redução de tempo é de 80 a 90%.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Os resultados do Claude precisam de revisão? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Sempre. O Claude produz rascunhos de alta qualidade, mas você precisa revisar para garantir precisão factual, alinhamento com o contexto específico do cliente e personalizações que só você conhece. O fluxo ideal é: Claude produz o rascunho, você revisa e refina.</p></div>
+    </div>
+    <div class="divider"></div>
+    <div class="todos-produtos">
+      <div class="todos-titulo">Escolha o produto certo para o seu momento</div>
+      <p class="todos-sub">Todos com acesso imediato e garantia incondicional de 7 dias.</p>
+      <div class="prod-lista">
+        <a href="https://www.domineclaude.com.br/oferta" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude: O Guia Definitivo de IA</div><div class="prod-desc">Do zero ao avançado. 13 capítulos e 6 bônus exclusivos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$37</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/95chkbq_925913" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power — 120 Prompts Prontos</div><div class="prod-desc">120 prompts organizados por área. Use hoje, sem adaptação.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$27</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/cf68gv5_925925" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power Pro — 120 Prompts + 150 Skills</div><div class="prod-desc">O arsenal completo de prompts e skills para o Claude.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$47</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude na Prática — 30 Casos Reais</div><div class="prod-desc">30 situações documentadas com prompt exato e resultado real.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$67</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Renda com IA — Guia Completo</div><div class="prod-desc">30 modelos de negócio validados + scripts de prospecção prontos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$97</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/knh5cyu_925940" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Domínio Total — Arsenal Completo de IA</div><div class="prod-desc">Tudo junto: guia, prompts, casos reais e guia de renda.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$127</span><span class="prod-btn">Acessar</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:0.8rem;color:var(--white-40);margin-bottom:0.6rem;font-weight:500">Artigos relacionados:</p>
+    <div class="rel-grid">
+      <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="rel-card">
+        <span class="rel-tag">Renda com IA</span>
+        <div class="rel-titulo">Como usar o Claude para ganhar dinheiro</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/blog/como-usar-ia-para-ganhar-tempo-no-trabalho" class="rel-card">
+        <span class="rel-tag">Produtividade</span>
+        <div class="rel-titulo">Como usar IA para ganhar tempo no trabalho</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/blog/prompts-para-claude-em-portugues" class="rel-card">
+        <span class="rel-tag">Prompts</span>
+        <div class="rel-titulo">Melhores prompts para o Claude em português</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-note">Kortex Evolution · <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a> · <a href="https://www.domineclaude.com.br/termos">Termos</a></div>
+</footer>
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const header=document.querySelector('.site-header');
+  if(menu.classList.contains('open')&&!header.contains(e.target))menu.classList.remove('open');
+});
+</script>
+</body>
+</html>

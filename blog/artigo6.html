@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como criar prompts perfeitos para o Claude — guia completo de prompt engineering</title>
+<meta name="description" content="Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.">
+<meta property="og:title" content="Como criar prompts perfeitos para o Claude — guia completo de prompt engineering">
+<meta property="og:description" content="Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.">
+<meta property="og:type" content="article">
+<meta name="author" content="Kortex Evolution">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Como criar prompts perfeitos para o Claude — guia completo de prompt engineering",
+  "description": "Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.",
+  "author": {"@type": "Organization", "name": "Kortex Evolution"},
+  "publisher": {"@type": "Organization", "name": "Domina Claude", "url": "https://www.domineclaude.com.br"},
+  "mainEntityOfPage": "https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},
+    {"@type":"ListItem","position":2,"name":"Artigos","item":"https://www.domineclaude.com.br/blog"},
+    {"@type":"ListItem","position":3,"name":"Como criar prompts perfeitos para o Claude — guia completo de prompt engineering","item":"https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude"}
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é prompt engineering?","acceptedAnswer":{"@type":"Answer","text":"Prompt engineering é a habilidade de estruturar instruções para IAs de forma a obter resultados precisos e consistentes. Envolve técnicas como definição de papel, cadeia de raciocínio, few-shot examples e formatação de saída. Não é uma habilidade técnica — qualquer profissional pode aprender."}},
+    {"@type":"Question","name":"Qual a diferença entre um prompt simples e um prompt avançado?","acceptedAnswer":{"@type":"Answer","text":"Um prompt simples é uma pergunta direta: 'escreva um e-mail de vendas'. Um prompt avançado define papel, contexto, objetivo, restrições e formato: 'Você é um copywriter especializado em SaaS B2B. Escreva um e-mail de follow-up para um lead que assistiu a demo mas não respondeu em 5 dias. Tom: próximo, sem pressão. Máximo 120 palavras. Inclua uma pergunta aberta no final.'"},
+    {"@type":"Question","name":"O que é few-shot prompting?","acceptedAnswer":{"@type":"Answer","text":"Few-shot prompting é a técnica de fornecer exemplos do resultado desejado dentro do prompt. Em vez de só descrever o que você quer, você mostra 2 ou 3 exemplos de como deve ficar. O Claude usa esses exemplos como referência e reproduz o padrão com novo conteúdo — muito mais preciso que descrição textual."}},
+    {"@type":"Question","name":"Como fazer o Claude não inventar informações?","acceptedAnswer":{"@type":"Answer","text":"Instrua explicitamente: 'Se você não tiver certeza sobre alguma informação, diga que não sabe em vez de inventar'. Também ajuda fornecer as informações relevantes no próprio prompt — quanto mais contexto você dá, menos o modelo precisa 'imaginar' detalhes."}}
+  ]
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#060606;--black-3:#141414;--black-4:#1C1C1C;--black-5:#242424;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);--white-60:rgba(255,255,255,0.6);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);letter-spacing:-0.01em;text-decoration:none;}
+.logo span{color:var(--gold);}
+.header-nav{display:flex;align-items:center;gap:1.4rem;}
+.header-nav a{color:var(--white-50);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
+.header-nav a:hover{color:var(--white-90);}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);padding:1rem 1.5rem;flex-direction:column;gap:0.7rem;z-index:99;}
+.mobile-menu a{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.hamburger{display:flex}}
+.page-push{height:56px;}
+.article-wrap{position:relative;z-index:10;max-width:780px;margin:0 auto;padding:0 1.5rem;}
+.article-hero{padding:3rem 0 2rem;}
+.article-category{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;margin-bottom:1.2rem;text-decoration:none;}
+.article-h1{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em;}
+.article-h1 span{color:var(--gold);}
+.article-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.meta-item{font-size:0.77rem;color:var(--white-40);}
+.article-intro{font-size:1rem;color:var(--white-70);line-height:1.75;padding:1.2rem 1.4rem;background:rgba(201,168,76,0.05);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;margin-bottom:2rem;}
+.indice{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:2rem;}
+.indice-titulo{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.indice ol{padding-left:1.4rem;}
+.indice li{font-size:0.83rem;color:var(--white-50);line-height:1.6;margin-bottom:0.3rem;}
+.indice a{color:var(--white-50);text-decoration:none;transition:color 0.2s;}
+.indice a:hover{color:var(--gold);}
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--white-90);margin:2.5rem 0 0.8rem;padding-top:0.5rem;border-top:1px solid rgba(201,168,76,0.1);letter-spacing:-0.01em;scroll-margin-top:70px;}
+.article-body h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gold);margin:1.8rem 0 0.6rem;scroll-margin-top:70px;}
+.article-body p{font-size:0.9rem;color:var(--white-60);line-height:1.8;margin-bottom:0.9rem;}
+.article-body p strong{color:var(--white-80);font-weight:600;}
+.article-body ul,.article-body ol{padding-left:1.4rem;margin-bottom:1rem;}
+.article-body li{font-size:0.88rem;color:var(--white-60);line-height:1.65;margin-bottom:0.5rem;}
+.article-body li strong{color:var(--white-80);}
+.article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.article-body a:hover{border-bottom-color:var(--gold);}
+.destaque{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.destaque-titulo{font-family:var(--font-display);font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;}
+.destaque p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin-bottom:0.4rem;}
+.destaque p:last-child{margin-bottom:0;}
+.alerta{background:rgba(232,114,42,0.06);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.alerta p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin:0;}
+.alerta strong{color:var(--orange);}
+.cta-inline{background:rgba(232,114,42,0.07);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-inline-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-inline-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-orange{display:inline-flex;align-items:center;background:linear-gradient(135deg,#E8722A,#F5832E);color:#ffffff!important;font-family:var(--font-display);font-size:0.8rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;border:none;}
+.btn-orange:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(232,114,42,0.5);}
+.cta-calc{background:rgba(76,175,125,0.05);border:1px solid rgba(76,175,125,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-calc-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-calc-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-green{display:inline-flex;align-items:center;background:rgba(76,175,125,0.12);border:1px solid rgba(76,175,125,0.3);color:#ffffff!important;font-family:var(--font-body);font-size:0.83rem;font-weight:600;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.btn-green:hover{background:rgba(76,175,125,0.22);border-color:var(--green);}
+.cta-final{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;}
+.cta-final h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
+.cta-final p{font-size:0.88rem;color:var(--white-50);max-width:440px;margin:0 auto 1.2rem;line-height:1.65;}
+.btn-gold{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#ffffff!important;font-family:var(--font-display);font-size:0.88rem;font-weight:700;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(201,168,76,0.25);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.4);}
+.faq-item{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:8px;margin-bottom:0.5rem;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:var(--font-body);font-size:0.88rem;font-weight:600;text-align:left;padding:0.9rem 1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color 0.2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-q svg{flex-shrink:0;transition:transform 0.3s;color:var(--gold);}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;padding:0 1.1rem;}
+.faq-item.open .faq-a{max-height:400px;padding:0 1.1rem 0.9rem;}
+.faq-a p{font-size:0.86rem;color:var(--white-60);line-height:1.65;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.rel-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:10px;padding:1.1rem;transition:all 0.25s;text-decoration:none;display:block;}
+.rel-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
+.rel-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:block;}
+.rel-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.3rem;}
+.rel-leia{font-size:0.75rem;color:var(--gold);margin-top:0.5rem;display:block;}
+.todos-produtos{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:1.8rem;margin:2rem 0;}
+.todos-titulo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);margin-bottom:0.4rem;}
+.todos-sub{font-size:0.83rem;color:var(--white-40);margin-bottom:1.2rem;}
+.prod-lista{display:flex;flex-direction:column;gap:0.6rem;}
+.prod-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--black-5);border:1px solid rgba(201,168,76,0.08);border-radius:8px;padding:0.9rem 1rem;text-decoration:none;transition:all 0.2s;}
+.prod-item:hover{border-color:rgba(201,168,76,0.25);background:rgba(201,168,76,0.04);}
+.prod-info{flex:1;}
+.prod-nome{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--white-90);margin-bottom:0.2rem;}
+.prod-desc{font-size:0.75rem;color:var(--white-40);line-height:1.4;}
+.prod-preco-btn{display:flex;align-items:center;gap:0.8rem;flex-shrink:0;}
+.prod-preco{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--gold);}
+.prod-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.7rem;font-weight:700;padding:0.4rem 0.9rem;border-radius:4px;white-space:nowrap;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:2rem 0;}
+footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);margin-top:2rem;position:relative;z-index:10;}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.4rem;}
+.footer-logo span{color:rgba(201,168,76,0.35);}
+.footer-note{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+.footer-note a{color:rgba(255,255,255,0.18);text-decoration:none;}
+@media(max-width:640px){.article-h1{font-size:1.7rem}.cta-inline,.cta-calc{flex-direction:column}.prod-item{flex-direction:column;align-items:flex-start}.prod-preco-btn{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1475704073818729');
+window.addEventListener('load',function(){fbq('track','PageView');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+<div class="article-wrap">
+  <div class="article-hero">
+    <a href="https://www.domineclaude.com.br/blog" class="article-category">Prompts</a>
+    <h1 class="article-h1">Como criar <span>prompts perfeitos</span> para o Claude — guia completo</h1>
+    <div class="article-meta">
+      <span class="meta-item">✍️ Kortex Evolution</span>
+      <span class="meta-item">📖 Leitura de 11 min</span>
+      <span class="meta-item">🔄 Atualizado regularmente</span>
+    </div>
+    <div class="article-intro">Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.</div>
+  </div>
+  <div class="indice">
+    <div class="indice-titulo">Índice do artigo</div>
+    <ol>
+      <li><a href="#por-que-importa">Por que a forma como você escreve o prompt muda tudo</a></li>
+      <li><a href="#estrutura">A estrutura de um prompt avançado</a></li>
+      <li><a href="#tecnicas">Técnicas avançadas de prompting</a></li>
+      <li><a href="#few-shot">Few-shot: a técnica mais subestimada</a></li>
+      <li><a href="#cadeia">Cadeia de raciocínio — para tarefas complexas</a></li>
+      <li><a href="#erros">Erros que destroem a qualidade do prompt</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </div>
+  <div class="article-body">
+    <h2 id="por-que-importa">Por que a forma como você escreve o prompt muda tudo</h2>
+    <p>A maioria das pessoas experimenta o Claude, fica desapontada com uma resposta mediana e conclui que a ferramenta não é tão boa. O problema quase nunca é a ferramenta — é o prompt.</p>
+    <p>O Claude é treinado para responder na proporção do que recebe. Um input vago gera um output genérico. Um input preciso, com contexto e estrutura, gera um output profissional. <strong>A diferença entre um usuário mediano e um usuário avançado não é o plano — é o prompt.</strong></p>
+    <div class="destaque">
+      <div class="destaque-titulo">Um experimento simples</div>
+      <p>Prompt ruim: "Escreva um texto sobre produtividade."<br>
+      Prompt bom: "Você é um coach de produtividade para profissionais de marketing. Escreva um artigo de 400 palavras sobre como usar blocos de tempo de 90 minutos para aumentar o foco. Público: gestores com agenda fragmentada. Tom: direto e prático. Inclua 3 exemplos concretos e termine com uma ação para aplicar hoje."</p>
+      <p>O segundo prompt leva 30 segundos a mais para escrever. O resultado é 10 vezes melhor.</p>
+    </div>
+
+    <h2 id="estrutura">A estrutura de um prompt avançado</h2>
+    <p>Todo prompt de alta performance tem até seis elementos. Você não precisa usar todos — mas quanto mais incluir, mais preciso o resultado:</p>
+    <ul>
+      <li><strong>1. Papel (Role):</strong> "Você é um advogado especialista em contratos de tecnologia" calibra o tom, o vocabulário e o nível de profundidade da resposta.</li>
+      <li><strong>2. Contexto:</strong> informações que o Claude precisa para entender a situação. Público, empresa, projeto, restrições relevantes.</li>
+      <li><strong>3. Tarefa:</strong> o que exatamente você quer que ele produza. Seja específico: não "analise isso" — "liste os 3 principais riscos jurídicos deste contrato e sugira cláusulas alternativas para cada um".</li>
+      <li><strong>4. Formato de saída:</strong> lista numerada, texto corrido, tabela, e-mail, script. Se você não especifica, o Claude escolhe — pode não ser o que você quer.</li>
+      <li><strong>5. Restrições:</strong> o que evitar, limite de tamanho, tom, palavras proibidas.</li>
+      <li><strong>6. Exemplos:</strong> mostrar ao Claude 1 ou 2 exemplos do resultado desejado é a forma mais eficiente de calibrar a resposta.</li>
+    </ul>
+        <div class="cta-inline">
+      <div class="cta-inline-text"><h4>Quer 270 prompts já estruturados com esses elementos?</h4><p>O Prompt Power Pro tem 120 prompts prontos mais 150 Skills — todos com papel, contexto e formato definidos. O arsenal completo para quem não quer criar prompt do zero.</p></div>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-orange">Ver o guia</a>
+    </div>
+    <h2 id="tecnicas">Técnicas avançadas de prompting</h2>
+    <h3>Prompting iterativo</h3>
+    <p>Nunca trate o primeiro resultado como final. O Claude melhora com feedback. Responda com: "Bom começo. Agora reescreva o segundo parágrafo com tom mais direto e reduza para 80 palavras." Cada iteração refina o resultado. 3 a 4 iterações geralmente chegam ao ponto ideal.</p>
+    <h3>Divisão de tarefas complexas</h3>
+    <p>Para projetos grandes — um e-book, uma proposta completa, um relatório extenso — não tente resolver tudo em um prompt. Divida em etapas: primeiro a estrutura, depois o desenvolvimento de cada seção, depois a revisão. O resultado final é mais coeso e controlado.</p>
+    <h3>Persona permanente</h3>
+    <p>Para trabalho recorrente com o mesmo tipo de conteúdo, crie um "prompt de sistema" que você usa sempre no início da conversa: "Em todas as respostas desta conversa, você é [persona]. Use sempre [tom]. Nunca [restrição]. Sempre inclua [elemento]." Isso calibra o Claude para a conversa inteira sem precisar repetir o contexto a cada mensagem.</p>
+
+    <h2 id="few-shot">Few-shot: a técnica mais subestimada</h2>
+    <p>Few-shot prompting é fornecer exemplos do resultado desejado dentro do próprio prompt. Em vez de descrever o que você quer, você <em>mostra</em>.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Exemplo de few-shot para legenda de Instagram</div>
+      <p>"Crie uma legenda para este post seguindo exatamente o padrão dos exemplos abaixo:</p>
+      <p>Exemplo 1: [legenda que você aprovou]<br>
+      Exemplo 2: [outra legenda que você aprovou]</p>
+      <p>Agora crie uma legenda para: [tema do novo post]. Mesmo tom, mesma estrutura, mesmo tamanho."</p>
+    </div>
+    <p>Com dois exemplos bem escolhidos, o Claude replica o padrão com precisão impressionante. Essa técnica é especialmente poderosa para quem precisa manter consistência em conteúdo de marca — o Claude aprende o "jeito" de escrever do seu cliente.</p>
+
+    <h2 id="cadeia">Cadeia de raciocínio — para tarefas complexas</h2>
+    <p>Para tarefas que exigem análise profunda, adicione ao final do prompt: <strong>"Pense passo a passo antes de responder"</strong> ou <strong>"Mostre seu raciocínio antes da conclusão"</strong>. Isso ativa um modo de processamento mais cuidadoso no Claude, com resultados significativamente mais precisos em análises, diagnósticos e planejamentos.</p>
+    <p>A diferença é mais evidente em: análise de negócio, resolução de problemas complexos, avaliação de riscos, decisões com múltiplas variáveis. Para textos simples, não é necessário.</p>
+
+    <h2 id="erros">Erros que destroem a qualidade do prompt</h2>
+    <ul>
+      <li><strong>Ambiguidade no verbo principal.</strong> "Fale sobre X" é vago. "Explique", "Liste", "Compare", "Analise", "Reescreva", "Critique" — cada verbo ativa um tipo de resposta diferente.</li>
+      <li><strong>Falta de contexto sobre o público.</strong> O mesmo conteúdo para um gestor de 45 anos e para um estagiário de 22 precisa ser completamente diferente. Sempre especifique quem vai consumir.</li>
+      <li><strong>Não especificar o que evitar.</strong> Se há algo que você definitivamente não quer no resultado — clichês, linguagem excessivamente formal, referências a concorrentes — diga explicitamente: "Evite [X]".</li>
+      <li><strong>Prompt em uma única linha para tarefa complexa.</strong> Quanto mais complexa a tarefa, mais detalhado o prompt precisa ser. Um prompt de uma linha para um relatório de 10 páginas vai gerar um resultado mediano.</li>
+    </ul>
+        <div class="cta-calc">
+      <div class="cta-calc-text"><h4>Vai usar essas técnicas para prestar serviços?</h4><p>Descubra o preço certo para cobrar pelos seus serviços com a calculadora gratuita de precificação.</p></div>
+      <a href="https://www.domineclaude.com.br/ferramentas/calculadora" class="btn-green">Usar a calculadora</a>
+    </div>
+    <div class="divider"></div>
+    <h2 id="faq">Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O que é prompt engineering? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Prompt engineering é a habilidade de estruturar instruções para IAs de forma a obter resultados precisos e consistentes. Envolve técnicas como definição de papel, cadeia de raciocínio, few-shot examples e formatação de saída. Não é uma habilidade técnica — qualquer profissional pode aprender.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Qual a diferença entre um prompt simples e um prompt avançado? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Um prompt simples é uma pergunta direta: 'escreva um e-mail de vendas'. Um prompt avançado define papel, contexto, objetivo, restrições e formato — e gera um resultado profissional sem necessidade de grandes revisões.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O que é few-shot prompting? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Few-shot prompting é a técnica de fornecer exemplos do resultado desejado dentro do prompt. Em vez de só descrever o que você quer, você mostra 2 ou 3 exemplos de como deve ficar. O Claude usa esses exemplos como referência e reproduz o padrão com novo conteúdo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Como fazer o Claude não inventar informações? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Instrua explicitamente: 'Se você não tiver certeza sobre alguma informação, diga que não sabe em vez de inventar'. Também ajuda fornecer as informações relevantes no próprio prompt — quanto mais contexto você dá, menos o modelo precisa imaginar detalhes.</p></div>
+    </div>
+    <div class="divider"></div>
+    <div class="todos-produtos">
+      <div class="todos-titulo">Escolha o produto certo para o seu momento</div>
+      <p class="todos-sub">Todos com acesso imediato e garantia incondicional de 7 dias.</p>
+      <div class="prod-lista">
+        <a href="https://www.domineclaude.com.br/oferta" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude: O Guia Definitivo de IA</div><div class="prod-desc">Do zero ao avançado. 13 capítulos e 6 bônus exclusivos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$37</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/95chkbq_925913" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power — 120 Prompts Prontos</div><div class="prod-desc">120 prompts organizados por área. Use hoje, sem adaptação.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$27</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/cf68gv5_925925" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power Pro — 120 Prompts + 150 Skills</div><div class="prod-desc">O arsenal completo de prompts e skills para o Claude.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$47</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude na Prática — 30 Casos Reais</div><div class="prod-desc">30 situações documentadas com prompt exato e resultado real.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$67</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Renda com IA — Guia Completo</div><div class="prod-desc">30 modelos de negócio validados + scripts de prospecção prontos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$97</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/knh5cyu_925940" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Domínio Total — Arsenal Completo de IA</div><div class="prod-desc">Tudo junto: guia, prompts, casos reais e guia de renda.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$127</span><span class="prod-btn">Acessar</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:0.8rem;color:var(--white-40);margin-bottom:0.6rem;font-weight:500">Artigos relacionados:</p>
+    <div class="rel-grid">
+      <a href="https://www.domineclaude.com.br/blog/prompts-para-claude-em-portugues" class="rel-card">
+        <span class="rel-tag">Prompts</span>
+        <div class="rel-titulo">Melhores prompts para o Claude em português — 25 exemplos prontos</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/blog/claude-vs-chatgpt" class="rel-card">
+        <span class="rel-tag">Comparativo</span>
+        <div class="rel-titulo">Claude vs ChatGPT — comparativo completo</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-note">Kortex Evolution · <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a> · <a href="https://www.domineclaude.com.br/termos">Termos</a></div>
+</footer>
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const header=document.querySelector('.site-header');
+  if(menu.classList.contains('open')&&!header.contains(e.target))menu.classList.remove('open');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude vs ChatGPT: qual usar para cada tarefa — comparativo completo</title>
+<meta name="description" content="Comparativo completo e prático entre Claude e ChatGPT para o mercado brasileiro. Descubra qual IA usar para texto, código, análise, trabalho e muito mais.">
+<meta name="keywords" content="Claude vs ChatGPT, diferença Claude ChatGPT, qual melhor IA português, Claude ou ChatGPT, comparativo inteligência artificial">
+<meta property="og:title" content="Claude vs ChatGPT: qual usar para cada tarefa — comparativo completo">
+<meta property="og:description" content="Comparativo prático e atualizado entre Claude e ChatGPT para quem trabalha em português.">
+<meta property="og:type" content="article">
+<meta name="author" content="Kortex Evolution">
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude vs ChatGPT: qual usar para cada tarefa — comparativo completo",
+  "description": "Comparativo completo e prático entre Claude e ChatGPT para o mercado brasileiro.",
+  "author": {"@type": "Organization", "name": "Kortex Evolution"},
+  "publisher": {"@type": "Organization", "name": "Domina Claude", "url": "https://www.domineclaude.com.br"},
+  "mainEntityOfPage": "https://www.domineclaude.com.br/blog/claude-vs-chatgpt"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},
+    {"@type":"ListItem","position":2,"name":"Artigos","item":"https://www.domineclaude.com.br/blog"},
+    {"@type":"ListItem","position":3,"name":"Claude vs ChatGPT","item":"https://www.domineclaude.com.br/blog/claude-vs-chatgpt"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Claude é melhor que o ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"Depende da tarefa. Claude é superior para textos em português, análise de documentos longos e raciocínio complexo. ChatGPT se destaca em código, uso de plugins e geração de imagens com DALL-E. Para a maioria dos profissionais brasileiros que trabalham com texto, o Claude tende a entregar resultados melhores."}},
+    {"@type":"Question","name":"Claude e ChatGPT podem ser usados juntos?","acceptedAnswer":{"@type":"Answer","text":"Sim. Muitos profissionais usam os dois de forma complementar — Claude para redigir, analisar e estruturar texto, ChatGPT para tarefas de código ou quando precisam de plugins específicos. Não há motivo para escolher apenas um."}},
+    {"@type":"Question","name":"Qual IA é melhor para escrever em português?","acceptedAnswer":{"@type":"Answer","text":"O Claude tem desempenho consistentemente superior em português. Os textos saem mais naturais, com melhor estrutura e menos erros de construção de frase — algo que o ChatGPT ainda luta para replicar no idioma."}},
+    {"@type":"Question","name":"O Claude tem versão gratuita?","acceptedAnswer":{"@type":"Answer","text":"Sim. O Claude tem plano gratuito com acesso ao modelo principal, com limite diário de mensagens. O plano pago remove esses limites e dá acesso a modelos mais avançados e maior contexto de documentos."}},
+    {"@type":"Question","name":"ChatGPT ou Claude para freelancers?","acceptedAnswer":{"@type":"Answer","text":"Para freelancers que trabalham com texto — copywriting, gestão de redes sociais, propostas, ghostwriting — o Claude tende a ser a escolha mais produtiva. Para quem trabalha com desenvolvimento ou precisa de integrações, o ChatGPT tem mais opções de ferramentas."}},
+    {"@type":"Question","name":"Qual IA lê documentos longos melhor?","acceptedAnswer":{"@type":"Answer","text":"O Claude. Com capacidade de processar até 200 mil tokens de contexto, o Claude consegue analisar contratos, relatórios e documentos extensos sem perder o fio da meada — algo que o ChatGPT ainda não acompanha na mesma escala."}}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;
+  --black:#060606;--black-3:#141414;--black-4:#1C1C1C;--black-5:#242424;
+  --white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);
+  --white-60:rgba(255,255,255,0.6);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);
+  --green:#4CAF7D;--orange:#E8722A;
+  --font-display:'Plus Jakarta Sans',sans-serif;
+  --font-body:'Inter',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+
+/* HEADER */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);letter-spacing:-0.01em;text-decoration:none;}
+.logo span{color:var(--gold);}
+.header-nav{display:flex;align-items:center;gap:1.4rem;}
+.header-nav a{color:var(--white-50);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
+.header-nav a:hover{color:var(--white-90);}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);padding:1rem 1.5rem;flex-direction:column;gap:0.7rem;z-index:99;}
+.mobile-menu a{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.hamburger{display:flex}}
+.page-push{height:56px;}
+
+/* LAYOUT */
+.article-wrap{position:relative;z-index:10;max-width:780px;margin:0 auto;padding:0 1.5rem;}
+
+/* HERO */
+.article-hero{padding:3rem 0 2rem;}
+.article-category{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;margin-bottom:1.2rem;text-decoration:none;}
+.article-h1{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em;}
+.article-h1 span{color:var(--gold);}
+.article-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.meta-item{font-size:0.77rem;color:var(--white-40);}
+.article-intro{font-size:1rem;color:var(--white-70);line-height:1.75;padding:1.2rem 1.4rem;background:rgba(201,168,76,0.05);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;margin-bottom:2rem;}
+
+/* ÍNDICE */
+.indice{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:2rem;}
+.indice-titulo{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.indice ol{padding-left:1.4rem;}
+.indice li{font-size:0.83rem;color:var(--white-50);line-height:1.6;margin-bottom:0.3rem;}
+.indice a{color:var(--white-50);text-decoration:none;transition:color 0.2s;}
+.indice a:hover{color:var(--gold);}
+
+/* CONTEÚDO */
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--white-90);margin:2.5rem 0 0.8rem;padding-top:0.5rem;border-top:1px solid rgba(201,168,76,0.1);letter-spacing:-0.01em;scroll-margin-top:70px;}
+.article-body h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gold);margin:1.8rem 0 0.6rem;scroll-margin-top:70px;}
+.article-body p{font-size:0.9rem;color:var(--white-60);line-height:1.8;margin-bottom:0.9rem;}
+.article-body p strong{color:var(--white-80);font-weight:600;}
+.article-body ul,
+.article-body ol{padding-left:1.4rem;margin-bottom:1rem;}
+.article-body li{font-size:0.88rem;color:var(--white-60);line-height:1.65;margin-bottom:0.5rem;}
+.article-body li strong{color:var(--white-80);}
+.article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.article-body a:hover{border-bottom-color:var(--gold);}
+
+/* VEREDICTO */
+.veredicto{background:var(--black-4);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;display:flex;align-items:flex-start;gap:1rem;}
+.veredicto-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;margin-top:0.1rem;}
+.veredicto-icon.claude{background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.25);}
+.veredicto-icon.chatgpt{background:rgba(76,175,125,0.12);border:1px solid rgba(76,175,125,0.25);}
+.veredicto-icon.empate{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);}
+.veredicto-content{}
+.veredicto-label{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;}
+.veredicto-icon.claude + .veredicto-content .veredicto-label{color:var(--gold);}
+.veredicto-icon.chatgpt + .veredicto-content .veredicto-label{color:var(--green);}
+.veredicto-icon.empate + .veredicto-content .veredicto-label{color:var(--white-40);}
+.veredicto-text{font-size:0.87rem;color:var(--white-60);line-height:1.6;}
+.veredicto-text strong{color:var(--white-80);font-weight:600;}
+
+/* TABELA */
+.tabela-wrap{overflow-x:auto;margin:1.5rem 0;}
+.comp-table{width:100%;border-collapse:collapse;font-size:0.82rem;}
+.comp-table th{background:rgba(201,168,76,0.08);color:var(--gold);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;font-size:0.68rem;padding:0.75rem 1rem;text-align:left;}
+.comp-table td{padding:0.65rem 1rem;color:var(--white-60);border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top;}
+.comp-table tr:hover td{background:rgba(201,168,76,0.025);}
+.comp-table tr:last-child td{border-bottom:none;}
+.comp-table td:first-child{color:var(--white-80);font-weight:600;}
+.tag-c{display:inline-block;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.25);color:var(--gold);padding:0.15rem 0.5rem;border-radius:100px;white-space:nowrap;}
+.tag-g{display:inline-block;font-size:0.62rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;background:rgba(76,175,125,0.1);border:1px solid rgba(76,175,125,0.25);color:var(--green);padding:0.15rem 0.5rem;border-radius:100px;white-space:nowrap;}
+.tag-e{display:inline-block;font-size:0.62rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--white-40);padding:0.15rem 0.5rem;border-radius:100px;white-space:nowrap;}
+
+/* DESTAQUE */
+.destaque{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.destaque-titulo{font-family:var(--font-display);font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;}
+.destaque p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin-bottom:0.4rem;}
+.destaque p:last-child{margin-bottom:0;}
+
+/* PERFIL CARDS */
+.perfil-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+.perfil-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.1);border-radius:10px;padding:1.3rem;}
+.perfil-card.chatgpt{border-color:rgba(76,175,125,0.15);}
+.perfil-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:700;margin-bottom:0.8rem;}
+.perfil-card .perfil-titulo{color:var(--gold);}
+.perfil-card.chatgpt .perfil-titulo{color:var(--green);}
+.perfil-card ul{list-style:none;padding:0;}
+.perfil-card li{font-size:0.82rem;color:var(--white-60);padding:0.3rem 0;padding-left:1rem;position:relative;border-bottom:1px solid rgba(255,255,255,0.04);}
+.perfil-card li:last-child{border-bottom:none;}
+.perfil-card li::before{content:'✓';position:absolute;left:0;font-size:0.72rem;font-weight:700;}
+.perfil-card .perfil-titulo ~ ul li::before{color:var(--gold);}
+.perfil-card.chatgpt li::before{color:var(--green);}
+@media(max-width:580px){.perfil-grid{grid-template-columns:1fr;}}
+
+/* JUNTOS */
+.juntos{background:linear-gradient(135deg,rgba(201,168,76,0.06),rgba(76,175,125,0.04));border:1px solid rgba(201,168,76,0.15);border-radius:12px;padding:1.6rem;margin:1.5rem 0;}
+.juntos h3{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white-90);margin-bottom:0.8rem;}
+.juntos p{font-size:0.87rem;color:var(--white-60);line-height:1.65;margin-bottom:0.6rem;}
+.juntos p:last-child{margin-bottom:0;}
+
+/* CTAs */
+.cta-inline{background:rgba(232,114,42,0.07);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-inline-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-inline-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-orange{display:inline-flex;align-items:center;background:linear-gradient(135deg,#E8722A,#F5832E);color:#ffffff!important;font-family:var(--font-display);font-size:0.8rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;box-shadow:0 3px 15px rgba(232,114,42,0.3);border:none;}
+.btn-orange:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(232,114,42,0.5);}
+
+.cta-calc{background:rgba(76,175,125,0.05);border:1px solid rgba(76,175,125,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-calc-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-calc-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-green{display:inline-flex;align-items:center;background:rgba(76,175,125,0.12);border:1px solid rgba(76,175,125,0.3);color:#ffffff!important;font-family:var(--font-body);font-size:0.83rem;font-weight:600;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.btn-green:hover{background:rgba(76,175,125,0.22);border-color:var(--green);}
+
+.cta-final{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;}
+.cta-final h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
+.cta-final p{font-size:0.88rem;color:var(--white-50);max-width:440px;margin:0 auto 1.2rem;line-height:1.65;}
+.btn-gold{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#ffffff!important;font-family:var(--font-display);font-size:0.88rem;font-weight:700;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(201,168,76,0.25);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.4);}
+
+/* FAQ */
+.faq-item{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:8px;margin-bottom:0.5rem;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:var(--font-body);font-size:0.88rem;font-weight:600;text-align:left;padding:0.9rem 1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color 0.2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-q svg{flex-shrink:0;transition:transform 0.3s;color:var(--gold);}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;padding:0 1.1rem;}
+.faq-item.open .faq-a{max-height:400px;padding:0 1.1rem 0.9rem;}
+.faq-a p{font-size:0.86rem;color:var(--white-60);line-height:1.65;}
+
+/* RELACIONADOS */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.rel-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:10px;padding:1.1rem;transition:all 0.25s;text-decoration:none;display:block;}
+.rel-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
+.rel-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:block;}
+.rel-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.3rem;}
+.rel-leia{font-size:0.75rem;color:var(--gold);margin-top:0.5rem;display:block;}
+
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:2rem 0;}
+
+footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);margin-top:2rem;position:relative;z-index:10;}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.4rem;}
+.footer-logo span{color:rgba(201,168,76,0.35);}
+.footer-note{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+.footer-note a{color:rgba(255,255,255,0.18);text-decoration:none;}
+
+@media(max-width:640px){.article-h1{font-size:1.7rem}.cta-inline,.cta-calc{flex-direction:column}.perfil-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1475704073818729');
+window.addEventListener('load',function(){fbq('track','PageView');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+
+<div class="article-wrap">
+  <div class="article-hero">
+    <a href="https://www.domineclaude.com.br/blog" class="article-category">Comparativo</a>
+    <h1 class="article-h1">Claude vs ChatGPT: qual usar para <span>cada tarefa</span> — comparativo completo</h1>
+    <div class="article-meta">
+      <span class="meta-item">✍️ Kortex Evolution</span>
+      <span class="meta-item">📖 Leitura de 14 min</span>
+      <span class="meta-item">🔄 Atualizado regularmente</span>
+    </div>
+    <div class="article-intro">
+      Claude e ChatGPT são as duas IAs mais usadas no Brasil. Mas a pergunta que todo profissional faz é a mesma: qual delas usar? A resposta não é simples — e qualquer artigo que diga "X é melhor que Y" sem contexto está te enganando. Neste comparativo você vai descobrir qual IA vence em cada tipo de tarefa, quando usar as duas juntas e qual faz mais sentido para o seu perfil.
+    </div>
+  </div>
+
+  <!-- ÍNDICE -->
+  <div class="indice">
+    <div class="indice-titulo">Índice do artigo</div>
+    <ol>
+      <li><a href="#diferencas">As diferenças fundamentais entre Claude e ChatGPT</a></li>
+      <li><a href="#portugues">Qual escreve melhor em português</a></li>
+      <li><a href="#tarefas">Comparativo por tipo de tarefa</a></li>
+      <li><a href="#tabela">Tabela comparativa completa</a></li>
+      <li><a href="#quando-claude">Quando usar o Claude</a></li>
+      <li><a href="#quando-chatgpt">Quando usar o ChatGPT</a></li>
+      <li><a href="#juntos">Podem ser usados juntos?</a></li>
+      <li><a href="#precos">Comparativo de planos</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="diferencas">As diferenças fundamentais entre Claude e ChatGPT</h2>
+    <p>Claude é desenvolvido pela <strong>Anthropic</strong>, fundada por ex-pesquisadores da OpenAI com foco obsessivo em segurança e precisão. ChatGPT é desenvolvido pela <strong>OpenAI</strong>, a empresa que popularizou o uso de IA generativa no mundo.</p>
+    <p>As duas ferramentas usam arquiteturas de linguagem avançadas, mas foram treinadas com prioridades diferentes — e isso aparece de forma clara nos resultados do dia a dia.</p>
+
+    <div class="destaque">
+      <div class="destaque-titulo">A diferença que mais importa na prática</div>
+      <p>O Claude foi treinado com uma filosofia chamada "Constitutional AI" — onde a IA aprende a seguir princípios de honestidade e segurança. O ChatGPT foi otimizado para ser útil e engajante. Na prática: o Claude tende a dizer quando não sabe algo; o ChatGPT tende a dar uma resposta de qualquer jeito.</p>
+      <p>Para quem usa IA no trabalho, isso importa muito. Um texto errado que parece certo é mais perigoso que nenhum texto.</p>
+    </div>
+
+    <h2 id="portugues">Qual escreve melhor em português</h2>
+    <p>Esta é a comparação que mais importa para o mercado brasileiro — e onde a diferença é mais evidente.</p>
+    <p>O Claude produz textos em português com <strong>naturalidade, coesão e estrutura superiores</strong>. As frases soam como foram escritas por um brasileiro, não traduzidas do inglês. A pontuação está correta, os conectivos fazem sentido e o tom se mantém consistente ao longo do texto.</p>
+    <p>O ChatGPT também escreve bem em português, mas ainda sofre com construções que soam estrangeiras, uso excessivo de palavras formais onde o coloquial seria mais natural, e inconsistências de tom em textos mais longos.</p>
+
+    <div class="veredicto">
+      <div class="veredicto-icon claude">✦</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — Claude</div>
+        <div class="veredicto-text"><strong>Para quem trabalha com texto em português, o Claude é a escolha mais eficiente.</strong> A diferença de qualidade é perceptível especialmente em textos longos, copywriting persuasivo e conteúdo que precisa soar natural.</div>
+      </div>
+    </div>
+
+    <h2 id="tarefas">Comparativo por tipo de tarefa</h2>
+
+    <h3>Copywriting e textos de vendas</h3>
+    <p>O Claude entende o contexto de persuasão com mais profundidade. Dado um bom briefing, ele estrutura textos de vendas com gatilhos psicológicos bem posicionados, headlines que funcionam e CTAs que convertem — tudo em português natural. Para profissionais de marketing e copywriters, o Claude reduz significativamente o tempo de revisão e reescrita.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon claude">✦</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — Claude</div>
+        <div class="veredicto-text">Textos mais persuasivos, em português mais natural e com menos retrabalho.</div>
+      </div>
+    </div>
+
+    <h3>Código e programação</h3>
+    <p>Aqui o ChatGPT ainda leva vantagem. O ecossistema de ferramentas da OpenAI — especialmente o Code Interpreter e os plugins para desenvolvimento — é mais maduro. O ChatGPT também tem uma base maior de exemplos de código em linguagens menos comuns. O Claude escreve código de qualidade, mas para tarefas de desenvolvimento intenso, o ChatGPT ainda é a escolha da maioria dos programadores.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon chatgpt">◆</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — ChatGPT</div>
+        <div class="veredicto-text">Ecossistema mais completo para desenvolvimento, com mais ferramentas integradas.</div>
+      </div>
+    </div>
+
+    <h3>Análise de documentos longos</h3>
+    <p>O Claude tem uma vantagem técnica significativa aqui: processa até <strong>200 mil tokens de contexto</strong> — equivalente a mais de 150 páginas de texto de uma só vez. Isso permite analisar contratos extensos, relatórios completos, dossiês e documentos corporativos sem perder o fio da meada. O ChatGPT tem janela de contexto menor e tende a "esquecer" informações do início do documento em análises longas.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon claude">✦</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — Claude</div>
+        <div class="veredicto-text">Contexto até 5x maior. Ideal para contratos, relatórios e documentos extensos.</div>
+      </div>
+    </div>
+
+    <h3>Pesquisa e síntese de informação</h3>
+    <p>O ChatGPT com acesso à web (versão paga) se destaca aqui por conseguir buscar informações em tempo real. O Claude, sem acesso nativo à internet na versão padrão, trabalha com o conhecimento do seu treinamento. Para pesquisa de dados atuais, o ChatGPT leva vantagem. Para síntese, análise e estruturação de informação já fornecida, o Claude é superior.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon empate">—</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Depende do contexto</div>
+        <div class="veredicto-text">ChatGPT para pesquisa de dados atuais na web. Claude para síntese e análise profunda de informação fornecida.</div>
+      </div>
+    </div>
+
+    <h3>Raciocínio complexo e análise estratégica</h3>
+    <p>Para tarefas que exigem raciocínio em múltiplos passos — análise de cenários, tomada de decisão, planejamento estratégico — o Claude consistentemente produz respostas mais precisas e com menor índice de erros lógicos. Ele também reconhece limitações do próprio raciocínio e sinaliza quando a resposta pode estar errada, o que é crítico em contextos profissionais.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon claude">✦</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — Claude</div>
+        <div class="veredicto-text">Menor índice de alucinações e maior capacidade de sinalizar incertezas. Mais confiável para decisões profissionais.</div>
+      </div>
+    </div>
+
+    <h3>Geração de imagens</h3>
+    <p>O ChatGPT tem integração nativa com DALL-E para geração de imagens. O Claude não gera imagens. Para qualquer necessidade visual, o ChatGPT é a única opção entre os dois.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon chatgpt">◆</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — ChatGPT</div>
+        <div class="veredicto-text">Claude não gera imagens. ChatGPT com DALL-E é a escolha para criação visual.</div>
+      </div>
+    </div>
+
+    <h3>Gestão de redes sociais e conteúdo recorrente</h3>
+    <p>Para quem precisa de calendários editoriais, legendas, hashtags e conteúdo consistente em volume, o Claude se destaca. A capacidade de manter tom, voz e estilo consistentes ao longo de múltiplas entregas é superior — especialmente quando você fornece bons exemplos do estilo desejado.</p>
+    <div class="veredicto">
+      <div class="veredicto-icon claude">✦</div>
+      <div class="veredicto-content">
+        <div class="veredicto-label">Vencedor — Claude</div>
+        <div class="veredicto-text">Melhor consistência de tom e voz em produção de conteúdo em volume.</div>
+      </div>
+    </div>
+
+    <div class="cta-calc">
+      <div class="cta-calc-text">
+        <h4>Vai usar o Claude para trabalhar?</h4>
+        <p>Descubra quanto cobrar pelos seus serviços com a calculadora gratuita de precificação.</p>
+      </div>
+      <a href="https://www.domineclaude.com.br/ferramentas/calculadora" class="btn-green">Usar a calculadora</a>
+    </div>
+
+    <h2 id="tabela">Tabela comparativa completa</h2>
+    <div class="tabela-wrap">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Critério</th>
+            <th>Claude</th>
+            <th>ChatGPT</th>
+            <th>Vencedor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Texto em português</td><td>Excelente, muito natural</td><td>Bom, pode soar traduzido</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Copywriting persuasivo</td><td>Estrutura e gatilhos precisos</td><td>Bom, menos consistente</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Código e programação</td><td>Muito bom</td><td>Excelente, ecossistema maior</td><td><span class="tag-g">ChatGPT</span></td></tr>
+          <tr><td>Documentos longos</td><td>Até 200k tokens de contexto</td><td>Contexto mais limitado</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Pesquisa em tempo real</td><td>Sem acesso à web nativo</td><td>Com acesso à web (pago)</td><td><span class="tag-g">ChatGPT</span></td></tr>
+          <tr><td>Raciocínio complexo</td><td>Menor índice de erros</td><td>Bom, mais propenso a alucinar</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Geração de imagens</td><td>Não disponível</td><td>DALL-E integrado</td><td><span class="tag-g">ChatGPT</span></td></tr>
+          <tr><td>Conteúdo para redes sociais</td><td>Consistência superior</td><td>Bom em volume</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Honestidade sobre limitações</td><td>Sinaliza incertezas</td><td>Tende a responder sempre</td><td><span class="tag-c">Claude</span></td></tr>
+          <tr><td>Plugins e integrações</td><td>Ecossistema menor</td><td>Ecossistema maior e maduro</td><td><span class="tag-g">ChatGPT</span></td></tr>
+          <tr><td>Plano gratuito</td><td>Disponível com limites</td><td>Disponível com limites</td><td><span class="tag-e">Empate</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="quando-claude">Quando usar o Claude</h2>
+    <p>O Claude é a escolha certa quando o seu trabalho envolve principalmente texto, análise e comunicação em português. Se a qualidade da escrita impacta diretamente no resultado — seja para vender, convencer, informar ou entregar para um cliente — o Claude vai economizar tempo de revisão e elevar o padrão do output.</p>
+
+    <div class="perfil-grid">
+      <div class="perfil-card">
+        <div class="perfil-titulo">Use o Claude se você é:</div>
+        <ul>
+          <li>Copywriter ou redator</li>
+          <li>Gestor de redes sociais</li>
+          <li>Consultor ou coach</li>
+          <li>Profissional de RH ou gestão</li>
+          <li>Freelancer de conteúdo</li>
+          <li>Advogado ou analista de contratos</li>
+          <li>Ghostwriter ou produtor editorial</li>
+          <li>Qualquer profissional que trabalha muito com texto em português</li>
+        </ul>
+      </div>
+      <div class="perfil-card">
+        <div class="perfil-titulo">O Claude se destaca em:</div>
+        <ul>
+          <li>Textos persuasivos e comerciais</li>
+          <li>Análise de documentos extensos</li>
+          <li>Revisão e melhoria de textos</li>
+          <li>Planejamento e estratégia</li>
+          <li>Síntese de informação complexa</li>
+          <li>Calendários editoriais</li>
+          <li>Propostas e apresentações</li>
+          <li>Raciocínio em múltiplos passos</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="quando-chatgpt">Quando usar o ChatGPT</h2>
+    <p>O ChatGPT é a escolha certa quando você precisa de integração com outras ferramentas, geração de imagens, busca na web em tempo real ou trabalho intenso com código. O ecossistema da OpenAI é mais maduro para casos de uso técnicos e para quem precisa de plugins específicos.</p>
+
+    <div class="perfil-grid">
+      <div class="perfil-card chatgpt">
+        <div class="perfil-titulo">Use o ChatGPT se você é:</div>
+        <ul>
+          <li>Desenvolvedor ou programador</li>
+          <li>Designer que precisa de imagens</li>
+          <li>Pesquisador que precisa de dados atuais</li>
+          <li>Usuário de automações e plugins</li>
+          <li>Profissional que trabalha com Office 365</li>
+        </ul>
+      </div>
+      <div class="perfil-card chatgpt">
+        <div class="perfil-titulo">O ChatGPT se destaca em:</div>
+        <ul>
+          <li>Código e debugging</li>
+          <li>Geração de imagens com DALL-E</li>
+          <li>Pesquisa com acesso à web</li>
+          <li>Integrações via plugins</li>
+          <li>Automações com ferramentas externas</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="juntos">Podem ser usados juntos?</h2>
+    <div class="juntos">
+      <h3>Sim — e muitos profissionais já fazem isso</h3>
+      <p>Não existe nenhuma razão para escolher apenas uma IA. Muitos profissionais de alto desempenho usam as duas ferramentas de forma complementar, aproveitando o que cada uma faz melhor.</p>
+      <p>Um exemplo prático: usar o ChatGPT para pesquisar dados atuais sobre um tema, e depois passar essas informações para o Claude redigir o texto final em português com qualidade superior. Ou usar o ChatGPT para gerar o código de uma planilha automatizada, e o Claude para escrever o manual de uso dessa ferramenta.</p>
+      <p>A pergunta certa não é "qual é melhor" — é "qual serve melhor para essa tarefa específica". Ter as duas disponíveis maximiza sua capacidade de entrega.</p>
+    </div>
+
+    <div class="cta-inline">
+      <div class="cta-inline-text">
+        <h4>Quer dominar o Claude de vez?</h4>
+        <p>O guia completo com 13 capítulos, exemplos práticos e 6 bônus exclusivos — por R$37.</p>
+      </div>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-orange">Ver o guia</a>
+    </div>
+
+    <h2 id="precos">Comparativo de planos</h2>
+    <p>Tanto o Claude quanto o ChatGPT oferecem planos gratuitos com limites de uso diário — suficientes para quem está começando ou quer testar antes de assinar.</p>
+    <p>Os planos pagos de ambas as ferramentas ficam na faixa de R$80 a R$120 por mês, com acesso a modelos mais avançados, limites maiores e recursos exclusivos. O investimento se paga rapidamente para quem usa IA no trabalho — uma única entrega de serviço já cobre o custo mensal.</p>
+    <p>A recomendação prática: <strong>comece pelo plano gratuito de ambas</strong>. Teste nas suas tarefas reais durante duas semanas. Depois assine o plano pago da IA que gerou mais valor no seu contexto específico.</p>
+
+    <p>Se você vai usar IA para prestar serviços como freelancer, use nossa <a href="https://www.domineclaude.com.br/ferramentas/calculadora">calculadora de precificação</a> para definir quanto cobrar pelos seus serviços com IA — o custo das ferramentas entra no cálculo automaticamente.</p>
+
+    <div class="divider"></div>
+
+    <h2 id="faq">Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Claude é melhor que o ChatGPT?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Depende da tarefa. Claude é superior para textos em português, análise de documentos longos e raciocínio complexo. ChatGPT se destaca em código, uso de plugins e geração de imagens com DALL-E. Para a maioria dos profissionais brasileiros que trabalham com texto, o Claude tende a entregar resultados melhores.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Claude e ChatGPT podem ser usados juntos?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Sim. Muitos profissionais usam os dois de forma complementar — Claude para redigir, analisar e estruturar texto, ChatGPT para tarefas de código ou quando precisam de plugins específicos. Não há motivo para escolher apenas um.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Qual IA é melhor para escrever em português?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>O Claude tem desempenho consistentemente superior em português. Os textos saem mais naturais, com melhor estrutura e menos erros de construção de frase — algo que o ChatGPT ainda luta para replicar no idioma.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O Claude tem versão gratuita?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Sim. O Claude tem plano gratuito com acesso ao modelo principal, com limite diário de mensagens. O plano pago remove esses limites e dá acesso a modelos mais avançados e maior contexto de documentos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">ChatGPT ou Claude para freelancers?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>Para freelancers que trabalham com texto — copywriting, gestão de redes sociais, propostas, ghostwriting — o Claude tende a ser a escolha mais produtiva. Para quem trabalha com desenvolvimento ou precisa de integrações, o ChatGPT tem mais opções de ferramentas.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Qual IA lê documentos longos melhor?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+      </button>
+      <div class="faq-a"><p>O Claude. Com capacidade de processar até 200 mil tokens de contexto, o Claude consegue analisar contratos, relatórios e documentos extensos sem perder o fio da meada — algo que o ChatGPT ainda não acompanha na mesma escala.</p></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="cta-final">
+      <h3>Pronto para dominar o Claude de vez?</h3>
+      <p>O guia definitivo com 13 capítulos, 6 bônus exclusivos e exemplos práticos que você aplica hoje — por R$37 com acesso vitalício.</p>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-gold">Acessar o guia completo</a>
+    </div>
+
+    <div class="divider"></div>
+    <p style="font-size:0.8rem;color:var(--white-40);margin-bottom:0.6rem;font-weight:500">Artigos e ferramentas relacionados:</p>
+    <div class="rel-grid">
+      <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="rel-card">
+        <span class="rel-tag">Renda com IA</span>
+        <div class="rel-titulo">Como usar o Claude para ganhar dinheiro — guia completo</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/ferramentas/calculadora" class="rel-card">
+        <span class="rel-tag">Ferramenta gratuita</span>
+        <div class="rel-titulo">Calculadora de precificação para freelancers de IA</div>
+        <div class="rel-leia">Usar a calculadora</div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-note">Kortex Evolution · <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a> · <a href="https://www.domineclaude.com.br/termos">Termos</a></div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const header=document.querySelector('.site-header');
+  if(menu.classList.contains('open')&&!header.contains(e.target))menu.classList.remove('open');
+});
+</script>
+</body>
+</html>
