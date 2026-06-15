@@ -5,22 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Domina Claude</title>
 <meta name="description" content="Artigos práticos sobre o Claude — como usar, ganhar dinheiro com IA, prompts e comparativos. Tudo em português, sem papo de tecnologia.">
-<meta name="keywords" content="blog Claude IA, artigos inteligência artificial, como usar Claude, prompts Claude português">
-<meta property="og:title" content="Blog — Domina Claude">
-<meta property="og:type" content="website">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Blog","name":"Blog Domina Claude","url":"https://www.domineclaude.com.br/blog","description":"Artigos práticos sobre o Claude em português","publisher":{"@type":"Organization","name":"Kortex Evolution"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.domineclaude.com.br/blog"}]}
-</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog Domina Claude","url":"https://www.domineclaude.com.br/blog","publisher":{"@type":"Organization","name":"Kortex Evolution"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.domineclaude.com.br/blog"}]}</script>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#070707;--black-3:#161616;--black-4:#1E1E1E;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+:root{--gold:#C9A84C;--gold-dark:#9A7A32;--black:#070707;--black-3:#161616;--black-4:#1E1E1E;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;}
@@ -48,30 +41,20 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .page-hero p{font-size:0.95rem;color:var(--white-50);max-width:480px;margin:0 auto;line-height:1.7;}
 .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:0 0 2.5rem;}
 .section-label{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block;}
-/* ARTIGOS GRID */
-.artigos-lista{display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;}
+.artigos-lista{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;}
 .artigo-item{background:var(--black-3);border:1px solid rgba(201,168,76,0.1);border-radius:10px;padding:1.6rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1.5rem;text-decoration:none;transition:all 0.25s;}
 .artigo-item:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
-.artigo-item.em-breve{opacity:0.45;cursor:default;pointer-events:none;}
 .artigo-cat{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;}
-.artigo-item h2{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.4rem;letter-spacing:-0.01em;}
-.artigo-item p{font-size:0.83rem;color:var(--white-50);line-height:1.55;}
+.artigo-item h2{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.4rem;letter-spacing:-0.01em;}
+.artigo-item p{font-size:0.82rem;color:var(--white-50);line-height:1.5;}
 .artigo-meta{font-size:0.72rem;color:var(--white-40);margin-top:0.5rem;}
 .artigo-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.75rem;font-weight:700;padding:0.55rem 1.1rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;display:inline-flex;align-items:center;}
 .artigo-btn:hover{opacity:0.9;transform:translateY(-1px);}
-.badge-breve{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--white-40);padding:0.3rem 0.8rem;border-radius:100px;white-space:nowrap;}
-@media(max-width:600px){.artigo-item{grid-template-columns:1fr;}.artigo-btn,.badge-breve{width:fit-content;}}
-/* CTA */
 .cta-blog{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin-bottom:3rem;}
 .cta-blog h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
 .cta-blog p{font-size:0.88rem;color:var(--white-50);max-width:420px;margin:0 auto 1.2rem;line-height:1.65;}
 .btn-cta{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.85rem;font-weight:700;padding:0.8rem 1.8rem;border-radius:4px;text-decoration:none;transition:all 0.3s;}
 .btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.35);}
-/* SEO */
-.seo-section{padding:2rem 0 3rem;}
-.seo-section h2{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--white-90);margin-bottom:0.7rem;letter-spacing:-0.01em;}
-.seo-section p{font-size:0.86rem;color:var(--white-50);line-height:1.75;margin-bottom:0.7rem;text-align:justify;}
-.seo-section strong{color:var(--white-70);font-weight:600;}
 footer{position:relative;z-index:10;text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);}
 .footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.5rem;}
 .footer-logo span{color:rgba(201,168,76,0.35);}
@@ -79,10 +62,10 @@ footer{position:relative;z-index:10;text-align:center;padding:2rem 1.5rem;border
 .footer-links a{font-size:0.73rem;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;}
 .footer-links a:hover{color:rgba(255,255,255,0.5);}
 .footer-note{font-size:0.68rem;color:rgba(255,255,255,0.15);}
+@media(max-width:600px){.artigo-item{grid-template-columns:1fr}.artigo-btn{width:fit-content}}
 </style>
 </head>
 <body>
-
 <!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -115,69 +98,106 @@ window.addEventListener('load',function(){fbq('track','PageView');});
     <h1>Aprenda com quem usa o <em>Claude</em> de verdade</h1>
     <p>Artigos práticos sobre inteligência artificial — sem papo de tecnologia, com exemplos reais que você aplica hoje.</p>
   </div>
-
   <div class="divider"></div>
 
-  <span class="section-label">Artigos publicados</span>
+  <span class="section-label">Todos os artigos</span>
   <div class="artigos-lista">
     <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="artigo-item">
       <div>
         <span class="artigo-cat">Renda com IA</span>
         <h2>Como usar o Claude para ganhar dinheiro — guia completo para freelancers</h2>
-        <p>11 modelos de negócio validados, quanto cobrar em cada nicho e como prospectar os primeiros clientes como freelancer de IA.</p>
-        <div class="artigo-meta">Leitura de 12 min · Kortex Evolution</div>
+        <p>11 modelos de negócio validados, quanto cobrar em cada nicho e como prospectar os primeiros clientes.</p>
+        <div class="artigo-meta">📖 12 min · Kortex Evolution</div>
       </div>
-      <span class="artigo-btn">Ler artigo</span>
+      <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="artigo-btn">Ler artigo</a>
     </a>
-  </div>
-
-  <span class="section-label">Em breve</span>
-  <div class="artigos-lista">
-    <div class="artigo-item em-breve">
+    <a href="https://www.domineclaude.com.br/blog/claude-vs-chatgpt" class="artigo-item">
       <div>
         <span class="artigo-cat">Comparativo</span>
-        <h2>Claude vs ChatGPT: qual usar para cada tipo de tarefa</h2>
-        <p>Comparativo prático com testes reais nas principais categorias de uso profissional em português.</p>
+        <h2>Claude vs ChatGPT: qual usar para cada tarefa — comparativo completo</h2>
+        <p>Comparativo prático com veredicto por tarefa — texto, código, análise, imagens e uso profissional.</p>
+        <div class="artigo-meta">📖 14 min · Kortex Evolution</div>
       </div>
-      <span class="badge-breve">Em breve</span>
-    </div>
-    <div class="artigo-item em-breve">
+      <a href="https://www.domineclaude.com.br/blog/claude-vs-chatgpt" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/prompts-para-claude-em-portugues" class="artigo-item">
       <div>
         <span class="artigo-cat">Prompts</span>
-        <h2>Os melhores prompts para o Claude em português — 25 exemplos prontos</h2>
-        <p>Prompts testados para copywriting, carreira, negócios e produtividade pessoal — prontos para usar.</p>
+        <h2>Melhores prompts para o Claude em português — 25 exemplos prontos</h2>
+        <p>Prompts testados para copywriting, carreira, negócios e produtividade — prontos para usar agora.</p>
+        <div class="artigo-meta">📖 11 min · Kortex Evolution</div>
       </div>
-      <span class="badge-breve">Em breve</span>
-    </div>
-    <div class="artigo-item em-breve">
+      <a href="https://www.domineclaude.com.br/blog/prompts-para-claude-em-portugues" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/melhores-ias-gratuitas-brasil" class="artigo-item">
       <div>
         <span class="artigo-cat">Comparativo</span>
-        <h2>Melhores IAs gratuitas do Brasil — qual escolher em 2025</h2>
-        <p>Análise das principais ferramentas de IA disponíveis gratuitamente para usuários brasileiros.</p>
+        <h2>Melhores IAs gratuitas do Brasil — comparativo completo e atualizado</h2>
+        <p>Claude, ChatGPT, Gemini, Perplexity e Copilot — qual vale mais para o seu uso?</p>
+        <div class="artigo-meta">📖 10 min · Kortex Evolution</div>
       </div>
-      <span class="badge-breve">Em breve</span>
-    </div>
-    <div class="artigo-item em-breve">
+      <a href="https://www.domineclaude.com.br/blog/melhores-ias-gratuitas-brasil" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/claude-para-gestao-de-redes-sociais" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Gestão de redes</span>
+        <h2>Claude para gestão de redes sociais — guia completo para profissionais</h2>
+        <p>Como criar calendários editoriais, legendas e gerenciar múltiplas contas com qualidade superior.</p>
+        <div class="artigo-meta">📖 10 min · Kortex Evolution</div>
+      </div>
+      <a href="https://www.domineclaude.com.br/blog/claude-para-gestao-de-redes-sociais" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Prompts</span>
+        <h2>Como criar prompts perfeitos para o Claude — guia completo de prompt engineering</h2>
+        <p>Few-shot, cadeia de raciocínio e os erros que destroem a qualidade dos seus resultados.</p>
+        <div class="artigo-meta">📖 11 min · Kortex Evolution</div>
+      </div>
+      <a href="https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/como-usar-ia-para-ganhar-tempo-no-trabalho" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Produtividade</span>
+        <h2>Como usar IA para ganhar tempo no trabalho — guia prático com o Claude</h2>
+        <p>Como economizar 2 a 4 horas por dia em e-mails, relatórios, resumos e propostas.</p>
+        <div class="artigo-meta">📖 9 min · Kortex Evolution</div>
+      </div>
+      <a href="https://www.domineclaude.com.br/blog/como-usar-ia-para-ganhar-tempo-no-trabalho" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/claude-para-freelancers" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Freelancer</span>
+        <h2>Claude para freelancers — como aumentar sua produtividade e faturamento com IA</h2>
+        <p>Atenda mais clientes, entregue qualidade superior e aumente o faturamento com IA.</p>
+        <div class="artigo-meta">📖 10 min · Kortex Evolution</div>
+      </div>
+      <a href="https://www.domineclaude.com.br/blog/claude-para-freelancers" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/claude-na-pratica-casos-reais" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Na prática</span>
+        <h2>Claude na prática — 10 casos reais com prompts e resultados documentados</h2>
+        <p>10 situações reais com o prompt exato e o resultado obtido. E-mails, propostas, relatórios e muito mais.</p>
+        <div class="artigo-meta">📖 13 min · Kortex Evolution</div>
+      </div>
+      <a href="https://www.domineclaude.com.br/blog/claude-na-pratica-casos-reais" class="artigo-btn">Ler artigo</a>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/dicionario-termos-ia-portugues" class="artigo-item">
       <div>
         <span class="artigo-cat">Referência</span>
         <h2>Dicionário de termos de IA em português — do básico ao avançado</h2>
-        <p>Glossário completo para entender tudo que se fala sobre inteligência artificial sem se perder no jargão técnico.</p>
+        <p>Prompt, token, LLM, alucinação, RAG e muito mais — explicados de forma simples e direta.</p>
+        <div class="artigo-meta">📖 10 min · Kortex Evolution</div>
       </div>
-      <span class="badge-breve">Em breve</span>
-    </div>
+      <a href="https://www.domineclaude.com.br/blog/dicionario-termos-ia-portugues" class="artigo-btn">Ler artigo</a>
+    </a>
   </div>
 
   <div class="cta-blog">
     <h3>Quer dominar o Claude de vez?</h3>
     <p>O guia completo com 13 capítulos, 6 bônus exclusivos e exemplos práticos que você aplica hoje — por R$37 com acesso vitalício.</p>
     <a href="https://www.domineclaude.com.br/oferta" class="btn-cta">Conhecer o guia completo</a>
-  </div>
-
-  <div class="seo-section">
-    <div class="divider"></div>
-    <h2>Sobre este blog</h2>
-    <p>O blog do <strong>Domina Claude</strong> publica artigos práticos sobre inteligência artificial — com foco no Claude da Anthropic e em como profissionais brasileiros podem usar essa tecnologia para trabalhar melhor e ganhar mais.</p>
-    <p>Todos os artigos são escritos com base em testes reais, dados do mercado brasileiro e exemplos aplicáveis no dia a dia — sem teoria vaga ou promessas exageradas. Novos artigos são publicados regularmente.</p>
   </div>
 </div>
 
@@ -193,7 +213,6 @@ window.addEventListener('load',function(){fbq('track','PageView');});
   </div>
   <div class="footer-note">© Kortex Evolution · Todos os direitos reservados</div>
 </footer>
-
 <script>
 document.addEventListener('click',function(e){
   const menu=document.getElementById('mobileMenu');
