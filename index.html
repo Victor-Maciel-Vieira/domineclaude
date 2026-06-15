@@ -145,6 +145,8 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .badge-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; animation: blink 2s infinite; }
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 .featured-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; line-height: 1.25; margin-bottom: 0.6rem; color: var(--white-90); letter-spacing: -0.01em; }
+.produto-card h4, 
+a h4, a h3 { color: inherit; }
 .featured-card p { font-size: 0.85rem; color: var(--white-50); line-height: 1.65; margin-bottom: 1rem; }
 .card-link { font-size: 0.78rem; font-weight: 600; color: var(--gold); letter-spacing: 0.03em; }
 .card-price-wrap { text-align: center; white-space: nowrap; }
@@ -153,29 +155,17 @@ body { background: var(--black); color: var(--white); font-family: var(--font-bo
 .card-price-label { font-size: 0.65rem; color: var(--gold); text-align: center; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.2rem; opacity: 0.7; }
 
 /* PRODUTOS */
-.produtos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-.produto-card { background: var(--black-3); border: 1px solid rgba(201,168,76,0.08); border-radius: 12px; overflow: hidden; transition: all 0.3s; text-decoration: none; display: flex; flex-direction: column; }
-.produto-card:hover { border-color: rgba(201,168,76,0.22); transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
-.produto-img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
-.produto-body { padding: 1.4rem; flex: 1; display: flex; flex-direction: column; }
-.produto-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201,168,76,0.5); margin-bottom: 0.4rem; }
-.produto-card h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--white-90); line-height: 1.3; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-.produto-visao { font-size: 0.85rem; color: rgba(201,168,76,0.85); line-height: 1.6; margin-bottom: 0.8rem; font-style: italic; }
-.produto-beneficios { list-style: none; padding: 0; margin: 0 0 1rem; }
-.produto-beneficios li { font-size: 0.8rem; color: var(--white-50); line-height: 1.5; padding: 0.25rem 0; padding-left: 1.1rem; position: relative; }
-.produto-beneficios li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; font-weight: 700; }
-.produto-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
-.produto-preco { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--gold); letter-spacing: -0.01em; }
-.btn-produto { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: var(--black); font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 4px; text-decoration: none; white-space: nowrap; transition: all 0.2s; }
-.btn-produto:hover { opacity: 0.9; transform: translateY(-1px); }
 
 /* PRODUTO PRINCIPAL DESTAQUE */
-.produto-principal { background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02)); border: 1px solid rgba(201,168,76,0.2); border-radius: 12px; display: grid; grid-template-columns: 300px 1fr; overflow: hidden; transition: all 0.3s; text-decoration: none; margin-bottom: 1.5rem; }
-.produto-principal:hover { border-color: rgba(201,168,76,0.35); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
-.produto-principal .produto-img { width: 300px; height: 300px; object-fit: cover; }
-.produto-principal .produto-body { padding: 2rem; }
-.produto-principal h4 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-.produto-principal .produto-visao { font-size: 0.9rem; }
+
+.produto-principal 
+.produto-principal 
+
+.produto-principal 
+
+.produto-principal 
+
+.produto-ob 
 
 /* FERRAMENTAS */
 .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
@@ -227,8 +217,7 @@ footer { position: relative; z-index: 10; text-align: center; padding: 2.5rem 2r
   .featured-grid { grid-template-columns: 1fr; }
   .featured-card.destaque { grid-column: 1; grid-template-columns: 1fr; }
   .card-price-wrap { text-align: left; }
-  .produto-principal { grid-template-columns: 1fr; }
-  .produto-principal .produto-img { width: 100%; height: 200px; }
+  
   .stats-row { gap: 2rem; }
   .stat-item .num { font-size: 1.8rem; }
   .hero { padding: 3rem 1.5rem 2.5rem; }
@@ -238,9 +227,79 @@ footer { position: relative; z-index: 10; text-align: center; padding: 2.5rem 2r
   .site-header { padding: 0 1.2rem; }
 }
 @media(max-width: 480px) {
-  .produtos-grid { grid-template-columns: 1fr; }
+  
   .hero h1 { font-size: 1.9rem; }
 }
+
+/* ===== PRODUTOS ===== */
+/* Container da lista de OBs */
+.produtos-lista { display: flex; flex-direction: column; gap: 1.2rem; }
+
+/* Card base — produto principal E OBs usam a MESMA estrutura horizontal */
+.produto-principal,
+.produto-ob {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.produto-principal {
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
+  border: 1px solid rgba(201,168,76,0.20);
+  margin-bottom: 1.5rem;
+}
+.produto-ob {
+  background: var(--black-3);
+  border: 1px solid rgba(201,168,76,0.08);
+}
+.produto-principal:hover { border-color: rgba(201,168,76,0.35); box-shadow: 0 16px 48px rgba(0,0,0,0.4); }
+.produto-ob:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+/* Imagem — coluna esquerda, ocupa toda a altura do card */
+.produto-principal > .produto-img,
+.produto-ob > .produto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corpo — coluna direita */
+.produto-principal > .produto-body,
+.produto-ob > .produto-body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Elementos internos */
+.produto-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(201,168,76,0.5); margin-bottom: 0.4rem; }
+.produto-body h4 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--white-90) !important; line-height: 1.3; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+.produto-principal .produto-body h4 { font-size: 1.3rem; }
+.produto-visao { font-size: 0.85rem; color: rgba(201,168,76,0.85); line-height: 1.6; margin-bottom: 0.8rem; font-style: italic; }
+.produto-beneficios { list-style: none; padding: 0; margin: 0 0 1rem; }
+.produto-beneficios li { font-size: 0.8rem; color: var(--white-50); line-height: 1.5; padding: 0.25rem 0 0.25rem 1.1rem; position: relative; }
+.produto-beneficios li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; font-weight: 700; }
+.produto-footer { display: flex; align-items: center; justify-content: space-between; margin-top: auto; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
+.produto-preco { font-family: var(--font-display); font-size: 1.3rem; font-weight: 800; color: var(--gold); letter-spacing: -0.01em; }
+.btn-produto { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: var(--black); font-family: var(--font-display); font-size: 0.75rem; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 4px; text-decoration: none; white-space: nowrap; transition: all 0.2s; display: inline-flex; align-items: center; }
+.btn-produto:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* Mobile: empilha imagem em cima, conteúdo embaixo — APENAS em telas pequenas */
+@media (max-width: 600px) {
+  .produto-principal,
+  .produto-ob {
+    grid-template-columns: 1fr;
+  }
+  .produto-principal > .produto-img,
+  .produto-ob > .produto-img {
+    height: 200px;
+  }
+}
+/* ===== FIM PRODUTOS ===== */
+
 </style>
 </head>
 <body>
@@ -259,8 +318,8 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
 <header class="site-header">
   <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
   <nav class="nav">
-    <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro">Artigos</a>
-    <a href="https://www.domineclaude.com.br/ferramentas/calculadora">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
     <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
   </nav>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -269,8 +328,8 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" onclick="toggleMenu()">Artigos</a>
-  <a href="https://www.domineclaude.com.br/ferramentas/calculadora" onclick="toggleMenu()">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/blog" onclick="toggleMenu()">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas" onclick="toggleMenu()">Ferramentas</a>
   <a href="https://www.domineclaude.com.br/oferta" onclick="toggleMenu()">Guia R$37</a>
 </div>
 
@@ -283,7 +342,7 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
   <p class="hero-sub">Guias práticos, ferramentas gratuitas e o conhecimento que separa quem usa IA de quem domina IA — tudo em português.</p>
   <div class="hero-ctas">
     <a href="https://www.domineclaude.com.br/oferta" class="btn-primary">Conhecer o guia completo</a>
-    <a href="https://www.domineclaude.com.br/ferramentas/calculadora" class="btn-secondary">Ferramentas gratuitas</a>
+    <a href="https://www.domineclaude.com.br/ferramentas" class="btn-secondary">Ferramentas gratuitas</a>
   </div>
 </div>
 
@@ -346,7 +405,7 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
 
   <!-- PRODUTO PRINCIPAL -->
   <a href="https://www.domineclaude.com.br/oferta" class="produto-principal">
-    <img src="./assets/Produto_Principal.jpeg" alt="Claude: O Guia Definitivo de IA" class="produto-img" loading="lazy">
+    <img src="./assets/Produto%20Principal.jpeg" alt="Claude: O Guia Definitivo de IA" class="produto-img" loading="lazy">
     <div class="produto-body">
       <div class="produto-num">Produto principal</div>
       <h4>Claude: O Guia Definitivo de IA para Quem Quer Resultados Reais</h4>
@@ -364,8 +423,8 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
   </a>
 
   <!-- OBs GRID -->
-  <div class="produtos-grid">
-    <a href="https://pay.cakto.com.br/95chkbq_925913" class="produto-card">
+  <div class="produtos-lista">
+    <a href="https://pay.cakto.com.br/95chkbq_925913" class="produto-ob">
       <img src="./assets/OB1.jpeg" alt="Prompt Power — 120 Prompts Prontos" class="produto-img" loading="lazy">
       <div class="produto-body">
         <div class="produto-num">Complemento 01</div>
@@ -378,12 +437,12 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         </ul>
         <div class="produto-footer">
           <div class="produto-preco">R$27</div>
-          <a href="https://pay.cakto.com.br/95chkbq_925913" class="btn-produto">Garantir acesso</a>
+          <span class="btn-produto">Garantir acesso</span>
         </div>
       </div>
     </a>
 
-    <a href="https://pay.cakto.com.br/cf68gv5_925925" class="produto-card">
+    <a href="https://pay.cakto.com.br/cf68gv5_925925" class="produto-ob">
       <img src="./assets/OB2.jpeg" alt="Prompt Power Pro" class="produto-img" loading="lazy">
       <div class="produto-body">
         <div class="produto-num">Complemento 02</div>
@@ -396,12 +455,12 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         </ul>
         <div class="produto-footer">
           <div class="produto-preco">R$47</div>
-          <a href="https://pay.cakto.com.br/cf68gv5_925925" class="btn-produto">Garantir acesso</a>
+          <span class="btn-produto">Garantir acesso</span>
         </div>
       </div>
     </a>
 
-    <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="produto-card">
+    <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="produto-ob">
       <img src="./assets/OB3.jpeg" alt="Claude na Prática — 30 Casos Reais" class="produto-img" loading="lazy">
       <div class="produto-body">
         <div class="produto-num">Complemento 03</div>
@@ -414,12 +473,12 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         </ul>
         <div class="produto-footer">
           <div class="produto-preco">R$67</div>
-          <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="btn-produto">Garantir acesso</a>
+          <span class="btn-produto">Garantir acesso</span>
         </div>
       </div>
     </a>
 
-    <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="produto-card">
+    <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="produto-ob">
       <img src="./assets/OB4.jpeg" alt="Renda com IA" class="produto-img" loading="lazy">
       <div class="produto-body">
         <div class="produto-num">Complemento 04</div>
@@ -432,12 +491,12 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         </ul>
         <div class="produto-footer">
           <div class="produto-preco">R$97</div>
-          <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="btn-produto">Garantir acesso</a>
+          <span class="btn-produto">Garantir acesso</span>
         </div>
       </div>
     </a>
 
-    <a href="https://pay.cakto.com.br/knh5cyu_925940" class="produto-card">
+    <a href="https://pay.cakto.com.br/knh5cyu_925940" class="produto-ob">
       <img src="./assets/OB5.jpeg" alt="Domínio Total" class="produto-img" loading="lazy">
       <div class="produto-body">
         <div class="produto-num">Complemento 05</div>
@@ -450,7 +509,7 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         </ul>
         <div class="produto-footer">
           <div class="produto-preco">R$127</div>
-          <a href="https://pay.cakto.com.br/knh5cyu_925940" class="btn-produto">Garantir acesso</a>
+          <span class="btn-produto">Garantir acesso</span>
         </div>
       </div>
     </a>
@@ -572,8 +631,8 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
 <footer>
   <div class="footer-logo">Domina<span>Claude</span></div>
   <div class="footer-links">
-    <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro">Artigos</a>
-    <a href="https://www.domineclaude.com.br/ferramentas/calculadora">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
     <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
     <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a>
     <a href="https://www.domineclaude.com.br/termos">Termos</a>
