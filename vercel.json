@@ -5,6 +5,8 @@
     { "source": "/oferta", "destination": "/oferta.html" },
     { "source": "/privacidade", "destination": "/privacidade.html" },
     { "source": "/termos", "destination": "/termos.html" },
+    { "source": "/blog", "destination": "/blog-index.html" },
+    { "source": "/ferramentas", "destination": "/ferramentas-index.html" },
     { "source": "/ferramentas/calculadora", "destination": "/calculadora-precificacao.html" },
     { "source": "/blog/como-usar-claude-para-ganhar-dinheiro", "destination": "/artigo-renda-ia.html" }
   ]
