@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Domina Claude</title>
+<meta name="description" content="Artigos práticos sobre o Claude — como usar, ganhar dinheiro com IA, prompts e comparativos. Tudo em português, sem papo de tecnologia.">
+<meta name="keywords" content="blog Claude IA, artigos inteligência artificial, como usar Claude, prompts Claude português">
+<meta property="og:title" content="Blog — Domina Claude">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Blog Domina Claude","url":"https://www.domineclaude.com.br/blog","description":"Artigos práticos sobre o Claude em português","publisher":{"@type":"Organization","name":"Kortex Evolution"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.domineclaude.com.br/blog"}]}
+</script>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#070707;--black-3:#161616;--black-4:#1E1E1E;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 60% at 50% -10%,rgba(201,168,76,0.06) 0%,transparent 65%);pointer-events:none;z-index:0;}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(7,7,7,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);letter-spacing:-0.01em;text-decoration:none;}
+.logo span{color:var(--gold);}
+.header-nav{display:flex;align-items:center;gap:1.4rem;}
+.header-nav a{color:var(--white-50);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
+.header-nav a:hover{color:var(--white-90);}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);padding:1rem 1.5rem;flex-direction:column;gap:0.7rem;z-index:99;}
+.mobile-menu a{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.hamburger{display:flex}}
+.wrap{position:relative;z-index:10;max-width:900px;margin:0 auto;padding:0 1.5rem;}
+.page-push{height:56px;}
+.page-hero{padding:3.5rem 0 2.5rem;text-align:center;}
+.page-eyebrow{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;display:block;}
+.page-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:0.8rem;letter-spacing:-0.02em;}
+.page-hero h1 em{font-style:normal;color:var(--gold);}
+.page-hero p{font-size:0.95rem;color:var(--white-50);max-width:480px;margin:0 auto;line-height:1.7;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:0 0 2.5rem;}
+.section-label{font-size:0.68rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block;}
+/* ARTIGOS GRID */
+.artigos-lista{display:flex;flex-direction:column;gap:1rem;margin-bottom:3rem;}
+.artigo-item{background:var(--black-3);border:1px solid rgba(201,168,76,0.1);border-radius:10px;padding:1.6rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:1.5rem;text-decoration:none;transition:all 0.25s;}
+.artigo-item:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
+.artigo-item.em-breve{opacity:0.45;cursor:default;pointer-events:none;}
+.artigo-cat{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block;}
+.artigo-item h2{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.4rem;letter-spacing:-0.01em;}
+.artigo-item p{font-size:0.83rem;color:var(--white-50);line-height:1.55;}
+.artigo-meta{font-size:0.72rem;color:var(--white-40);margin-top:0.5rem;}
+.artigo-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.75rem;font-weight:700;padding:0.55rem 1.1rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;display:inline-flex;align-items:center;}
+.artigo-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.badge-breve{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--white-40);padding:0.3rem 0.8rem;border-radius:100px;white-space:nowrap;}
+@media(max-width:600px){.artigo-item{grid-template-columns:1fr;}.artigo-btn,.badge-breve{width:fit-content;}}
+/* CTA */
+.cta-blog{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin-bottom:3rem;}
+.cta-blog h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
+.cta-blog p{font-size:0.88rem;color:var(--white-50);max-width:420px;margin:0 auto 1.2rem;line-height:1.65;}
+.btn-cta{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.85rem;font-weight:700;padding:0.8rem 1.8rem;border-radius:4px;text-decoration:none;transition:all 0.3s;}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.35);}
+/* SEO */
+.seo-section{padding:2rem 0 3rem;}
+.seo-section h2{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--white-90);margin-bottom:0.7rem;letter-spacing:-0.01em;}
+.seo-section p{font-size:0.86rem;color:var(--white-50);line-height:1.75;margin-bottom:0.7rem;text-align:justify;}
+.seo-section strong{color:var(--white-70);font-weight:600;}
+footer{position:relative;z-index:10;text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.5rem;}
+.footer-logo span{color:rgba(201,168,76,0.35);}
+.footer-links{display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:0.5rem;}
+.footer-links a{font-size:0.73rem;color:rgba(255,255,255,0.2);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:rgba(255,255,255,0.5);}
+.footer-note{font-size:0.68rem;color:rgba(255,255,255,0.15);}
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1475704073818729');
+window.addEventListener('load',function(){fbq('track','PageView');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog" style="color:var(--gold)">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+
+<div class="wrap">
+  <div class="page-hero">
+    <span class="page-eyebrow">Blog</span>
+    <h1>Aprenda com quem usa o <em>Claude</em> de verdade</h1>
+    <p>Artigos práticos sobre inteligência artificial — sem papo de tecnologia, com exemplos reais que você aplica hoje.</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <span class="section-label">Artigos publicados</span>
+  <div class="artigos-lista">
+    <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="artigo-item">
+      <div>
+        <span class="artigo-cat">Renda com IA</span>
+        <h2>Como usar o Claude para ganhar dinheiro — guia completo para freelancers</h2>
+        <p>11 modelos de negócio validados, quanto cobrar em cada nicho e como prospectar os primeiros clientes como freelancer de IA.</p>
+        <div class="artigo-meta">Leitura de 12 min · Kortex Evolution</div>
+      </div>
+      <span class="artigo-btn">Ler artigo</span>
+    </a>
+  </div>
+
+  <span class="section-label">Em breve</span>
+  <div class="artigos-lista">
+    <div class="artigo-item em-breve">
+      <div>
+        <span class="artigo-cat">Comparativo</span>
+        <h2>Claude vs ChatGPT: qual usar para cada tipo de tarefa</h2>
+        <p>Comparativo prático com testes reais nas principais categorias de uso profissional em português.</p>
+      </div>
+      <span class="badge-breve">Em breve</span>
+    </div>
+    <div class="artigo-item em-breve">
+      <div>
+        <span class="artigo-cat">Prompts</span>
+        <h2>Os melhores prompts para o Claude em português — 25 exemplos prontos</h2>
+        <p>Prompts testados para copywriting, carreira, negócios e produtividade pessoal — prontos para usar.</p>
+      </div>
+      <span class="badge-breve">Em breve</span>
+    </div>
+    <div class="artigo-item em-breve">
+      <div>
+        <span class="artigo-cat">Comparativo</span>
+        <h2>Melhores IAs gratuitas do Brasil — qual escolher em 2025</h2>
+        <p>Análise das principais ferramentas de IA disponíveis gratuitamente para usuários brasileiros.</p>
+      </div>
+      <span class="badge-breve">Em breve</span>
+    </div>
+    <div class="artigo-item em-breve">
+      <div>
+        <span class="artigo-cat">Referência</span>
+        <h2>Dicionário de termos de IA em português — do básico ao avançado</h2>
+        <p>Glossário completo para entender tudo que se fala sobre inteligência artificial sem se perder no jargão técnico.</p>
+      </div>
+      <span class="badge-breve">Em breve</span>
+    </div>
+  </div>
+
+  <div class="cta-blog">
+    <h3>Quer dominar o Claude de vez?</h3>
+    <p>O guia completo com 13 capítulos, 6 bônus exclusivos e exemplos práticos que você aplica hoje — por R$37 com acesso vitalício.</p>
+    <a href="https://www.domineclaude.com.br/oferta" class="btn-cta">Conhecer o guia completo</a>
+  </div>
+
+  <div class="seo-section">
+    <div class="divider"></div>
+    <h2>Sobre este blog</h2>
+    <p>O blog do <strong>Domina Claude</strong> publica artigos práticos sobre inteligência artificial — com foco no Claude da Anthropic e em como profissionais brasileiros podem usar essa tecnologia para trabalhar melhor e ganhar mais.</p>
+    <p>Todos os artigos são escritos com base em testes reais, dados do mercado brasileiro e exemplos aplicáveis no dia a dia — sem teoria vaga ou promessas exageradas. Novos artigos são publicados regularmente.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-links">
+    <a href="https://www.domineclaude.com.br">Início</a>
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+    <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a>
+    <a href="https://www.domineclaude.com.br/termos">Termos</a>
+  </div>
+  <div class="footer-note">© Kortex Evolution · Todos os direitos reservados</div>
+</footer>
+
+<script>
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const header=document.querySelector('.site-header');
+  if(menu.classList.contains('open')&&!header.contains(e.target))menu.classList.remove('open');
+});
+</script>
+</body>
+</html>
