@@ -879,6 +879,36 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
   if(!isOpen)item.classList.add('open');
 }
+
+// Propagação de UTM: captura os parâmetros da URL e repassa para os links do Cakto
+(function(){
+  function propagarUTM(){
+    var params = new URLSearchParams(window.location.search);
+    var chavesUTM = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','fbclid','gclid'];
+    var utmsPresentes = [];
+    chavesUTM.forEach(function(chave){
+      var valor = params.get(chave);
+      if(valor){ utmsPresentes.push([chave, valor]); }
+    });
+    if(utmsPresentes.length === 0){ return; }
+
+    // Aplica em todos os links que apontam para o Cakto
+    var links = document.querySelectorAll('a[href*="pay.cakto.com.br"]');
+    links.forEach(function(link){
+      var url;
+      try { url = new URL(link.href); } catch(e){ return; }
+      utmsPresentes.forEach(function(par){
+        url.searchParams.set(par[0], par[1]); // não sobrescreve o coupon, só adiciona/atualiza UTMs
+      });
+      link.href = url.toString();
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', propagarUTM);
+  } else {
+    propagarUTM();
+  }
+})();
 </script>
 
 <!-- CTA FLUTUANTE -->
