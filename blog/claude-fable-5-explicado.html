@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Fable 5: o que é, o que fazia de melhor e por que foi suspenso pelo governo dos EUA</title>
+<meta name="description" content="Tudo sobre o Claude Fable 5 e o Mythos 5: o que são, os recordes de desempenho que bateram, a linha do tempo completa da suspensão pelo governo americano e o que isso significa para quem usa o Claude no dia a dia.">
+<meta property="og:title" content="Claude Fable 5: o que é, o que fazia de melhor e por que foi suspenso pelo governo dos EUA">
+<meta property="og:description" content="A história completa do modelo mais poderoso que a Anthropic já lançou — e que durou só 96 horas no ar para o público.">
+<meta property="og:type" content="article">
+<meta name="author" content="Kortex Evolution">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Fable 5: o que é, o que fazia de melhor e por que foi suspenso pelo governo dos EUA",
+  "description": "Tudo sobre o Claude Fable 5 e o Mythos 5: o que são, os recordes de desempenho que bateram, a linha do tempo completa da suspensão pelo governo americano e o que isso significa para quem usa o Claude no dia a dia.",
+  "author": {"@type": "Organization", "name": "Kortex Evolution"},
+  "publisher": {"@type": "Organization", "name": "Domina Claude", "url": "https://www.domineclaude.com.br"},
+  "dateModified": "2026-06-24",
+  "mainEntityOfPage": "https://www.domineclaude.com.br/blog/claude-fable-5-explicado"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Início","item":"https://www.domineclaude.com.br"},
+    {"@type":"ListItem","position":2,"name":"Artigos","item":"https://www.domineclaude.com.br/blog"},
+    {"@type":"ListItem","position":3,"name":"Claude Fable 5: o que é e por que foi suspenso","item":"https://www.domineclaude.com.br/blog/claude-fable-5-explicado"}
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"O que é o Claude Fable 5?","acceptedAnswer":{"@type":"Answer","text":"O Claude Fable 5 é o primeiro modelo da classe Mythos — um nível acima do Opus em capacidade — que a Anthropic disponibilizou ao público em geral. Foi lançado em 9 de junho de 2026 com desempenho recorde em engenharia de software, raciocínio longo e pesquisa científica, e veio com barreiras de segurança que bloqueiam respostas em áreas de alto risco como cibersegurança e biologia."}},
+    {"@type":"Question","name":"Qual é a diferença entre Fable 5 e Mythos 5?","acceptedAnswer":{"@type":"Answer","text":"São o mesmo modelo por baixo. O Fable 5 tem camadas de segurança que recusam ou redirecionam pedidos de alto risco para o Claude Opus 4.8. O Mythos 5 tem essas travas removidas em algumas áreas e fica restrito a parceiros aprovados de cibersegurança e infraestrutura crítica através do Project Glasswing."}},
+    {"@type":"Question","name":"Por que o Fable 5 foi suspenso?","acceptedAnswer":{"@type":"Answer","text":"O Departamento de Comércio dos Estados Unidos emitiu uma diretiva de controle de exportação em 12 de junho de 2026, alegando risco à segurança nacional após um relatório sobre uma possível falha de segurança no modelo. A Anthropic discordou da avaliação, mas precisou suspender o acesso globalmente porque a ordem afeta qualquer cidadão estrangeiro, em qualquer lugar do mundo."}},
+    {"@type":"Question","name":"O Claude Fable 5 vai voltar?","acceptedAnswer":{"@type":"Answer","text":"Não há data confirmada. A Anthropic diz que está negociando com o governo americano e que pretende restaurar o acesso assim que possível, mas até a última atualização deste artigo nenhuma data oficial havia sido divulgada."}},
+    {"@type":"Question","name":"A suspensão do Fable 5 afeta o Claude que eu uso no dia a dia?","acceptedAnswer":{"@type":"Answer","text":"Não. A suspensão é específica para o Fable 5 e o Mythos 5. Todos os outros modelos — Opus, Sonnet, Haiku e versões anteriores — continuam funcionando normalmente, sem qualquer restrição, no Claude.ai, nos aplicativos e na API."}}
+  ]
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#060606;--black-3:#141414;--black-4:#1C1C1C;--black-5:#242424;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-70:rgba(255,255,255,0.7);--white-60:rgba(255,255,255,0.6);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--green:#4CAF7D;--orange:#E8722A;--red:#D9534F;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.7;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 20% 20%,rgba(201,168,76,0.04) 0%,transparent 60%);pointer-events:none;z-index:0;}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);letter-spacing:-0.01em;text-decoration:none;}
+.logo span{color:var(--gold);}
+.header-nav{display:flex;align-items:center;gap:1.4rem;}
+.header-nav a{color:var(--white-50);font-size:0.8rem;text-decoration:none;font-weight:500;transition:color 0.2s;}
+.header-nav a:hover{color:var(--white-90);}
+.header-nav .nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,0.7);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);padding:1rem 1.5rem;flex-direction:column;gap:0.7rem;z-index:99;}
+.mobile-menu a{font-size:0.88rem;font-weight:500;color:rgba(255,255,255,0.7);text-decoration:none;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+@media(max-width:640px){.header-nav a:not(.nav-cta){display:none}.hamburger{display:flex}}
+.page-push{height:56px;}
+.article-wrap{position:relative;z-index:10;max-width:780px;margin:0 auto;padding:0 1.5rem;}
+.article-hero{padding:3rem 0 2rem;}
+.article-category{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);color:var(--gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.9rem;border-radius:100px;margin-bottom:1.2rem;text-decoration:none;}
+.article-h1{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.6rem);font-weight:800;line-height:1.15;margin-bottom:1rem;letter-spacing:-0.02em;}
+.article-h1 span{color:var(--gold);}
+.article-meta{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.5rem;}
+.meta-item{font-size:0.77rem;color:var(--white-40);}
+.meta-item.update{color:var(--orange);}
+.article-intro{font-size:1rem;color:var(--white-70);line-height:1.75;padding:1.2rem 1.4rem;background:rgba(201,168,76,0.05);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;margin-bottom:1.5rem;}
+.indice{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:1.4rem 1.6rem;margin-bottom:2rem;}
+.indice-titulo{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;}
+.indice ol{padding-left:1.4rem;}
+.indice li{font-size:0.83rem;color:var(--white-50);line-height:1.6;margin-bottom:0.3rem;}
+.indice a{color:var(--white-50);text-decoration:none;transition:color 0.2s;}
+.indice a:hover{color:var(--gold);}
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--white-90);margin:2.5rem 0 0.8rem;padding-top:0.5rem;border-top:1px solid rgba(201,168,76,0.1);letter-spacing:-0.01em;scroll-margin-top:70px;}
+.article-body h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gold);margin:1.8rem 0 0.6rem;scroll-margin-top:70px;}
+.article-body p{font-size:0.9rem;color:var(--white-60);line-height:1.8;margin-bottom:0.9rem;}
+.article-body p strong{color:var(--white-80);font-weight:600;}
+.article-body ul,.article-body ol{padding-left:1.4rem;margin-bottom:1rem;}
+.article-body li{font-size:0.88rem;color:var(--white-60);line-height:1.65;margin-bottom:0.5rem;}
+.article-body li strong{color:var(--white-80);}
+.article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.article-body a:hover{border-bottom-color:var(--gold);}
+.destaque{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.18);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.destaque-titulo{font-family:var(--font-display);font-size:0.68rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:0.7rem;}
+.destaque p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin-bottom:0.4rem;}
+.destaque p:last-child{margin-bottom:0;}
+.alerta{background:rgba(232,114,42,0.06);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:1.5rem 0;}
+.alerta p{font-size:0.86rem;color:var(--white-60);line-height:1.65;margin:0;}
+.alerta strong{color:var(--orange);}
+.aviso-importante{background:rgba(76,175,125,0.07);border:2px solid rgba(76,175,125,0.3);border-radius:10px;padding:1.4rem 1.5rem;margin:1.5rem 0 2rem;}
+.aviso-importante-titulo{font-family:var(--font-display);font-size:0.78rem;font-weight:800;letter-spacing:0.06em;color:var(--green);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem;}
+.aviso-importante p{font-size:0.88rem;color:var(--white-70);line-height:1.7;margin:0;}
+.aviso-importante strong{color:var(--white-90);}
+.linha-tempo{border-left:2px solid rgba(201,168,76,0.25);margin:1.5rem 0 1.5rem 0.6rem;padding-left:1.5rem;}
+.lt-item{position:relative;margin-bottom:1.6rem;}
+.lt-item:last-child{margin-bottom:0;}
+.lt-item::before{content:'';position:absolute;left:-1.86rem;top:0.3rem;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,0.15);}
+.lt-data{font-family:var(--font-display);font-size:0.78rem;font-weight:800;color:var(--gold);letter-spacing:0.02em;margin-bottom:0.2rem;}
+.lt-texto{font-size:0.87rem;color:var(--white-60);line-height:1.65;}
+.lt-texto strong{color:var(--white-80);}
+.versus-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+@media(max-width:640px){.versus-grid{grid-template-columns:1fr}}
+.versus-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:1.3rem;}
+.versus-card.mythos{border-color:rgba(217,83,79,0.25);}
+.versus-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:var(--gold);margin-bottom:0.6rem;}
+.versus-card.mythos .versus-titulo{color:var(--red);}
+.versus-card ul{padding-left:1.1rem;margin:0;}
+.versus-card li{font-size:0.82rem;color:var(--white-60);line-height:1.55;margin-bottom:0.4rem;}
+.cta-inline{background:rgba(232,114,42,0.07);border:1px solid rgba(232,114,42,0.2);border-radius:10px;padding:1.3rem 1.5rem;margin:2rem 0;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+.cta-inline-text h4{font-family:var(--font-display);font-size:0.95rem;font-weight:700;margin-bottom:0.2rem;}
+.cta-inline-text p{font-size:0.8rem;color:var(--white-50);margin:0;}
+.btn-orange{display:inline-flex;align-items:center;background:linear-gradient(135deg,#E8722A,#F5832E);color:#ffffff!important;font-family:var(--font-display);font-size:0.8rem;font-weight:700;padding:0.7rem 1.4rem;border-radius:4px;text-decoration:none;white-space:nowrap;transition:all 0.2s;border:none;}
+.btn-orange:hover{transform:translateY(-1px);box-shadow:0 5px 20px rgba(232,114,42,0.5);}
+.cta-final{background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border:1px solid rgba(201,168,76,0.2);border-radius:12px;padding:2rem;text-align:center;margin:2rem 0;}
+.cta-final h3{font-family:var(--font-display);font-size:1.3rem;font-weight:700;margin-bottom:0.5rem;}
+.cta-final p{font-size:0.88rem;color:var(--white-50);max-width:440px;margin:0 auto 1.2rem;line-height:1.65;}
+.btn-gold{display:inline-flex;align-items:center;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:#ffffff!important;font-family:var(--font-display);font-size:0.88rem;font-weight:700;padding:0.9rem 2rem;border-radius:4px;text-decoration:none;transition:all 0.3s;box-shadow:0 4px 20px rgba(201,168,76,0.25);}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.4);}
+.faq-item{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:8px;margin-bottom:0.5rem;overflow:hidden;}
+.faq-q{width:100%;background:none;border:none;color:var(--white);font-family:var(--font-body);font-size:0.88rem;font-weight:600;text-align:left;padding:0.9rem 1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color 0.2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-q svg{flex-shrink:0;transition:transform 0.3s;color:var(--gold);}
+.faq-item.open .faq-q svg{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.3s;padding:0 1.1rem;}
+.faq-item.open .faq-a{max-height:400px;padding:0 1.1rem 0.9rem;}
+.faq-a p{font-size:0.86rem;color:var(--white-60);line-height:1.65;}
+.compartilhar{margin:2.2rem 0;}
+.compartilhar-titulo{font-family:var(--font-display);font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--white-40);margin-bottom:0.9rem;}
+.compartilhar-lista{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.share-btn{display:flex;align-items:center;gap:0.5rem;background:var(--black-4);border:1px solid rgba(255,255,255,0.08);color:var(--white-70);font-family:var(--font-body);font-size:0.8rem;font-weight:600;padding:0.6rem 1rem;border-radius:8px;cursor:pointer;text-decoration:none;transition:all 0.2s;}
+.share-btn:hover{border-color:rgba(201,168,76,0.35);color:var(--white-90);transform:translateY(-1px);}
+.share-btn svg{width:16px;height:16px;flex-shrink:0;}
+.share-btn.wa:hover{border-color:rgba(76,175,125,0.5);}
+.share-btn.tg:hover{border-color:rgba(91,162,222,0.5);}
+.share-btn.li:hover{border-color:rgba(91,148,222,0.5);}
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--black-4);border:1px solid rgba(201,168,76,0.35);color:var(--white);padding:0.8rem 1.5rem;border-radius:8px;font-size:0.85rem;z-index:1000;transition:transform 0.3s ease;}
+.toast.show{transform:translateX(-50%) translateY(0);}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+.rel-card{background:var(--black-4);border:1px solid rgba(201,168,76,0.08);border-radius:10px;padding:1.1rem;transition:all 0.25s;text-decoration:none;display:block;}
+.rel-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);}
+.rel-tag{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem;display:block;}
+.rel-titulo{font-family:var(--font-display);font-size:0.9rem;font-weight:700;color:var(--white-90);line-height:1.3;margin-bottom:0.3rem;}
+.rel-leia{font-size:0.75rem;color:var(--gold);margin-top:0.5rem;display:block;}
+.todos-produtos{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:1.8rem;margin:2rem 0;}
+.todos-titulo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);margin-bottom:0.4rem;}
+.todos-sub{font-size:0.83rem;color:var(--white-40);margin-bottom:1.2rem;}
+.prod-lista{display:flex;flex-direction:column;gap:0.6rem;}
+.prod-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--black-5);border:1px solid rgba(201,168,76,0.08);border-radius:8px;padding:0.9rem 1rem;text-decoration:none;transition:all 0.2s;}
+.prod-item:hover{border-color:rgba(201,168,76,0.25);background:rgba(201,168,76,0.04);}
+.prod-info{flex:1;}
+.prod-nome{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--white-90);margin-bottom:0.2rem;}
+.prod-desc{font-size:0.75rem;color:var(--white-40);line-height:1.4;}
+.prod-preco-btn{display:flex;align-items:center;gap:0.8rem;flex-shrink:0;}
+.prod-preco{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--gold);}
+.prod-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.7rem;font-weight:700;padding:0.4rem 0.9rem;border-radius:4px;white-space:nowrap;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.18),transparent);margin:2rem 0;}
+footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,76,0.08);margin-top:2rem;position:relative;z-index:10;}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.25);margin-bottom:0.4rem;}
+.footer-logo span{color:rgba(201,168,76,0.35);}
+.footer-note{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+.footer-note a{color:rgba(255,255,255,0.18);text-decoration:none;}
+@media(max-width:640px){.article-h1{font-size:1.7rem}.cta-inline{flex-direction:column}.prod-item{flex-direction:column;align-items:flex-start}.prod-preco-btn{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1475704073818729');
+window.addEventListener('load',function(){fbq('track','PageView');});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+
+<div class="toast" id="toast"></div>
+
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="header-nav">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+</div>
+<div class="page-push"></div>
+
+<div class="article-wrap">
+  <div class="article-hero">
+    <a href="https://www.domineclaude.com.br/blog" class="article-category">Análise completa</a>
+    <h1 class="article-h1">Claude Fable 5: o que é, o que fazia de melhor e <span>por que foi suspenso</span> pelo governo dos EUA</h1>
+    <div class="article-meta">
+      <span class="meta-item">✍️ Kortex Evolution</span>
+      <span class="meta-item">📖 Leitura de 19 min</span>
+      <span class="meta-item update">🔄 Última atualização: 24 de junho de 2026</span>
+    </div>
+    <div class="article-intro">O modelo mais poderoso que a Anthropic já lançou ficou disponível ao público geral por apenas 96 horas. Reunimos a história completa — o que o Fable 5 é, os recordes que bateu, a linha do tempo do banimento e o que ainda está em disputa entre a Anthropic e o governo americano.</div>
+  </div>
+
+  <div class="aviso-importante">
+    <div class="aviso-importante-titulo">✓ Antes de continuar — isso não afeta o Claude que você usa</div>
+    <p>O Claude Fable 5 e o Claude Mythos 5 são modelos de um nível <strong>acima</strong> do Opus, com acesso restrito mesmo antes da suspensão. O <strong>Claude.ai, o aplicativo, a extensão e os modelos Opus, Sonnet e Haiku continuam funcionando normalmente</strong>, sem qualquer alteração. Se você usa o Claude para trabalho, estudo ou para aplicar o que ensinamos no nosso guia, nada muda para você. Esta é uma história sobre a fronteira mais avançada da IA — não sobre a ferramenta do seu dia a dia.</p>
+  </div>
+
+  <div class="indice">
+    <div class="indice-titulo">Índice do artigo</div>
+    <ol>
+      <li><a href="#o-que-e">O que é o Claude Fable 5</a></li>
+      <li><a href="#fable-vs-mythos">Fable 5 e Mythos 5: qual é a diferença</a></li>
+      <li><a href="#project-glasswing">De onde veio o Mythos — o Project Glasswing</a></li>
+      <li><a href="#melhor-desempenho">O que o Fable 5 fazia de melhor</a></li>
+      <li><a href="#linha-do-tempo">Linha do tempo completa do banimento</a></li>
+      <li><a href="#por-que-suspenso">Por que o governo dos EUA suspendeu o acesso</a></li>
+      <li><a href="#resposta-anthropic">A resposta da Anthropic</a></li>
+      <li><a href="#depois-do-banimento">O que aconteceu depois — e o que ainda não se sabe</a></li>
+      <li><a href="#contexto-maior">O contexto maior: IPO, avaliação e tensão prévia</a></li>
+      <li><a href="#afeta-meu-claude">Isso afeta o Claude que eu uso?</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </div>
+
+  <div class="article-body">
+
+    <h2 id="o-que-e">O que é o Claude Fable 5</h2>
+    <p>O Claude Fable 5 é o primeiro modelo da chamada <strong>classe Mythos</strong> — uma categoria de modelos da Anthropic que fica um nível acima da família Opus em capacidade — disponibilizado ao público em geral. Foi lançado em <strong>9 de junho de 2026</strong>, e a própria Anthropic o descreveu como o modelo mais capaz que já havia colocado à disposição de qualquer pessoa.</p>
+    <p>Segundo o material técnico publicado no lançamento, o Fable 5 alcançou desempenho de ponta em praticamente todos os benchmarks testados, com destaque para engenharia de software, trabalho de conhecimento, visão computacional e pesquisa científica. A característica mais marcante: quanto mais longa e complexa a tarefa, maior a vantagem do Fable 5 sobre os modelos anteriores da própria Anthropic.</p>
+    <p>Tecnicamente, o modelo trouxe uma janela de contexto de 1 milhão de tokens e capacidade de gerar até 128 mil tokens de saída por solicitação — números bem acima do que era padrão até então. O preço também refletia o salto de capacidade: US$ 10 por milhão de tokens de entrada e US$ 50 por milhão de tokens de saída, o dobro do Opus 4.8.</p>
+    <p>Para assinantes dos planos Pro, Max, Team e Enterprise por assento, o acesso seria gratuito (incluído na assinatura) entre 9 e 22 de junho, passando a depender de créditos de uso a partir do dia 23. Esse calendário de transição nunca chegou a ser testado normalmente — o modelo foi suspenso antes disso, como você vai ver na linha do tempo.</p>
+
+    <h2 id="fable-vs-mythos">Fable 5 e Mythos 5: qual é a diferença</h2>
+    <p>Esse é o ponto que mais gera confusão, então vale destrinchar com calma: <strong>Fable 5 e Mythos 5 são o mesmo modelo por baixo</strong>. A diferença entre eles está inteiramente nas camadas de segurança aplicadas em cima.</p>
+    <div class="versus-grid">
+      <div class="versus-card">
+        <div class="versus-titulo">Claude Fable 5</div>
+        <ul>
+          <li>Disponível ao público em geral</li>
+          <li>Tem classificadores de segurança que recusam ou redirecionam pedidos de risco</li>
+          <li>Em cibersegurança, biologia, química e técnicas de distilação, perguntas sensíveis são respondidas pelo Opus 4.8 em vez do próprio Fable</li>
+          <li>Acessível via API, AWS, Vertex AI, Microsoft Foundry e planos de assinatura</li>
+        </ul>
+      </div>
+      <div class="versus-card mythos">
+        <div class="versus-titulo">Claude Mythos 5</div>
+        <ul>
+          <li>Acesso restrito a parceiros aprovados</li>
+          <li>As mesmas travas de segurança ficam removidas em algumas áreas</li>
+          <li>Disponível apenas via Project Glasswing, em parceria com o governo dos EUA</li>
+          <li>Considerado o modelo com maior capacidade de cibersegurança do mundo</li>
+        </ul>
+      </div>
+    </div>
+    <p>Na prática, quem usa o Fable 5 e tenta pedir algo na zona de risco recebe a resposta do Opus 4.8 sem perceber imediatamente — a API retorna isso como uma recusa bem-sucedida, não como um erro, e existem formas de a aplicação tentar de novo automaticamente em outro modelo.</p>
+
+    <h2 id="project-glasswing">De onde veio o Mythos — o Project Glasswing</h2>
+    <p>A história do Mythos não começa em junho. Em <strong>abril de 2026</strong>, a Anthropic já havia apresentado o Claude Mythos Preview — e, na ocasião, afirmou que não pretendia disponibilizá-lo ao público, citando o risco de suas capacidades serem usadas para explorar e invadir sistemas.</p>
+    <p>O acesso ficou restrito a um grupo pequeno de empresas de tecnologia, cibersegurança e finanças, dentro de um programa batizado de <strong>Project Glasswing</strong>. No início de junho, esse programa já havia se expandido para cerca de 150 organizações em mais de 15 países — todas com foco em proteger infraestrutura crítica. Os participantes relataram ter encontrado mais de 10 mil falhas críticas de segurança em seus próprios sistemas usando o modelo.</p>
+    <p>É esse mesmo Mythos, batizado de Mythos 5 em sua versão mais recente, que serviu de base tanto para a versão restrita usada no Glasswing quanto para o Fable 5 lançado ao público — com as travas de segurança ligadas.</p>
+    <div class="destaque">
+      <div class="destaque-titulo">Curiosidade sobre o nome</div>
+      <p>"Fable" vem do latim <em>fabula</em> — "aquilo que é contado" — em referência direta à palavra grega <em>mythos</em>. A escolha do nome não é por acaso: a Anthropic queria deixar clara a relação de parentesco entre os dois modelos, mesmo sendo produtos diferentes na forma como chegam ao usuário.</p>
+    </div>
+
+    <h2 id="melhor-desempenho">O que o Fable 5 fazia de melhor</h2>
+    <p>Antes da suspensão, dados de uso real e testes de terceiros indicavam um salto de capacidade real, não apenas números de benchmark isolados:</p>
+    <ul>
+      <li><strong>Engenharia de software em escala:</strong> a Stripe relatou que o modelo executou, em um único dia, uma migração completa em uma base de código Ruby com 50 milhões de linhas — um trabalho que uma equipe inteira levaria mais de dois meses para concluir manualmente.</li>
+      <li><strong>Raciocínio analítico complexo:</strong> a empresa de análise de dados Hex afirmou que o Fable 5 foi o primeiro modelo a atingir 90% no principal benchmark analítico da empresa, destacando o julgamento do modelo em questões com muitas nuances.</li>
+      <li><strong>Autonomia em tarefas longas:</strong> o modelo conseguia trabalhar de forma independente por períodos mais longos que qualquer Claude anterior, mantendo coerência ao longo de milhões de tokens.</li>
+      <li><strong>Visão computacional:</strong> uma das capacidades destacadas foi reconstruir o código-fonte de uma aplicação web inteira a partir apenas de capturas de tela.</li>
+      <li><strong>Confiabilidade nas próprias respostas:</strong> dados iniciais divulgados pela Anthropic indicavam que pelo menos 95% das sessões do Fable 5 eram concluídas inteiramente com respostas do próprio modelo, sem precisar recorrer ao Opus 4.8 — ou seja, os casos de bloqueio por segurança eram a exceção, não a regra.</li>
+    </ul>
+    <p>Esse desempenho vinha de testes extensos de segurança feitos antes do lançamento: a Anthropic afirma ter rodado mais de 1.000 horas de testes internos de recompensa por falhas sem que fosse encontrado um "jailbreak universal" — um método capaz de contornar amplamente as proteções do modelo — e que equipes externas de red team chegaram à mesma conclusão.</p>
+
+    <h2 id="linha-do-tempo">Linha do tempo completa do banimento</h2>
+    <p>Esta é a sequência de eventos, do lançamento à situação mais recente, organizada por data:</p>
+    <div class="linha-tempo">
+      <div class="lt-item">
+        <div class="lt-data">Abril de 2026</div>
+        <div class="lt-texto">Anthropic apresenta o <strong>Claude Mythos Preview</strong> e diz não pretender lançá-lo ao público. Acesso restrito a parceiros do Project Glasswing.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">Início de junho de 2026</div>
+        <div class="lt-texto">Project Glasswing já alcança <strong>150 organizações em mais de 15 países</strong>. Participantes encontram mais de 10 mil falhas críticas em seus próprios sistemas.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">9 de junho de 2026 (terça-feira)</div>
+        <div class="lt-texto">Anthropic lança o <strong>Claude Fable 5</strong> (público) e o <strong>Claude Mythos 5</strong> (parceiros) simultaneamente. Disponível via API, AWS, Vertex AI e Microsoft Foundry.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">12 de junho de 2026 (sexta-feira), 17h21</div>
+        <div class="lt-texto">O Departamento de Comércio dos EUA, sob o secretário Howard Lutnick, envia carta ao CEO da Anthropic, Dario Amodei, com uma <strong>diretiva de controle de exportação</strong> exigindo a suspensão imediata do acesso ao Fable 5 e ao Mythos 5 por qualquer cidadão estrangeiro, em qualquer lugar do mundo.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">12 de junho de 2026 — mesma noite</div>
+        <div class="lt-texto">Incapaz de distinguir cidadãos americanos entre suas centenas de milhões de usuários em tempo real, a Anthropic desativa os <strong>dois modelos para todos, globalmente</strong>. A empresa publica um pedido de desculpas e afirma discordar da decisão.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">16 de junho de 2026</div>
+        <div class="lt-texto">Uma conta ligada à comunidade de "vibe coding", sem qualquer vínculo oficial com a Anthropic, publica que o acesso "retornaria em 48 horas". O prazo passa e nada é confirmado oficialmente.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">17 e 18 de junho de 2026</div>
+        <div class="lt-texto">O tom de Washington <strong>endurece</strong>, em vez de afrouxar. Um funcionário do governo associa a medida a uma suposta "imprudência" da Anthropic. Engenheiros seniores da empresa viajam a Washington para a primeira reunião presencial com o Departamento de Comércio desde a suspensão — sem resultado de reativação até aquele momento.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">21 de junho de 2026</div>
+        <div class="lt-texto">Analistas de mercado relatam que um sucessor ainda mais capaz que o Mythos 5 já teria concluído o treinamento — apenas 9 dias após o banimento. A Anthropic não confirma a informação.</div>
+      </div>
+      <div class="lt-item">
+        <div class="lt-data">24 de junho de 2026 (data desta atualização)</div>
+        <div class="lt-texto">O Fable 5 e o Mythos 5 <strong>permanecem suspensos</strong>. Não há data de reativação confirmada. As negociações entre Anthropic e governo americano continuam.</div>
+      </div>
+    </div>
+
+    <h2 id="por-que-suspenso">Por que o governo dos EUA suspendeu o acesso</h2>
+    <p>A justificativa oficial do governo, até o momento, é genérica: uma "preocupação de segurança nacional". A carta enviada pelo Departamento de Comércio não detalhou publicamente os motivos técnicos por trás da medida — algo que a própria imprensa internacional notou como incomum.</p>
+    <p>Segundo apuração da Anthropic, a origem da diretiva teria sido um relatório levado ao governo afirmando ter encontrado um método capaz de contornar as salvaguardas do Fable 5 — um chamado <em>jailbreak</em>. Reportagens de veículos internacionais associam esse relatório à equipe de segurança de uma grande empresa de tecnologia concorrente, mas a origem exata não foi confirmada publicamente por nenhuma das partes envolvidas.</p>
+    <p>Há também uma camada mais ampla na disputa. Segundo reportagem da Bloomberg, a carta do secretário Lutnick teria mencionado o temor de que as capacidades do Fable 5 e do Mythos 5 pudessem, de alguma forma, beneficiar serviços de inteligência militar de outras potências — um argumento geopolítico mais amplo do que uma falha pontual de segurança.</p>
+    <div class="alerta">
+      <p><strong>Importante sobre essa parte da história:</strong> existe um relato, não confirmado oficialmente, de que a decisão teria sido precedida por uma reunião entre executivos de uma grande empresa de tecnologia e autoridades do governo. Tratamos essa informação aqui como o que ela é — um relato de imprensa ainda em apuração, não um fato estabelecido. Vale acompanhar como a história se desenvolve antes de tirar conclusões sobre motivações por trás da medida.</p>
+    </div>
+
+    <h2 id="resposta-anthropic">A resposta da Anthropic</h2>
+    <p>A Anthropic não aceitou passivamente a justificativa do governo. Em comunicados públicos, a empresa classificou a medida como desproporcional e afirmou que a capacidade citada no relatório — basicamente, pedir ao modelo para ler um trecho de código e apontar falhas — já está amplamente disponível em outros modelos do mercado, incluindo o GPT-5.5 da OpenAI, sem que tenha gerado qualquer restrição equivalente.</p>
+    <p>A empresa reafirmou que nenhum testador, interno ou externo, havia encontrado um jailbreak universal contra o Fable 5, e que sua estratégia de segurança em camadas mantinha o risco do modelo em níveis comparáveis aos de outros sistemas já em uso comercial. A Anthropic disse acreditar se tratar de um "mal-entendido" e afirmou estar trabalhando para restaurar o acesso o mais rápido possível.</p>
+    <p>Vale registrar que esse episódio aconteceu logo após meses em que a Anthropic construiu publicamente uma identidade de empresa mais cautelosa e transparente do setor em relação a riscos de IA — incluindo declarações de seu cofundador, Jack Clark, defendendo que a indústria precisa de mecanismos para "desacelerar" o avanço quando necessário. A suspensão, vinda justamente do governo que a empresa cortejava como parceiro no Project Glasswing, gerou um contraste que não passou despercebido pela imprensa especializada.</p>
+
+    <div class="cta-inline">
+      <div class="cta-inline-text"><h4>Quer aprender a usar o Claude do seu dia a dia com profundidade?</h4><p>Enquanto a fronteira mais avançada da IA segue em disputa, o Claude que você já tem acesso continua sendo uma das ferramentas mais poderosas disponíveis — se você souber usar.</p></div>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-orange">Ver o guia completo</a>
+    </div>
+
+    <h2 id="depois-do-banimento">O que aconteceu depois — e o que ainda não se sabe</h2>
+    <p>Nos dias seguintes à suspensão, três frentes se desenrolaram em paralelo:</p>
+    <h3>Os reembolsos</h3>
+    <p>A Anthropic passou a oferecer reembolsos proporcionais para assinantes que fizeram upgrade de plano especificamente para testar o Fable 5, dentro de uma janela de tempo restrita em torno do lançamento. A política, porém, tem sido aplicada de forma desigual: usuários da União Europeia, protegidos pela diretiva europeia de direitos do consumidor — que garante 14 dias para cancelamento de serviços digitais sem necessidade de justificativa — relataram taxas de sucesso bem maiores do que usuários nos Estados Unidos, muitos dos quais dizem não ter recebido nada mesmo cumprindo os critérios anunciados.</p>
+    <h3>O endurecimento do tom oficial</h3>
+    <p>Ao contrário do que rumores não oficiais sugeriram nos primeiros dias, o governo americano não sinalizou abrandamento. Pelo contrário: relatos indicam um tom mais duro, associando a suspensão à conduta da própria Anthropic antes do lançamento, não apenas a uma falha técnica pontual.</p>
+    <h3>O que ainda é incerto</h3>
+    <p>Até a data desta atualização, seguem sem resposta pública e confirmada: o conteúdo exato do relatório que motivou a diretiva, uma data de retorno do Fable 5 e do Mythos 5, e se a Anthropic precisará fazer alguma alteração técnica no modelo como condição para a liberação. Tudo isso está sendo negociado diretamente entre a empresa e o Departamento de Comércio.</p>
+
+    <h2 id="contexto-maior">O contexto maior: IPO, avaliação e tensão prévia</h2>
+    <p>Esse episódio não aconteceu isolado de outros movimentos relevantes da Anthropic. Dias antes do lançamento do Fable 5, a empresa havia registrado de forma confidencial o prospecto de uma oferta pública inicial de ações (IPO) junto à SEC, a comissão de valores mobiliários americana.</p>
+    <p>O momento financeiro da empresa também chamava atenção: a receita anualizada teria saltado de cerca de US$ 10 bilhões no ano anterior para US$ 47 bilhões em maio de 2026, com a última rodada de captação avaliando a Anthropic em aproximadamente US$ 965 bilhões — superando, na época, a avaliação da própria OpenAI.</p>
+    <p>Esse não foi, ainda, o primeiro atrito entre a Anthropic e autoridades americanas em 2026. No início do ano, o Departamento de Defesa dos EUA já havia classificado a empresa como um potencial risco para a cadeia de suprimentos, após divergências relacionadas ao uso militar de suas tecnologias — um sinal de que a relação entre a empresa e partes do governo americano já vinha tensa antes do episódio do Fable 5.</p>
+
+    <h2 id="afeta-meu-claude">Isso afeta o Claude que eu uso?</h2>
+    <p>Não. Vale repetir com todas as letras, porque é a pergunta mais importante para a maioria das pessoas lendo este artigo: <strong>a suspensão é específica para o Fable 5 e o Mythos 5</strong>. Segundo a própria Anthropic, nenhum outro modelo foi afetado pela diretiva.</p>
+    <p>Isso significa que continuam funcionando normalmente, sem qualquer restrição:</p>
+    <ul>
+      <li>O Claude.ai, no navegador e no aplicativo</li>
+      <li>Os modelos Opus, Sonnet e Haiku, em todas as suas versões</li>
+      <li>A extensão do Claude para navegador</li>
+      <li>O Claude Code, o Claude Desktop e demais produtos baseados nos modelos padrão</li>
+      <li>A API do Claude para os modelos que não são da classe Mythos</li>
+    </ul>
+    <p>Em outras palavras: o Claude que ensinamos a dominar no nosso guia, e que você provavelmente usa no trabalho hoje, está exatamente como estava antes de todo esse episódio. O Fable 5 e o Mythos 5 representam a fronteira mais avançada e experimental da empresa — não a base do produto que milhões de pessoas usam diariamente.</p>
+
+    <div class="cta-final">
+      <h3>Domine o Claude que você já tem acesso hoje</h3>
+      <p>Enquanto os modelos de fronteira seguem em disputa regulatória, o Claude padrão continua sendo uma das ferramentas mais subutilizadas por quem não sabe explorar todo o potencial dele.</p>
+      <a href="https://www.domineclaude.com.br/oferta" class="btn-gold">Quero dominar o Claude agora</a>
+    </div>
+
+    <h2 id="faq">Perguntas frequentes</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O que é o Claude Fable 5? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>É o primeiro modelo da classe Mythos — um nível acima do Opus em capacidade — que a Anthropic disponibilizou ao público em geral, lançado em 9 de junho de 2026 com desempenho recorde em engenharia de software, raciocínio longo e pesquisa científica, e com barreiras de segurança para áreas de alto risco.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Qual é a diferença entre Fable 5 e Mythos 5? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>São o mesmo modelo por baixo. O Fable 5 tem camadas de segurança que recusam ou redirecionam pedidos de alto risco para o Opus 4.8. O Mythos 5 tem essas travas removidas em algumas áreas e fica restrito a parceiros aprovados de cibersegurança e infraestrutura crítica através do Project Glasswing.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Por que o Fable 5 foi suspenso? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>O Departamento de Comércio dos EUA emitiu uma diretiva de controle de exportação em 12 de junho de 2026, alegando risco à segurança nacional após um relatório sobre uma possível falha de segurança no modelo. A Anthropic discordou da avaliação, mas precisou suspender o acesso globalmente porque a ordem afeta qualquer cidadão estrangeiro, em qualquer lugar do mundo.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">O Claude Fable 5 vai voltar? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Não há data confirmada. A Anthropic diz estar negociando com o governo americano e pretende restaurar o acesso assim que possível, mas até a última atualização deste artigo nenhuma data oficial havia sido divulgada.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">A suspensão afeta o Claude que eu uso no dia a dia? <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+      <div class="faq-a"><p>Não. A suspensão é específica para o Fable 5 e o Mythos 5. Todos os outros modelos — Opus, Sonnet, Haiku e versões anteriores — continuam funcionando normalmente, sem qualquer restrição, no Claude.ai, nos aplicativos e na API.</p></div>
+    </div>
+
+    <div class="compartilhar">
+      <div class="compartilhar-titulo">Compartilhe esta análise</div>
+      <div class="compartilhar-lista">
+        <a class="share-btn wa" id="shareWa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.9-1.1-2.7-1.9-.7-.7-1.2-1.5-1.6-2.3-.1-.2 0-.4.1-.5.2-.2.4-.5.6-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.1-.4-.3-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5.1 1.2.6 2.4 1.5 3.5 1.5 2 3.3 3.4 5.5 4.2 2.2.8 2.2.6 2.7.5.5 0 1.5-.6 1.7-1.2.2-.6.2-1.2.1-1.3-.1-.2-.2-.2-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.4c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+          WhatsApp
+        </a>
+        <a class="share-btn tg" id="shareTg" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.1c-.3-.2-.7-.3-1.1-.1L2.4 11c-.5.2-.8.7-.7 1.2.1.5.5.8 1 .9l4.6 1.2 1.7 5.6c.1.4.5.7.9.7h.1c.4 0 .7-.2.9-.6l2.1-3.8 4.5 3.4c.2.1.4.2.6.2.1 0 .3 0 .4-.1.3-.1.5-.4.6-.7l3-15.1c.1-.4-.1-.8-.4-1z"/></svg>
+          Telegram
+        </a>
+        <a class="share-btn li" id="shareLi" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM8.3 18H5.7V9.6h2.6V18zM7 8.5c-.8 0-1.5-.7-1.5-1.5S6.2 5.5 7 5.5s1.5.7 1.5 1.5S7.8 8.5 7 8.5zM18.5 18h-2.6v-4.1c0-1-.3-1.7-1.3-1.7-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.7V18h-2.6V9.6h2.5v1.1c.4-.6 1-1.3 2.4-1.3 1.8 0 3 1.1 3 3.6V18z"/></svg>
+          LinkedIn
+        </a>
+        <a class="share-btn" id="shareEmail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+          E-mail
+        </a>
+        <button class="share-btn" id="shareCopy" onclick="copiarLink()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copiar link
+        </button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="todos-produtos">
+      <div class="todos-titulo">Escolha o produto certo para o seu momento</div>
+      <p class="todos-sub">Todos com acesso imediato e garantia incondicional de 7 dias.</p>
+      <div class="prod-lista">
+        <a href="https://www.domineclaude.com.br/oferta" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude: O Guia Definitivo de IA</div><div class="prod-desc">Do zero ao avançado. 13 capítulos e 6 bônus exclusivos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$37</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/95chkbq_925913" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power — 120 Prompts Prontos</div><div class="prod-desc">120 prompts organizados por área. Use hoje, sem adaptação.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$27</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/cf68gv5_925925" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power Pro — 120 Prompts + 150 Skills</div><div class="prod-desc">O arsenal completo de prompts e skills para o Claude.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$47</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude na Prática — 30 Casos Reais</div><div class="prod-desc">30 situações documentadas com prompt exato e resultado real.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$67</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Renda com IA — Guia Completo</div><div class="prod-desc">30 modelos de negócio validados + scripts de prospecção prontos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$97</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/knh5cyu_925940" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Domínio Total — Arsenal Completo de IA</div><div class="prod-desc">Tudo junto: guia, prompts, casos reais e guia de renda.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$127</span><span class="prod-btn">Acessar</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <p style="font-size:0.8rem;color:var(--white-40);margin-bottom:0.6rem;font-weight:500">Artigos relacionados:</p>
+    <div class="rel-grid">
+      <a href="https://www.domineclaude.com.br/blog/claude-vs-chatgpt" class="rel-card">
+        <span class="rel-tag">Comparativo</span>
+        <div class="rel-titulo">Claude vs ChatGPT: qual escolher</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/blog/dicionario-termos-ia-portugues" class="rel-card">
+        <span class="rel-tag">Glossário</span>
+        <div class="rel-titulo">Dicionário de termos de IA em português</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+      <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="rel-card">
+        <span class="rel-tag">Renda com IA</span>
+        <div class="rel-titulo">Como usar o Claude para ganhar dinheiro</div>
+        <div class="rel-leia">Ler artigo</div>
+      </a>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-note">Kortex Evolution · <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a> · <a href="https://www.domineclaude.com.br/termos">Termos</a></div>
+</footer>
+<script>
+function toggleFaq(btn){
+  const item=btn.parentElement;
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const header=document.querySelector('.site-header');
+  if(menu.classList.contains('open')&&!header.contains(e.target))menu.classList.remove('open');
+});
+
+// Compartilhamento
+(function(){
+  var pageUrl = 'https://www.domineclaude.com.br/blog/claude-fable-5-explicado';
+  var pageTitle = 'Claude Fable 5: o que é, o que fazia de melhor e por que foi suspenso pelo governo dos EUA';
+  var shareText = pageTitle + ' — entenda a história completa:';
+
+  document.getElementById('shareWa').href = 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + pageUrl);
+  document.getElementById('shareTg').href = 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(shareText);
+  document.getElementById('shareLi').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl);
+  document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent(shareText + '\n\n' + pageUrl);
+})();
+
+function copiarLink(){
+  var url = 'https://www.domineclaude.com.br/blog/claude-fable-5-explicado';
+  navigator.clipboard.writeText(url).then(function(){
+    showToast('Link copiado!');
+  }).catch(function(){
+    showToast('Não foi possível copiar. Copie manualmente da barra de endereço.');
+  });
+}
+function showToast(msg){
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 2500);
+}
+</script>
+</body>
+</html>
