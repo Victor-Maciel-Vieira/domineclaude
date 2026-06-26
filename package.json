@@ -1,0 +1,12 @@
+{
+  "name": "domineclaude",
+  "version": "1.0.0",
+  "private": true,
+  "description": "domineclaude.com.br — conteúdo e produtos sobre o Claude (Anthropic)",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "google-auth-library": "^10.9.0"
+  }
+}
