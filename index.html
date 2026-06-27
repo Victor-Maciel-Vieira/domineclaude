@@ -534,19 +534,27 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
         <span class="tool-tag">Disponível</span>
       </div>
     </a>
-    <div class="tool-card" style="opacity:0.45;cursor:default">
+    <a href="https://www.domineclaude.com.br/ferramentas/gerador-prompts" class="tool-card">
       <div class="tool-icon">⚡</div>
       <div class="tool-info">
         <h4>Gerador de Prompts</h4>
         <p>Crie prompts otimizados para o Claude com base no objetivo, público e tipo de saída desejada.</p>
-        <span class="tool-tag" style="color:var(--white-40);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)">Em breve</span>
+        <span class="tool-tag">Disponível</span>
       </div>
-    </div>
-    <div class="tool-card" style="opacity:0.45;cursor:default">
+    </a>
+    <a href="https://www.domineclaude.com.br/ferramentas/comparador-ias" class="tool-card">
       <div class="tool-icon">📊</div>
       <div class="tool-info">
         <h4>Comparador de IAs</h4>
         <p>Teste interativo para descobrir qual IA entrega melhor resultado para cada tipo de tarefa.</p>
+        <span class="tool-tag">Disponível</span>
+      </div>
+    </a>
+    <div class="tool-card" style="opacity:0.45;cursor:default">
+      <div class="tool-icon">💰</div>
+      <div class="tool-info">
+        <h4>Calculadora de ROI com IA</h4>
+        <p>Calcule quanto tempo e dinheiro você economiza usando o Claude no trabalho — ideal para justificar o investimento em IA.</p>
         <span class="tool-tag" style="color:var(--white-40);background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1)">Em breve</span>
       </div>
     </div>
@@ -591,9 +599,9 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
 <!-- ÚLTIMOS ARTIGOS -->
 <div class="section">
   <div class="section-header">
-    <span class="section-label">Últimos artigos</span>
-    <h2 class="section-title">Aprenda com quem usa de verdade</h2>
-    <p class="section-sub">Artigos práticos sobre o Claude — sem papo de tecnologia, com exemplos reais.</p>
+    <span class="section-label">Mais acessados</span>
+    <h2 class="section-title">Os artigos que mais ajudam quem usa o Claude</h2>
+    <p class="section-sub">Em destaque, os conteúdos mais lidos do site — ordenados automaticamente pelo que as pessoas mais acessam.</p>
   </div>
   <div class="articles-grid">
     <a href="https://www.domineclaude.com.br/blog/como-usar-claude-para-ganhar-dinheiro" class="article-card">
@@ -602,18 +610,39 @@ window.addEventListener('load',function(){ fbq('track','PageView'); });
       <p>11 modelos de negócio validados, quanto cobrar e como prospectar os primeiros clientes.</p>
       <div class="article-read">Ler artigo</div>
     </a>
-    <div class="article-card" style="opacity:0.45;cursor:default">
+    <a href="https://www.domineclaude.com.br/blog/claude-vs-chatgpt" class="article-card">
       <span class="article-cat">Comparativo</span>
-      <h4>Claude vs ChatGPT: qual usar para cada tipo de tarefa</h4>
-      <p>Comparativo prático com testes reais nas principais categorias de uso profissional.</p>
-      <div class="article-read" style="color:var(--white-40)">Em breve</div>
-    </div>
-    <div class="article-card" style="opacity:0.45;cursor:default">
+      <h4>Claude vs ChatGPT: qual usar para cada tarefa</h4>
+      <p>Comparativo prático, tarefa por tarefa, entre as duas IAs mais usadas.</p>
+      <div class="article-read">Ler artigo</div>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/prompts-para-claude-em-portugues" class="article-card">
       <span class="article-cat">Prompts</span>
       <h4>Os melhores prompts para o Claude em português</h4>
-      <p>Prompts testados para copywriting, carreira, negócios e produtividade pessoal.</p>
-      <div class="article-read" style="color:var(--white-40)">Em breve</div>
-    </div>
+      <p>Prompts testados para copywriting, carreira, negócios e produtividade.</p>
+      <div class="article-read">Ler artigo</div>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/claude-na-pratica-casos-reais" class="article-card">
+      <span class="article-cat">Na prática</span>
+      <h4>Claude na prática: 30 casos reais de uso</h4>
+      <p>Trinta situações reais resolvidas passo a passo, prontas para aplicar.</p>
+      <div class="article-read">Ler artigo</div>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/qual-modelo-claude-escolher" class="article-card">
+      <span class="article-cat">Modelos</span>
+      <h4>Qual modelo do Claude escolher: Opus, Sonnet ou Haiku</h4>
+      <p>Entenda as diferenças e quando usar cada modelo do Claude.</p>
+      <div class="article-read">Ler artigo</div>
+    </a>
+    <a href="https://www.domineclaude.com.br/blog/manual-claude-code" class="article-card">
+      <span class="article-cat">Claude Code</span>
+      <h4>Manual do Claude Code: o Claude que programa por você</h4>
+      <p>O guia completo da ferramenta que transforma o Claude em programador.</p>
+      <div class="article-read">Ler artigo</div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:2.2rem">
+    <a href="https://www.domineclaude.com.br/blog" class="btn-secondary">Ver todos os artigos →</a>
   </div>
 </div>
 
@@ -653,6 +682,31 @@ document.addEventListener('click', function(e){
     menu.classList.remove('open');
   }
 });
+
+// Destaque dos artigos mais acessados (dados reais do GA4). Falha de forma segura:
+// se a API não responder, mantém a ordem padrão do HTML.
+(function(){
+  function getSlug(href){ var m = href.match(/\/blog\/([a-z0-9-]+)\/?$/i); return m ? m[1] : null; }
+  fetch('/api/views', { cache: 'no-store' })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(data){
+      if (!data || !data.ok || !data.views) return;
+      var views = data.views;
+      var grid = document.querySelector('.articles-grid');
+      if (!grid) return;
+      var itens = Array.prototype.slice.call(grid.querySelectorAll('.article-card'));
+      if (itens.length === 0) return;
+      itens.sort(function(a, b){
+        var va = (getSlug(a.getAttribute('href') || '') && views[getSlug(a.getAttribute('href'))]) || 0;
+        var vb = (getSlug(b.getAttribute('href') || '') && views[getSlug(b.getAttribute('href'))]) || 0;
+        return vb - va;
+      });
+      var frag = document.createDocumentFragment();
+      itens.forEach(function(item){ frag.appendChild(item); });
+      grid.appendChild(frag);
+    })
+    .catch(function(){});
+})();
 </script>
 </body>
 </html>
