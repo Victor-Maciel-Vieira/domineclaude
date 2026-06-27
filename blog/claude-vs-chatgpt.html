@@ -225,6 +225,18 @@ footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,7
 .share-btn svg{width:16px;height:16px;flex-shrink:0;}
 .toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--black-4);border:1px solid rgba(201,168,76,0.35);color:var(--white);padding:0.8rem 1.5rem;border-radius:8px;font-size:0.85rem;z-index:1000;transition:transform 0.3s ease;}
 .toast.show{transform:translateX(-50%) translateY(0);}
+.todos-produtos{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:1.8rem;margin:2rem 0;}
+.todos-titulo{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white-90);margin-bottom:0.4rem;}
+.todos-sub{font-size:0.83rem;color:var(--white-40);margin-bottom:1.2rem;}
+.prod-lista{display:flex;flex-direction:column;gap:0.6rem;}
+.prod-item{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:var(--black-5);border:1px solid rgba(201,168,76,0.08);border-radius:8px;padding:0.9rem 1rem;text-decoration:none;transition:all 0.2s;}
+.prod-item:hover{border-color:rgba(201,168,76,0.25);background:rgba(201,168,76,0.04);}
+.prod-info{flex:1;}
+.prod-nome{font-family:var(--font-display);font-size:0.88rem;font-weight:700;color:var(--white-90);margin-bottom:0.2rem;}
+.prod-desc{font-size:0.75rem;color:var(--white-40);line-height:1.4;}
+.prod-preco-btn{display:flex;align-items:center;gap:0.8rem;flex-shrink:0;}
+.prod-preco{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--gold);}
+.prod-btn{background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);font-family:var(--font-display);font-size:0.7rem;font-weight:700;padding:0.4rem 0.9rem;border-radius:4px;white-space:nowrap;}
 .doacao-pix{background:rgba(76,175,125,0.04);border:1px solid rgba(76,175,125,0.18);border-radius:10px;padding:1.6rem;margin:0;text-align:center;}
 .doacao-titulo{font-family:var(--font-display);font-size:0.95rem;font-weight:700;color:var(--white-90);margin-bottom:0.6rem;}
 .doacao-texto{font-size:0.85rem;color:var(--white-60);line-height:1.65;max-width:480px;margin:0 auto 1.2rem;}
@@ -235,6 +247,10 @@ footer{text-align:center;padding:2rem 1.5rem;border-top:1px solid rgba(201,168,7
 .doacao-qrcode.show{display:block;}
 .doacao-qrcode img{max-width:200px;width:100%;border-radius:8px;border:5px solid #fff;}
 .doacao-qrcode-legenda{font-size:0.72rem;color:var(--white-40);margin-top:0.5rem;}
+.compartilhar-titulo{font-family:var(--font-display);font-size:0.98rem;font-weight:700;color:var(--white-90);margin-bottom:0.3rem;text-transform:none;letter-spacing:normal;}
+.compartilhar-sub{font-size:0.82rem;color:var(--white-50);margin-bottom:1rem;line-height:1.5;}
+.compartilhar .share-btn{color:var(--gold);border-bottom:none;}
+.compartilhar .share-btn:hover{color:var(--gold-light);border-bottom:none;}
 </style>
 </head>
 <body>
@@ -558,7 +574,8 @@ window.addEventListener('load',function(){fbq('track','PageView');});
     </div>
 
     <div class="compartilhar">
-      <div class="compartilhar-titulo">Compartilhe este artigo</div>
+      <div class="compartilhar-titulo">Ainda escolhe entre Claude e ChatGPT no chute?</div>
+      <div class="compartilhar-sub">Manda pra quem usa um só por costume e nunca testou o outro pra valer.</div>
       <div class="compartilhar-lista">
         <a class="share-btn" id="shareWa" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.9-1.1-2.7-1.9-.7-.7-1.2-1.5-1.6-2.3-.1-.2 0-.4.1-.5.2-.2.4-.5.6-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.1-.4-.3-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5.1 1.2.6 2.4 1.5 3.5 1.5 2 3.3 3.4 5.5 4.2 2.2.8 2.2.6 2.7.5.5 0 1.5-.6 1.7-1.2.2-.6.2-1.2.1-1.3-.1-.2-.2-.2-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.4c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
@@ -583,6 +600,37 @@ window.addEventListener('load',function(){fbq('track','PageView');});
       </div>
     </div>
 
+    <div class="divider"></div>
+    <div class="todos-produtos">
+      <div class="todos-titulo">Escolha o produto certo para o seu momento</div>
+      <p class="todos-sub">Todos com acesso imediato e garantia incondicional de 7 dias.</p>
+      <div class="prod-lista">
+        <a href="https://www.domineclaude.com.br/oferta" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude: O Guia Definitivo de IA</div><div class="prod-desc">Do zero ao avançado. 13 capítulos e 6 bônus exclusivos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$37</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/95chkbq_925913" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power — 120 Prompts Prontos</div><div class="prod-desc">120 prompts organizados por área. Use hoje, sem adaptação.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$27</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/cf68gv5_925925" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Prompt Power Pro — 120 Prompts + 150 Skills</div><div class="prod-desc">O arsenal completo de prompts e skills para o Claude.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$47</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Claude na Prática — 30 Casos Reais</div><div class="prod-desc">30 situações documentadas com prompt exato e resultado real.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$67</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Renda com IA — Guia Completo</div><div class="prod-desc">30 modelos de negócio validados + scripts de prospecção prontos.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$97</span><span class="prod-btn">Acessar</span></div>
+        </a>
+        <a href="https://pay.cakto.com.br/knh5cyu_925940" class="prod-item">
+          <div class="prod-info"><div class="prod-nome">Domínio Total — Arsenal Completo de IA</div><div class="prod-desc">Tudo junto: guia, prompts, casos reais e guia de renda.</div></div>
+          <div class="prod-preco-btn"><span class="prod-preco">R$127</span><span class="prod-btn">Acessar</span></div>
+        </a>
+      </div>
+    </div>
     <div class="divider"></div>
     <div class="doacao-pix">
       <div class="doacao-titulo">Este site não usa anúncios</div>
@@ -634,26 +682,15 @@ document.addEventListener('click',function(e){
 });
 
 (function(){
-  var pageUrl = 'https://www.domineclaude.com.br/blog/claude-vs-chatgpt';
-  var shareText = 'Claude ou ChatGPT? Testei os dois tarefa por tarefa — texto, código, análise e uso profissional. O resultado não é o que a maioria pensa. Veja o comparativo completo:';
-  var pageTitle = 'Claude vs ChatGPT: qual usar para cada tarefa — comparativo completo';
-  document.getElementById('shareWa').href = 'https://wa.me/?text=' + encodeURIComponent(shareText + ' ' + pageUrl);
-  document.getElementById('shareTg').href = 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(shareText);
-  document.getElementById('shareLi').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(pageUrl);
-  document.getElementById('shareEmail').href = 'mailto:?subject=' + encodeURIComponent(pageTitle) + '&body=' + encodeURIComponent(shareText + '\n\n' + pageUrl);
+  var pageUrl='https://www.domineclaude.com.br/blog/claude-vs-chatgpt'; var shareText='Claude ou ChatGPT? Comparei os dois tarefa por tarefa — texto, código e análise. Vale a leitura:'; var pageTitle='Claude vs ChatGPT: qual usar para cada tarefa';
+  document.getElementById('shareWa').href='https://wa.me/?text='+encodeURIComponent(shareText+' '+pageUrl);
+  document.getElementById('shareTg').href='https://t.me/share/url?url='+encodeURIComponent(pageUrl)+'&text='+encodeURIComponent(shareText);
+  document.getElementById('shareLi').href='https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(pageUrl);
+  document.getElementById('shareEmail').href='mailto:?subject='+encodeURIComponent(pageTitle)+'&body='+encodeURIComponent(shareText+'\n\n'+pageUrl);
 })();
-function copiarLink(){
-  navigator.clipboard.writeText('https://www.domineclaude.com.br/blog/claude-vs-chatgpt').then(function(){ showToast('Link copiado!'); })
-  .catch(function(){ showToast('Não foi possível copiar. Copie manualmente da barra de endereço.'); });
-}
-function showToast(msg){
-  var t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show');
-  setTimeout(function(){ t.classList.remove('show'); }, 2500);
-}
-function copiarPix(){
-  navigator.clipboard.writeText("00020101021126580014br.gov.bcb.pix0136fb6733a7-06a6-4b54-850c-98f344ea77f85204000053039865802BR5917VICTOR E M VIEIRA6007PIRANGA62070503***63042801").then(function(){ showToast('Chave Pix copiada!'); })
-  .catch(function(){ showToast('Não foi possível copiar. Copie manualmente.'); });
-}
+function copiarLink(){ navigator.clipboard.writeText('https://www.domineclaude.com.br/blog/claude-vs-chatgpt').then(function(){showToast('Link copiado!');}).catch(function(){showToast('Não foi possível copiar.');}); }
+function showToast(msg){ var t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(function(){t.classList.remove('show');},2500); }
+function copiarPix(){ navigator.clipboard.writeText("00020101021126580014br.gov.bcb.pix0136fb6733a7-06a6-4b54-850c-98f344ea77f85204000053039865802BR5917VICTOR E M VIEIRA6007PIRANGA62070503***63042801").then(function(){showToast('Chave Pix copiada!');}).catch(function(){showToast('Não foi possível copiar.');}); }
 function toggleQrCode(){ document.getElementById('doacaoQrCode').classList.toggle('show'); }
 
 </script>
