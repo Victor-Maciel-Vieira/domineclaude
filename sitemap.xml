@@ -34,6 +34,8 @@
   <url><loc>https://www.domineclaude.com.br/blog/dicionario-termos-ia-portugues</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.domineclaude.com.br/ferramentas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.domineclaude.com.br/ferramentas/calculadora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.domineclaude.com.br/ferramentas/gerador-prompts</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/ferramentas/comparador-ias</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.domineclaude.com.br/privacidade</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.domineclaude.com.br/termos</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>
