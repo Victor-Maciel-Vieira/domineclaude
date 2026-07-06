@@ -7,7 +7,7 @@
     { "source": "/termos", "destination": "/termos.html" },
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/ferramentas", "destination": "/ferramentas.html" },
-    { "source": "/ferramentas/calculadora", "destination": "/calculadora.html" },
+    { "source": "/ferramentas/calculadora", "destination": "/ferramentas/calculadora.html" },
     { "source": "/oferta-lancamento", "destination": "/oferta-lancamento.html" },
     { "source": "/blog/como-usar-claude-para-ganhar-dinheiro", "destination": "/como-usar-claude-para-ganhar-dinheiro.html" }
   ]
