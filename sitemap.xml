@@ -40,4 +40,15 @@
   <url><loc>https://www.domineclaude.com.br/ferramentas/comparador-ias</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.domineclaude.com.br/privacidade</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.domineclaude.com.br/termos</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/gpt-5-6-sol-terra-luna</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/claude-vs-gpt-5-6-sol</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/claude-microsoft-365-escrita</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/claude-cowork-mobile</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/claude-code-atualizacoes-julho-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/claude-reflect</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/muse-spark-1-1</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/grok-4-5</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/glm-5-2-deepseek-china</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/meta-rotulos-ia-anuncios</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.domineclaude.com.br/blog/custo-ia-caiu-280-vezes</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>
