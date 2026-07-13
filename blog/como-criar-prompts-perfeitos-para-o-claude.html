@@ -3,11 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Como criar prompts perfeitos para o Claude — guia completo de prompt engineering</title>
-<meta name="description" content="Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.">
-<meta property="og:title" content="Como criar prompts perfeitos para o Claude — guia completo de prompt engineering">
-<meta property="og:description" content="Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.">
+<title>Como criar prompts perfeitos para o Claude | Domina Claude</title>
+<meta name="description" content="Guia completo de prompt engineering para o Claude: estrutura, técnicas avançadas e exemplos prontos para obter respostas muito melhores.">
+<link rel="canonical" href="https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude">
+<meta property="og:title" content="Como criar prompts perfeitos para o Claude">
+<meta property="og:description" content="Guia completo de prompt engineering para o Claude: estrutura, técnicas avançadas e exemplos prontos para obter respostas muito melhores.">
 <meta property="og:type" content="article">
+<meta property="og:image" content="https://www.domineclaude.com.br/assets/og/como-criar-prompts-perfeitos-para-o-claude.jpg">
+<meta property="og:url" content="https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude">
+<meta property="og:site_name" content="Domina Claude">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como criar prompts perfeitos para o Claude">
+<meta name="twitter:description" content="Guia completo de prompt engineering para o Claude: estrutura, técnicas avançadas e exemplos prontos para obter respostas muito melhores.">
+<meta name="twitter:image" content="https://www.domineclaude.com.br/assets/og/como-criar-prompts-perfeitos-para-o-claude.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Domina Claude">
 <meta name="author" content="Kortex Evolution">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
@@ -15,8 +27,8 @@
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Como criar prompts perfeitos para o Claude — guia completo de prompt engineering",
-  "description": "Aprenda a estruturar prompts avançados para o Claude com técnicas de prompt engineering. Few-shot, cadeia de raciocínio e os erros que arruínam seus resultados.",
+  "headline": "Como criar prompts perfeitos para o Claude",
+  "description": "Guia completo de prompt engineering para o Claude: estrutura, técnicas avançadas e exemplos prontos para obter respostas muito melhores.",
   "author": {"@type": "Organization", "name": "Kortex Evolution"},
   "publisher": {"@type": "Organization", "name": "Domina Claude", "url": "https://www.domineclaude.com.br"},
   "mainEntityOfPage": "https://www.domineclaude.com.br/blog/como-criar-prompts-perfeitos-para-o-claude"
@@ -35,7 +47,7 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type":"Question","name":"O que é prompt engineering?","acceptedAnswer":{"@type":"Answer","text":"Prompt engineering é a habilidade de estruturar instruções para IAs de forma a obter resultados precisos e consistentes. Envolve técnicas como definição de papel, cadeia de raciocínio, few-shot examples e formatação de saída. Não é uma habilidade técnica — qualquer profissional pode aprender."}},
-    {"@type":"Question","name":"Qual a diferença entre um prompt simples e um prompt avançado?","acceptedAnswer":{"@type":"Answer","text":"Um prompt simples é uma pergunta direta: 'escreva um e-mail de vendas'. Um prompt avançado define papel, contexto, objetivo, restrições e formato: 'Você é um copywriter especializado em SaaS B2B. Escreva um e-mail de follow-up para um lead que assistiu a demo mas não respondeu em 5 dias. Tom: próximo, sem pressão. Máximo 120 palavras. Inclua uma pergunta aberta no final.'"},
+    {"@type":"Question","name":"Qual a diferença entre um prompt simples e um prompt avançado?","acceptedAnswer":{"@type":"Answer","text":"Um prompt simples é uma pergunta direta: 'escreva um e-mail de vendas'. Um prompt avançado define papel, contexto, objetivo, restrições e formato: 'Você é um copywriter especializado em SaaS B2B. Escreva um e-mail de follow-up para um lead que assistiu a demo mas não respondeu em 5 dias. Tom: próximo, sem pressão. Máximo 120 palavras. Inclua uma pergunta aberta no final.'"}},
     {"@type":"Question","name":"O que é few-shot prompting?","acceptedAnswer":{"@type":"Answer","text":"Few-shot prompting é a técnica de fornecer exemplos do resultado desejado dentro do prompt. Em vez de só descrever o que você quer, você mostra 2 ou 3 exemplos de como deve ficar. O Claude usa esses exemplos como referência e reproduz o padrão com novo conteúdo — muito mais preciso que descrição textual."}},
     {"@type":"Question","name":"Como fazer o Claude não inventar informações?","acceptedAnswer":{"@type":"Answer","text":"Instrua explicitamente: 'Se você não tiver certeza sobre alguma informação, diga que não sabe em vez de inventar'. Também ajuda fornecer as informações relevantes no próprio prompt — quanto mais contexto você dá, menos o modelo precisa 'imaginar' detalhes."}}
   ]
