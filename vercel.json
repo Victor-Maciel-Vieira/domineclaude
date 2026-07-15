@@ -3,6 +3,18 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/d4aaee7b0c334e9ca89d6b9f1581da1a.txt",
+      "destination": "/d4aaee7b0c334e9ca89d6b9f1581da1a.txt"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
       "source": "/oferta",
       "destination": "/oferta.html"
     },
