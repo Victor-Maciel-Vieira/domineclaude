@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A crise de identidade da SpaceXAI | Domina Claude</title>
+<meta name="description" content="Documentos internos vazados à Bloomberg mostram uma xAI reconstruída, com o Claude como benchmark oficial e engenheiros preferindo o concorrente. O mapa completo.">
+<meta name="keywords" content="crise xAI, SpaceXAI Claude, Musk xAI reconstrucao, Bloomberg xAI Claude, Grok vs Claude, Michael Nicolls xAI, fundadores xAI saida, xAI Slack Claude">
+<link rel="canonical" href="https://www.domineclaude.com.br/blog/crise-identidade-xai">
+<meta property="og:title" content="A crise de identidade da SpaceXAI">
+<meta property="og:description" content="Documentos internos vazados à Bloomberg mostram uma xAI reconstruída, com o Claude como benchmark oficial e engenheiros preferindo o concorrente. O mapa completo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.domineclaude.com.br/blog/crise-identidade-xai">
+<meta property="og:image" content="https://www.domineclaude.com.br/assets/og/crise-identidade-xai.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Domina Claude">
+<meta property="og:site_name" content="Domina Claude">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A crise de identidade da SpaceXAI">
+<meta name="twitter:description" content="Documentos internos vazados à Bloomberg mostram uma xAI reconstruída, com o Claude como benchmark oficial e engenheiros preferindo o concorrente. O mapa completo.">
+<meta name="twitter:image" content="https://www.domineclaude.com.br/assets/og/crise-identidade-xai.jpg">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "A crise de identidade da SpaceXAI", "description": "Documentos internos vazados à Bloomberg mostram uma xAI reconstruída, com o Claude como benchmark oficial e engenheiros preferindo o concorrente. O mapa completo.", "url": "https://www.domineclaude.com.br/blog/crise-identidade-xai", "author": {"@type": "Organization", "name": "Kortex Evolution"}, "publisher": {"@type": "Organization", "name": "Domina Claude"}, "inLanguage": "pt-BR"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "O que é a SpaceXAI?", "acceptedAnswer": {"@type": "Answer", "text": "É a divisão de IA da SpaceX, criada em maio de 2026 quando a xAI (empresa independente de Elon Musk) foi absorvida pela SpaceX. Ela cuida do Grok, do Grokipedia, do Grok Build, do Grok Imagine e do X (antigo Twitter)."}}, {"@type": "Question", "name": "É verdade que a Bloomberg documentou uma crise interna na xAI?", "acceptedAnswer": {"@type": "Answer", "text": "Sim. A Bloomberg Businessweek publicou em julho de 2026 uma reportagem detalhada com base em documentos internos, memos, mensagens de Slack e relatos de funcionários, mostrando obsessão com o Claude como benchmark, dificuldades de execução e saída em bloco de fundadores."}}, {"@type": "Question", "name": "É verdade que engenheiros da Tesla e SpaceX preferem o Claude?", "acceptedAnswer": {"@type": "Answer", "text": "Sim, de acordo com múltiplas reportagens da Bloomberg. Alguns funcionários dentro da própria SpaceXAI usam Claude para código. A Tesla limitou gasto com IAs concorrentes a US$ 200/semana mas isentou o Grok — e ainda assim muitos engenheiros preferiam pagar do próprio orçamento para usar Claude."}}, {"@type": "Question", "name": "Musk admitiu que Claude é melhor que Grok?", "acceptedAnswer": {"@type": "Answer", "text": "Publicamente, em maio de 2026, ele afirmou que 'um modelo da Anthropic é definitivamente melhor'. É a admissão pública mais explícita da distância competitiva vinda do próprio CEO."}}, {"@type": "Question", "name": "O Grok 4.6 vai resolver a crise?", "acceptedAnswer": {"@type": "Answer", "text": "Se lançar com performance similar ao Kimi K3 e mantendo o custo do 4.5, melhora a percepção. Mas a crise vai além de benchmark: envolve confiança de fornecedor, escândalo de vazamento do Grok Build, saída de fundadores e falta de previsibilidade. Um lançamento não resolve tudo isso."}}, {"@type": "Question", "name": "Isso significa que não devo usar o Grok?", "acceptedAnswer": {"@type": "Answer", "text": "Não. Significa que a escolha deve ser feita com base em teste real e em uma análise honesta dos trade-offs — não em marketing. Para casos específicos (como uso pessoal ou tarefas não-críticas), o Grok pode servir. Para trabalho profissional com dados sensíveis, o Claude segue mais defensável hoje."}}]}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GV22WN4G8P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GV22WN4G8P');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C97A;--gold-dark:#9A7A32;--black:#070707;--black-2:#0F0F0F;--black-3:#161616;--black-4:#1E1E1E;--white:#FFFFFF;--white-90:rgba(255,255,255,0.9);--white-80:rgba(255,255,255,0.8);--white-70:rgba(255,255,255,0.7);--white-60:rgba(255,255,255,0.6);--white-50:rgba(255,255,255,0.5);--white-40:rgba(255,255,255,0.4);--white-30:rgba(255,255,255,0.3);--green:#4CAF7D;--font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Inter',sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--black);color:var(--white);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;}
+.bg-radial{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 60% at 50% -10%,rgba(201,168,76,0.07) 0%,transparent 65%);}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 1.5rem;height:56px;display:flex;align-items:center;justify-content:space-between;background:rgba(6,6,6,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.12);}
+.logo{font-family:var(--font-display);font-size:0.95rem;font-weight:800;color:var(--white);text-decoration:none;}
+.logo span{color:var(--gold);}
+.nav{display:flex;align-items:center;gap:1.5rem;}
+.nav a{font-size:0.8rem;font-weight:500;color:var(--white-50);text-decoration:none;transition:color 0.2s;}
+.nav a:hover{color:var(--white-90);}
+.nav-cta{background:linear-gradient(135deg,var(--gold-dark),var(--gold))!important;color:var(--black)!important;font-weight:700!important;padding:0.4rem 1rem!important;border-radius:4px;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.3rem;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white-70);border-radius:2px;}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(14,14,14,0.98);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.15);padding:1.2rem 1.5rem;flex-direction:column;gap:0.8rem;z-index:99;}
+.mobile-menu a{font-size:0.9rem;font-weight:500;color:var(--white-70);text-decoration:none;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.mobile-menu a:last-child{border-bottom:none;color:var(--gold);font-weight:700;}
+.mobile-menu.open{display:flex;}
+.page-content{padding-top:56px;position:relative;z-index:10;}
+.article-container{max-width:720px;margin:0 auto;padding:2.5rem 1.5rem 4rem;}
+.article-label{font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem;display:block;}
+.article-title{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.15;letter-spacing:-0.02em;color:var(--white);margin-bottom:1rem;}
+.article-meta{font-size:0.75rem;color:var(--white-40);margin-bottom:2rem;display:flex;gap:1rem;flex-wrap:wrap;}
+.article-body h2{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--white-90);margin:2.5rem 0 0.8rem;padding-top:0.5rem;border-top:1px solid rgba(201,168,76,0.1);letter-spacing:-0.01em;scroll-margin-top:70px;}
+.article-body h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--gold);margin:1.8rem 0 0.6rem;scroll-margin-top:70px;}
+.article-body p{font-size:0.9rem;color:var(--white-60);line-height:1.8;margin-bottom:0.9rem;}
+.article-body p strong{color:var(--white-80);font-weight:600;}
+.article-body ul,.article-body ol{padding-left:1.4rem;margin-bottom:1rem;}
+.article-body li{font-size:0.88rem;color:var(--white-60);line-height:1.65;margin-bottom:0.5rem;}
+.article-body li strong{color:var(--white-80);}
+.article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);}
+.article-body a:hover{border-bottom-color:var(--gold);}
+.destaque{background:rgba(201,168,76,0.06);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:1rem 1.2rem;margin:1.5rem 0;font-size:0.88rem;color:var(--white-70);line-height:1.7;}
+.destaque strong{color:var(--gold-light);}
+.tabela{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:0.82rem;}
+.tabela th{background:rgba(201,168,76,0.1);color:var(--gold-light);font-weight:700;padding:0.7rem 0.9rem;text-align:left;border-bottom:1px solid rgba(201,168,76,0.2);}
+.tabela td{padding:0.65rem 0.9rem;border-bottom:1px solid rgba(255,255,255,0.05);color:var(--white-60);vertical-align:top;}
+.tabela tr:last-child td{border-bottom:none;}
+.tabela td:first-child{color:var(--white-80);font-weight:600;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.2),transparent);margin:2rem 0;}
+.compartilhar{margin:2.2rem 0;}
+.compartilhar-titulo{font-family:var(--font-display);font-size:0.98rem;font-weight:700;color:var(--white-90);margin-bottom:0.3rem;}
+.compartilhar-sub{font-size:0.82rem;color:var(--white-50);margin-bottom:1rem;line-height:1.5;}
+.compartilhar-lista{display:flex;gap:0.6rem;flex-wrap:wrap;}
+.share-btn{display:inline-flex;align-items:center;gap:0.45rem;background:var(--black-4);border:1px solid rgba(255,255,255,0.08);color:var(--gold);font-family:var(--font-body);font-size:0.78rem;font-weight:600;padding:0.55rem 0.9rem;border-radius:7px;cursor:pointer;text-decoration:none;border-bottom:none;transition:all 0.2s;}
+.share-btn:hover{border-color:rgba(201,168,76,0.4);color:var(--gold-light);border-bottom:none;}
+.share-btn svg{width:15px;height:15px;flex-shrink:0;}
+.todos-produtos{background:var(--black-4);border:1px solid rgba(201,168,76,0.12);border-radius:12px;padding:1.8rem;margin:2rem 0;}
+.todos-produtos h3{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--white-90);margin-bottom:0.3rem;}
+.todos-produtos p{font-size:0.82rem;color:var(--white-50);margin-bottom:1.2rem;}
+.produtos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.7rem;}
+.produto-card{display:block;background:var(--black-3);border:1px solid rgba(255,255,255,0.07);border-radius:9px;padding:1rem;text-decoration:none;transition:all 0.2s;border-bottom:none;}
+.produto-card:hover{border-color:rgba(201,168,76,0.25);transform:translateY(-2px);border-bottom:none;}
+.pc-nome{font-family:var(--font-display);font-size:0.85rem;font-weight:700;color:var(--white-90);margin-bottom:0.2rem;}
+.pc-desc{font-size:0.72rem;color:var(--white-40);line-height:1.4;margin-bottom:0.5rem;}
+.pc-preco{font-family:var(--font-display);font-size:1rem;font-weight:800;color:var(--gold);}
+.doacao-pix{background:rgba(76,175,125,0.04);border:1px solid rgba(76,175,125,0.18);border-radius:10px;padding:1.6rem;text-align:center;}
+.doacao-titulo{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white-90);margin-bottom:0.4rem;}
+.doacao-texto{font-size:0.82rem;color:var(--white-50);line-height:1.6;max-width:420px;margin:0 auto 1.1rem;}
+.doacao-botoes{display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap;}
+.doacao-btn{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--font-display);font-size:0.8rem;font-weight:700;padding:0.6rem 1.1rem;border-radius:6px;cursor:pointer;border:none;transition:all 0.2s;background:linear-gradient(135deg,var(--gold-dark),var(--gold));color:var(--black);text-decoration:none;}
+.doacao-btn-sec{background:transparent;border:1px solid rgba(76,175,125,0.3)!important;color:#4CAF7D!important;}
+.doacao-btn:hover{transform:translateY(-1px);}
+.doacao-qrcode{display:none;margin-top:1.1rem;}
+.doacao-qrcode.show{display:block;}
+.doacao-qrcode img{width:160px;height:160px;border-radius:8px;border:3px solid #fff;}
+.doacao-qrcode p{font-size:0.7rem;color:var(--white-40);margin-top:0.5rem;}
+.relacionados-grid{display:grid;grid-template-columns:1fr;gap:0.6rem;margin-top:0.6rem;}
+.rel-card{display:flex;align-items:center;gap:0.8rem;background:var(--black-3);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.9rem 1rem;text-decoration:none;transition:all 0.2s;border-bottom:none;}
+.rel-card:hover{border-color:rgba(201,168,76,0.2);transform:translateX(3px);border-bottom:none;}
+.rc-title{font-family:var(--font-display);font-size:0.85rem;font-weight:700;color:var(--white-90);margin-bottom:0.15rem;}
+.rc-desc{font-size:0.75rem;color:var(--white-40);}
+.rc-arrow{margin-left:auto;color:var(--gold);flex-shrink:0;}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--gold);color:var(--black);font-family:var(--font-display);font-weight:700;font-size:0.82rem;padding:0.7rem 1.2rem;border-radius:7px;z-index:1000;opacity:0;transition:all 0.3s;}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+footer{text-align:center;padding:2.5rem 1.5rem 2rem;border-top:1px solid rgba(201,168,76,0.08);position:relative;z-index:10;}
+.footer-logo{font-family:var(--font-display);font-size:0.9rem;font-weight:800;color:rgba(255,255,255,0.2);margin-bottom:0.5rem;}
+.footer-logo span{color:rgba(201,168,76,0.3);}
+.footer-links{display:flex;align-items:center;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:0.5rem;}
+.footer-links a{font-size:0.72rem;color:rgba(255,255,255,0.18);text-decoration:none;}
+.footer-note{font-size:0.68rem;color:rgba(255,255,255,0.12);}
+@media(max-width:640px){.nav{display:none;}.hamburger{display:flex;}.site-header{padding:0 1.2rem;}.produtos-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<div class="bg-radial"></div>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1475704073818729');window.addEventListener('load',function(){fbq('track','PageView');});</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1475704073818729&ev=PageView&noscript=1"/></noscript>
+<div class="toast" id="toast"></div>
+<header class="site-header">
+  <a href="https://www.domineclaude.com.br" class="logo">Domina<span>Claude</span></a>
+  <nav class="nav">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta" class="nav-cta">Guia R$37</a>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://www.domineclaude.com.br/blog" onclick="toggleMenu()">Artigos</a>
+  <a href="https://www.domineclaude.com.br/ferramentas" onclick="toggleMenu()">Ferramentas</a>
+  <a href="https://www.domineclaude.com.br/oferta" onclick="toggleMenu()">Guia R$37</a>
+</div>
+<div class="page-content">
+<div class="article-container">
+  <span class="article-label">Análise de mercado</span>
+  <h1 class="article-title">A crise de identidade da SpaceXAI — e por que os próprios engenheiros da Tesla preferem o Claude</h1>
+  <div class="article-meta">
+    <span>📅 Julho 2026</span>
+    <span>⏱ 12 min de leitura</span>
+    <span>✍️ Kortex Evolution</span>
+  </div>
+  <div class="article-body">
+
+<p>Na semana de 16 de julho de 2026, a Bloomberg Businessweek publicou uma matéria que só existe uma vez por ciclo em uma indústria: um raio-X interno da SpaceXAI (o antigo xAI, agora divisão da SpaceX) revelando canais no Slack batizados com o nome do concorrente, engenheiros usando produtos rivais para trabalhar, memo do presidente da empresa dizendo em texto que "o objetivo próximo é igualar o desempenho do Claude". Não é rumor. É documento interno. E ele explica, em uma cascata coerente de fatos, por que o Grok — apesar de ter o dono mais barulhento do setor — ainda persegue um modelo que Musk publicamente já admitiu ser "definitivamente melhor". Este é o mapa completo.</p>
+
+<div class="destaque"><strong>Em resumo:</strong> a SpaceXAI vive uma crise de identidade documentada — obsessão explícita com o Claude como benchmark interno, engenheiros da Tesla e SpaceX preferindo Claude para trabalho técnico, 9 dos 12 co-fundadores originais já saíram, Musk trocando de estratégia em ciclos curtos, canais internos no Slack literalmente com o nome do concorrente. O momento é crítico: o SpaceX vai a IPO ainda em 2026, com avaliação de US$ 1,25 trilhão, e a divisão de IA precisa mostrar valor. Este artigo é análise, não fofoca — os fatos são todos de fontes primárias públicas.</div>
+
+<h2>Ato 1 — A fusão que virou reset</h2>
+<p>Em fevereiro de 2026, a SpaceX comprou a xAI em uma operação totalmente em ações que avaliou a startup em cerca de US$ 250 bilhões. Em maio, a xAI deixou de existir como empresa: virou <strong>SpaceXAI</strong>, uma divisão da SpaceX. O ganho para a xAI foi acesso permanente à infraestrutura e ao capital. O custo para os acionistas da SpaceX foi diluição para absorver um negócio que queimou US$ 7,8 bilhões nos primeiros três trimestres de 2025 — projetando ~US$ 10,4 bilhões de queima anual.</p>
+<p>A operação faz sentido do ponto de vista financeiro (limpar o balanço da xAI antes do IPO da SpaceX), mas cria um problema estrutural: a maior empresa aeroespacial privada do mundo passa a carregar um negócio de IA que ainda não achou seu diferencial competitivo.</p>
+
+<h2>Ato 2 — A saída dos fundadores</h2>
+<p>A xAI foi anunciada em julho de 2023 com 12 co-fundadores, muitos deles vindo do Google Brain, DeepMind, OpenAI e Tesla. Em março de 2026, dois deles — Guodong Zhang (chefe do time Imagine) e Zihang Dai — saíram durante uma auditoria interna feita pela SpaceX e pela Tesla. Semanas depois, Ross Nordeen também deixou. Em julho de 2026, apenas <strong>três</strong> dos 12 co-fundadores originais permanecem.</p>
+<p>Fundadores saem de empresas por muitos motivos — vesting concluído, mudança de fase, discordância. Quando saem em bloco, no meio do ciclo produtivo, e coincidem com uma auditoria, o padrão é sempre o mesmo: divergência sobre direção estratégica. A Bloomberg conseguiu vários relatos internos que descrevem uma equipe que perdeu confiança em como o negócio era conduzido.</p>
+
+<h2>Ato 3 — A promoção de Michael Nicolls</h2>
+<p>Para reorganizar a SpaceXAI, Musk promoveu <strong>Michael Nicolls</strong>, executivo de longa data do Starlink, a presidente da divisão. Nicolls não vem de IA — vem de infraestrutura satelital. Em memo interno vazado à Bloomberg, ele escreveu literalmente:</p>
+<p><em>"Nossos objetivos próximos são igualar o desempenho do Claude. Nosso trabalho é tornar o Grok maximamente útil."</em></p>
+<p>Essa é a evidência mais direta que a imprensa já obteve de que uma empresa da fronteira de IA definiu, em documento interno, outro fornecedor como <strong>vara de medida</strong>. Não é insulto: é retrato honesto de onde a empresa se vê no mercado.</p>
+
+<h2>Ato 4 — Os canais no Slack com o nome do concorrente</h2>
+<p>A Bloomberg documentou algo ainda mais concreto: existem <strong>múltiplos canais internos no Slack da SpaceXAI cujo nome faz referência direta ao Claude</strong>. Vários projetos internos mencionam o Claude explicitamente na documentação. Isso é sinal duplo: mostra que o rival virou obsessão organizacional, e mostra que a comunicação interna trata o "igualar" como missão prática, não como aspiração.</p>
+
+<h2>Ato 5 — Os próprios engenheiros preferindo o Claude</h2>
+<p>Aqui o dado mais eloquente. Reportagem da Bloomberg de abril de 2026 registra que:</p>
+<ul>
+<li>Engenheiros da SpaceX foram <strong>lentos em adotar o Grok</strong> para trabalho técnico porque ele "não é tão eficaz quanto ferramentas rivais".</li>
+<li>Dentro da própria divisão xAI, alguns funcionários usavam Claude e outras alternativas para código, em vez do Grok.</li>
+<li>A Tesla limitou o gasto de funcionários com Anthropic/OpenAI/Google a US$ 200 por semana — mas <strong>isentou o Grok</strong> desse limite. Ou seja, o Grok era grátis para uso interno. Mesmo assim, muitos engenheiros preferiam pagar do orçamento limitado para usar Claude.</li>
+</ul>
+<p>É o padrão do funcionário que age com honestidade técnica: escolhe a ferramenta que produz melhor resultado, mesmo contra o interesse político da chefia.</p>
+
+<h2>Ato 6 — A tentativa Cursor e a compra que não deu certo</h2>
+<p>Em abril de 2026, a SpaceX tentou comprar a Cursor por US$ 60 bilhões — a startup de coding assistant que estava dominando o mercado profissional junto com o Claude Code. A operação não avançou. A xAI então redirecionou o esforço para construir sua própria alternativa: o <strong>Grok Build</strong>, lançado em beta em maio e que foi central ao <a href="https://www.domineclaude.com.br/blog/grok-build-vazamento-repositorios">escândalo de vazamento de repositórios</a> em julho.</p>
+
+<h2>Ato 7 — Musk falando publicamente sobre o problema</h2>
+<p>Em março de 2026, Musk escreveu no X: <em>"xAI não foi construído corretamente da primeira vez, então está sendo reconstruído das fundações. A mesma coisa aconteceu com a Tesla."</em> Reconhecimento honesto — mas confirma o que a matéria da Bloomberg descreve com detalhes: a empresa está em estado de rebuild, não de crescimento.</p>
+
+<h2>O paradoxo do dinheiro</h2>
+<p>A parte mais irônica: a Anthropic anunciou em maio de 2026 que passaria a alugar 100% da capacidade do Colossus 1 (o data center original da SpaceXAI em Memphis) para rodar o próprio Claude. São 300 megawatts adicionais de capacidade computacional entregando poder para o principal rival — e a SpaceXAI recebendo o pagamento.</p>
+<p>Ou seja: a SpaceXAI treina o Grok num data center novo, aluga o antigo para a Anthropic, e a Anthropic usa a estrutura para rodar o modelo que a Nicolls definiu como benchmark a bater. É o tipo de arranjo que só faz sentido em um cenário em que os interesses financeiros de curto prazo se sobrepõem à disputa de mercado.</p>
+
+<h2>Por que isso importa para quem escolhe IA no Brasil</h2>
+<p>Três leituras práticas:</p>
+<ol>
+<li><strong>Marketing agressivo não substitui produto.</strong> Musk é o CEO com mais alcance de comunicação do setor. Ainda assim, os engenheiros da própria empresa preferem o Claude. A escolha de IA para trabalho profissional deve ser feita por teste real, não por manchete.</li>
+<li><strong>Confiabilidade de fornecedor importa.</strong> Uma empresa que perde 9 de 12 co-fundadores, faz demissões sem avisar os demitidos (documentado pela Bloomberg), muda de estratégia em ciclos de meses e teve escândalo de vazamento de dados corporativos em julho, é fornecedor de maior risco operacional. Para trabalho crítico, isso pesa.</li>
+<li><strong>O ecossistema Claude ganha por padrão.</strong> Todo cliente do Grok que fica sem confiança busca alternativa. Boa parte procura Claude — que já se estabeleceu como a "opção defensiva" do mercado corporativo. Vale ler o <a href="https://www.domineclaude.com.br/blog/qual-modelo-claude-escolher">guia sobre qual modelo do Claude escolher</a> e conhecer melhorias recentes como a <a href="https://www.domineclaude.com.br/blog/memoria-claude-entradas-categorizadas">memória por entradas categorizadas</a>, uma das razões pelas quais o Claude segue à frente em uso profissional recorrente.</li>
+</ol>
+
+<h2>O que pode virar o jogo</h2>
+<p>Duas coisas podem mudar o cenário rapidamente:</p>
+<ul>
+<li><strong>Um lançamento bem-sucedido do Grok 4.6</strong>, que vai chegar em agosto/setembro segundo estimativas de mercado. Se ele igualar Kimi K3 com o custo do 4.5, muda percepção.</li>
+<li><strong>Um Grok 5</strong> em desenvolvimento (6-10 trilhões de parâmetros) que rompa fronteira. Musk prometeu isso para o fim de 2026 — cabe ver.</li>
+</ul>
+<p>Ainda assim, produto de IA de fronteira não é só benchmark. É <strong>confiança de fornecedor + integração corporativa + previsibilidade contratual</strong>. Em todos esses três eixos, a SpaceXAI está atrás.</p>
+
+<h2>Resumo em uma linha</h2>
+<div class="destaque">A SpaceXAI é uma empresa em <strong>rebuild organizacional</strong> que definiu, em memo interno, o Claude como benchmark a bater. Enquanto os engenheiros da própria empresa preferem o produto do concorrente, o Musk anuncia modelos maiores. Para escolher IA no trabalho, essa distinção entre marketing e produto real importa mais do que a manchete do dia.</div>
+
+  </div>
+  <div class="divider"></div>
+  <div class="compartilhar">
+    <div class="compartilhar-titulo">Os engenheiros do próprio Musk preferem o Claude. O documento interno explica por quê.</div>
+    <div class="compartilhar-sub">Manda pra quem escolhe IA pelo dono mais barulhento e não pelo produto.</div>
+    <div class="compartilhar-lista">
+      <a class="share-btn" href="https://wa.me/?text=A%20crise%20de%20identidade%20da%20SpaceXAI%20documentada%20pela%20Bloomberg%20%E2%80%94%20o%20mapa%20completo:%20https://www.domineclaude.com.br/blog/crise-identidade-xai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.9-.4-1.9-1.1-2.7-1.9-.7-.7-1.2-1.5-1.6-2.3-.1-.2 0-.4.1-.5.2-.2.4-.5.6-.7.1-.2.1-.4 0-.6-.1-.2-.6-1.4-.8-1.9-.1-.4-.3-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5.1 1.2.6 2.4 1.5 3.5 1.5 2 3.3 3.4 5.5 4.2 2.2.8 2.2.6 2.7.5.5 0 1.5-.6 1.7-1.2.2-.6.2-1.2.1-1.3-.1-.2-.2-.2-.5-.4zM12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5-1.4c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>WhatsApp</a>
+      <a class="share-btn" href="https://t.me/share/url?url=https://www.domineclaude.com.br/blog/crise-identidade-xai&text=A%20crise%20de%20identidade%20da%20SpaceXAI%20documentada%20pela%20Bloomberg%20%E2%80%94%20o%20mapa%20completo:" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.1c-.3-.2-.7-.3-1.1-.1L2.4 11c-.5.2-.8.7-.7 1.2.1.5.5.8 1 .9l4.6 1.2 1.7 5.6c.1.4.5.7.9.7.3 0 .6-.1.8-.4l2.3-2.5 4.1 3c.2.1.4.2.6.2.6 0 1-.4 1.1-.9l3-13.5c.1-.5-.1-.9-.5-1.1z"/></svg>Telegram</a>
+      <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.domineclaude.com.br/blog/crise-identidade-xai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM8.5 18H6V10h2.5v8zM7.2 8.9c-.8 0-1.4-.6-1.4-1.4 0-.8.6-1.4 1.4-1.4.8 0 1.4.6 1.4 1.4 0 .8-.6 1.4-1.4 1.4zM18 18h-2.5v-4.2c0-1.1-.4-1.8-1.4-1.8-.7 0-1.2.5-1.4 1-.1.2-.1.4-.1.7V18H10v-8h2.5v1.1c.4-.6 1-1.3 2.3-1.3 1.7 0 3 1.1 3 3.5V18z"/></svg>LinkedIn</a>
+      <a class="share-btn" href="mailto:?subject=Os%20engenheiros%20do%20pr%C3%B3prio%20Musk%20preferem%20o%20Claude.%20O%20documento%20interno%20explica%20por%20qu%C3%AA.&body=A%20crise%20de%20identidade%20da%20SpaceXAI%20documentada%20pela%20Bloomberg%20%E2%80%94%20o%20mapa%20completo%3A%0A%0Ahttps%3A//www.domineclaude.com.br/blog/crise-identidade-xai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>E-mail</a>
+      <button class="share-btn" onclick="copiarLink('https://www.domineclaude.com.br/blog/crise-identidade-xai')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar link</button>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="todos-produtos">
+    <h3>Escolha o produto certo para o seu momento</h3>
+    <p>Materiais práticos para quem quer usar o Claude de verdade.</p>
+    <div class="produtos-grid">
+      <a href="https://www.domineclaude.com.br/oferta" class="produto-card"><div class="pc-nome">Guia Definitivo</div><div class="pc-desc">Do zero ao avançado, passo a passo.</div><div class="pc-preco">R$37</div></a>
+      <a href="https://pay.cakto.com.br/95chkbq_925913" class="produto-card"><div class="pc-nome">Prompt Power</div><div class="pc-desc">120 prompts prontos por área.</div><div class="pc-preco">R$27</div></a>
+      <a href="https://pay.cakto.com.br/cf68gv5_925925" class="produto-card"><div class="pc-nome">Prompt Power Pro</div><div class="pc-desc">120 prompts + 150 skills.</div><div class="pc-preco">R$47</div></a>
+      <a href="https://pay.cakto.com.br/8z8bsc4_925928" class="produto-card"><div class="pc-nome">Claude na Prática</div><div class="pc-desc">30 casos reais passo a passo.</div><div class="pc-preco">R$67</div></a>
+      <a href="https://pay.cakto.com.br/3fnhzyw_925935" class="produto-card"><div class="pc-nome">Renda com IA</div><div class="pc-desc">Como faturar com o Claude.</div><div class="pc-preco">R$97</div></a>
+      <a href="https://pay.cakto.com.br/knh5cyu_925940" class="produto-card"><div class="pc-nome">Domínio Total</div><div class="pc-desc">O pacote completo.</div><div class="pc-preco">R$127</div></a>
+    </div>
+  </div>
+  <div class="doacao-pix">
+    <div class="doacao-titulo">Este site não usa anúncios</div>
+    <div class="doacao-texto">Mantemos tudo gratuito e sem propaganda. Se o conteúdo te ajudou, uma doação via Pix ajuda a manter o site no ar.</div>
+    <div class="doacao-botoes">
+      <button class="doacao-btn" onclick="copiarPix()">Copiar chave Pix</button>
+      <button class="doacao-btn doacao-btn-sec" onclick="toggleQr()">Ver QR Code</button>
+    </div>
+    <div class="doacao-qrcode" id="doacaoQr">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAGIAQAAAABzOEqLAAADQUlEQVR4nO1b0W7jMAwjh/z/L/MeJMraAcOwBxuu43ZI28TErBgyRUmh8MfX118BF3ERH4t4AMY3gYAIAaAIMc4AeSJH7WnHKYgHecsJiiAEEHn3cxUoqkZtasdRCDLu/+ASQfFbdp8atbEdhyFIAWTsU/kBiMJYlE+w4xCEYpsSKBGxbcUmxR8QK2b1MsQD1D6loO9claT3dnndrN6LgEwa+uXt4XvacQriaSzO7hbCcA+xjdrTjlMQkCBJwwc07r0AKQOtcCRd/5iPYHiGCEECxNjEUoVIoILmdfXHZASb/g5FHoIQjq+Y8a48dk87TkFQdcjwNrkiyURNsWvZrN6LeIDYnThIg7TwQB6Fkc7a047DEIQICmTsTYM64sDc0dbO6q2IWAWIkDh4nFaGYr6XzuqVCDiezWhWGeEO14iot/TijXdnI5TSLwnExE0JJCRXRnJttrXjCITjq6JzoMe8qI0sRl0+X4FQ1qKAiKkia0KCFoogTegb23EIgkSReGkPNR8J+kCs2b52nIAoyo4feaxMVtCHc8C6fD4b4fp5aHHXBIMvUq5zXF81q/ciHuuMYOvcoUIcKsmk2Pzqj+mIB6C8Dl6CSl4BsF/IZZE97TgF0fkjuULoND5+Iq7uacdBCEFUEEaddnlKJBSXfWpbO85BELFrOW0CMgWIryLofumsXol4rDKSL1gs4iwK3Qd09fkCRNWjWA2hDrSc0EXVCK8+n47gSEz1kqD/+qosnNWrEdFFnYojj6NFTkw6IUjefMlkxBOygoo7Lo729lHFdcKdN75agCBAMJp9vByyHmdEW/G6+nw6Ivt32WtSlNNWas/huK93TztOQVS/qFvbvV1lX1wRe5bQd7XjFMQIZOtbKxmyXAY1bk87TkFETSOdJHsaRh0EWQwZnb03fzUX0cQFVfKwtYeOVtGrBxcg2vMfKidxt3uvC2a3z/WPuYj2fG3q8ezjlel9tMXh5q+mIx6gt1CnVP/2AKcbGXD7RZcjJKd7o03RkW+j+Y+w4wiEKreY6ZMQISE+SOHmr9YgsmXXTe6uodMpXj8xpRtfzUa4wwd+7l+VwYL14WiSWzWr9yL+K25M+R8XcRGfivgHDgsJjeTkm9cAAAAASUVORK5CYII=" alt="QR Code Pix" width="160" height="160">
+      <p>Aponte a câmera do app do seu banco</p>
+    </div>
+  </div>
+  <div style="margin-top:2rem">
+    <p style="font-size:0.8rem;color:var(--white-40);margin-bottom:0.6rem;font-weight:500">Artigos relacionados:</p>
+    <div class="relacionados-grid">
+<a href="https://www.domineclaude.com.br/blog/grok-4-6-xai-2-trilhoes" class="rel-card"><div><div class="rc-title">Grok 4.6 — o próximo lançamento</div><div class="rc-desc">O que a xAI pretende como resposta à crise.</div></div><span class="rc-arrow">→</span></a>
+<a href="https://www.domineclaude.com.br/blog/grok-build-vazamento-repositorios" class="rel-card"><div><div class="rc-title">Grok Build vazando repositórios</div><div class="rc-desc">O escândalo que colocou lenha na crise em julho.</div></div><span class="rc-arrow">→</span></a>
+<a href="https://www.domineclaude.com.br/blog/grok-4-5" class="rel-card"><div><div class="rc-title">Grok 4.5 — o atual modelo</div><div class="rc-desc">Onde o Grok está hoje em relação ao Claude.</div></div><span class="rc-arrow">→</span></a>
+<a href="https://www.domineclaude.com.br/blog/claude-fable-5-explicado" class="rel-card"><div><div class="rc-title">Claude Fable 5</div><div class="rc-desc">O modelo que a SpaceXAI definiu como benchmark a bater.</div></div><span class="rc-arrow">→</span></a>
+    </div>
+  </div>
+</div>
+</div>
+<footer>
+  <div class="footer-logo">Domina<span>Claude</span></div>
+  <div class="footer-links">
+    <a href="https://www.domineclaude.com.br/blog">Artigos</a>
+    <a href="https://www.domineclaude.com.br/ferramentas">Ferramentas</a>
+    <a href="https://www.domineclaude.com.br/oferta">Guia R$37</a>
+    <a href="https://www.domineclaude.com.br/privacidade">Privacidade</a>
+    <a href="https://www.domineclaude.com.br/termos">Termos</a>
+  </div>
+  <div class="footer-note">© Kortex Evolution · Todos os direitos reservados</div>
+</footer>
+<script>
+var PIX="00020101021126580014br.gov.bcb.pix0136fb6733a7-06a6-4b54-850c-98f344ea77f85204000053039865802BR5917VICTOR E M VIEIRA6007PIRANGA62070503***63042801";
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+function showToast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(function(){t.classList.remove('show');},2500);}
+function copiarPix(){navigator.clipboard.writeText(PIX).then(function(){showToast('Chave Pix copiada!');}).catch(function(){showToast('Não foi possível copiar.');});}
+function toggleQr(){document.getElementById('doacaoQr').classList.toggle('show');}
+document.addEventListener('click',function(e){var m=document.getElementById('mobileMenu');var h=document.querySelector('.site-header');if(m.classList.contains('open')&&!h.contains(e.target))m.classList.remove('open');});
+</script>
+<script>function copiarLink(u){navigator.clipboard.writeText(u||'https://www.domineclaude.com.br/blog/crise-identidade-xai').then(function(){showToast('Link copiado!');}).catch(function(){showToast('Não foi possível copiar.');});}</script>
+</body>
+</html>
